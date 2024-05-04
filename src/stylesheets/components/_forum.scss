@@ -1,0 +1,42 @@
+@use "../abstracts/" as *;
+
+.forum{
+    width: 100%;
+    margin: auto;
+    .forum-content{
+        @include size($width: 1169px,$height: 421px);
+        @include flex($display:flex,$align:center,$justify:space-between,$gap:40px);
+        margin: auto;
+        .img1{
+            @include size($width: 349px, $height:421px);
+        }
+        .img2{
+            @include size($width: 285px, $height:352);
+            margin-left: -90px;
+            margin-top: 50px;
+        }
+        .forum-content-main{
+            margin-left: 40px;
+            @include flex($display:flex,$direction:column,$justify:space-between,$gap:30px);
+
+            .contentA{
+                @include font($font_size:38px);
+                text-shadow: 1px 9px 10px #969595;
+            }
+            .contentB{
+                @include font($font-family:$secondary-font,$font_size:24px,$font-style:italic);
+            }
+            .contentC{
+                @include size($width:214px, $height:65px);
+                @include boder($boder-radius:30px,$boder:none);
+                @include color($color:$text-color-yellow,$background:$button-color-black);
+                @include font($font-family:$primary-font,$font_size:24px);
+                box-shadow: 1px 9px 10px #5f5e5e;
+
+                &:hover{
+                    scale: 1.1;
+                }
+            }
+        }
+    }
+}
