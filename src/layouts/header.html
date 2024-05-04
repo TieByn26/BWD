@@ -1,0 +1,51 @@
+<header>
+    <div class="header__top">
+        <div class="header__top__logo_and_title">
+            <img class="header__top__logo" src="../assets/icon/logo.svg" alt="">
+            <p class="header__title">HEALING<span class="header__title--right">.ME</span></p>
+        </div>
+        <div class="header__top__Nav">
+            <ul class="header__top__Nav__listItem">
+                <include src="./components/navList.html" locals='{
+            "list": [
+              {"name_class_li" : "header__top__Nav__listItem--item1", "name_class_a" : "header__top__Nav__listItem--item1--link", "link" : "#" , "content": "PODCAST" },
+              {"name_class_li" : "header__top__Nav__listItem--item2", "name_class_a" : "header__top__Nav__listItem--item2--link", "link" : "#" , "content": "CHAT" },
+              {"name_class_li" : "header__top__Nav__listItem--item3", "name_class_a" : "header__top__Nav__listItem--item3--link", "link" : "#" , "content": "GAME" },
+              {"name_class_li" : "header__top__Nav__listItem--item4", "name_class_a" : "header__top__Nav__listItem--item4--link", "link" : "#" , "content": "MUSIC" },
+              {"name_class_li" : "header__top__Nav__listItem--item5", "name_class_a" : "header__top__Nav__listItem--item5--link", "link" : "#" , "content": "FORUM" }
+            ]
+           }'>
+                </include>
+            </ul>
+        </div>
+    </div>
+
+    <div class="header__bottom">
+        <div class="header__bottom--circle">
+            <img class="header__bottom--circle--imgPink" src="../assets/img/pic-ellipsepink.png" alt="ellipsepink">
+            <img class="header__bottom--circle--imgBlue" src="../assets/img/pic-ellipseblue.png" alt="ellipseblue">
+            <img class="header__bottom--circle--imgyellow" src="../assets/img/pic-ellipseyellow.png"
+                alt="ellipseyellow">
+        </div>
+        <div class="header__bottom__content">
+            <p class="header__bottom__content--title">DISCOVER THE BEAUTY OF HEALING</p>
+            <p class="header__bottom__content--description">Our community will give a hand for people who suffer from self-harm, trauma and pain</p>
+            <div class="header__bottom__content--btn">
+
+                <include src="./components/button_tagA.html" locals='{
+                    "list": [
+                    {"name_class_btn": "header__bottom__content--btn--left", "name_class_a": "header__btn--left", "link":"#", "content":"Join Now" },
+                    {"name_class_btn": "header__bottom__content--btn--right", "name_class_a": "header__btn--right", "link":"#", "content":"MOre INFO" }
+                    ]
+                }'>
+                    
+                </include>
+            </div>
+           
+                <img class="header__bottom__content--img" src="../assets/img/img_header_bottom.png" alt="cat">
+                  </div>
+
+
+
+    </div>
+</header>
