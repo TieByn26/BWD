@@ -1,5 +1,14 @@
 @use "../abstracts/" as *;
 
+@font-face {
+    font-family: bungeeRegular;
+    src: url(../assets/font/Bungee-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: interRegular;
+    src: url(../assets/font/Inter-Regular.ttf) format("truetype");
+}
+
 body {
     font-family: $primary-font;
     font-weight: 400;
