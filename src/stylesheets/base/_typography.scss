@@ -1,10 +1,19 @@
 @use "../abstracts/" as *;
 
+@font-face {
+    font-family: bungeeRegular;
+    src: url(../assets/font/Bungee-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: interRegular;
+    src: url(../assets/font/Inter-Regular.ttf) format("truetype");
+}
+
 body {
     font-family: $primary-font;
     font-weight: 400;
     font-size: pxToRem(14);
-    max-width: 1800px;
+    max-width: 1440px;
     margin: 0 auto;
     min-width: 320px;
 }
