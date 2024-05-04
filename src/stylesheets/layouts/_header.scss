@@ -4,6 +4,7 @@
 header {
     width: 100%;
     height: auto;
+
     .header__top {
         @include flex ($display : flex, $justify : space-around);
 
@@ -121,7 +122,7 @@ header {
                 position: relative;
                 top: 90px;
                 left: 220px;
-               
+
 
                 button {
                     @include size ($width: 130px, $height: 45px);
@@ -129,9 +130,17 @@ header {
                     border: transparent;
                 }
 
+                
+                a {
+                    text-decoration: none;
+                }
+
+
                 .header__bottom__content--btn--left {
+
                     background-color: #C11D62;
-                    p {
+
+                    .header__btn--left {
                         color: white;
                         @include font($font-family: $primary-font);
                     }
@@ -141,16 +150,17 @@ header {
                     background-color: #1E1E1E;
                     margin-left: 20px;
 
-                    p {
+                    .header__btn--right {
                         color: white;
                         @include font($font-family: $primary-font);
                     }
                 }
             }
+
             .header__bottom__content--img {
-              position: relative;
-              top: -350px;
-              left: 680px;
+                position: relative;
+                top: -350px;
+                left: 680px;
             }
         }
 
