@@ -1,0 +1,23 @@
+@use "../abstracts/" as *;
+
+.btn{
+    display: flex;
+    gap: 30px;
+    p{
+        @include font($font-family:$primary-font,$font_size:24px);
+    }
+    .btnA{
+        @include size($width:214px,$height:65px);
+        @include boder($boder-radius:27px,$boder:3px solid black);
+        @include color($color:$text-color-yellow,$background:$button-color-black);
+        box-shadow: 1px 9px 10px #969595;
+    }
+    .btnB{
+        @include size($width:214px,$height:65px);
+        @include boder($boder-radius:27px,$boder:3px solid black);
+        box-shadow: 1px 9px 10px #969595;
+    }
+    button:hover{
+        scale: 1.1;
+    }
+}
