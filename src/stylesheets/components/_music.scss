@@ -1,0 +1,46 @@
+@use "../abstracts/" as *;
+
+.music {
+    width: 100%;
+
+    .music-content {
+        margin: auto;
+        @include size($width: 1203px, $height: 429px);
+        @include flex($display: flex, $align: center, $justify: space-between, $gap: 40px);
+
+        .music-content-main {
+            margin-left: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            .contentA {
+                @include font($font_size: 38px);
+                text-shadow: 1px 9px 10px #969595;
+            }
+
+            .contentB {
+                @include font($font-family:$secondary-font, $font-style:italic ,$font_size: 24px);
+            }
+
+        }
+
+        .music-img {
+            display:flex;
+            text-align: center;
+            justify-content: space-between;
+            .img1 {
+                @include size($width: 270px, $height: 180px);
+                margin-right: -130px;
+            }
+
+            .img2 {
+                @include size($width: 500px, $height: 400px);
+            }
+
+            .img3 {
+                @include size($width: 300px, $height: 200px);
+                margin-left: -150px;
+            }
+        }
+    }
+}
