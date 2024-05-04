@@ -1,0 +1,163 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+header {
+    width: 100%;
+    height: auto;
+    .header__top {
+        @include flex ($display : flex, $justify : space-around);
+
+        .header__top__logo {
+            @include size ($width: 200px, $height: 140px);
+        }
+
+        .header__title {
+            @include font ($font-family: $secondary-font, $font-size: 1.2rem, $font-weight: bold, $font-style: italic);
+            color: #FFDE6B;
+            margin-left: 41px;
+
+            .header__title--right {
+                @include font ($font-family: $secondary-font, $font-size: 1.2rem, $font-weight: bold, $font-style: italic);
+                color: white;
+            }
+        }
+
+
+        .header__top__Nav__listItem {
+            margin-top: 40px;
+            @include flex ($display : flex);
+
+            li {
+                padding: 20px;
+
+                a {
+                    text-decoration: none;
+                    font-size: 1.5rem;
+                }
+            }
+
+            .header__top__Nav__listItem--item1--link {
+                color: #FFCB11;
+            }
+
+            .header__top__Nav__listItem--item2--link {
+                color: #FFCB11;
+            }
+
+            .header__top__Nav__listItem--item3--link {
+                color: #FFE24B;
+            }
+
+            .header__top__Nav__listItem--item4--link {
+                color: #FFE9AE;
+            }
+
+            .header__top__Nav__listItem--item5--link {
+                color: #FFFFFF;
+            }
+
+        }
+
+    }
+
+    .header__bottom {
+
+
+        .header__bottom--circle {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin: 0 auto;
+            margin-top: 40px;
+        }
+
+        .header__bottom--circle--imgPink {
+            grid-column: 1/2;
+            width: 70%;
+            height: 70%;
+            margin: 80px 0 0 160px;
+        }
+
+        .header__bottom--circle--imgBlue {
+            grid-column: 2/3;
+            width: 110%;
+            height: 110%;
+            margin: -60px 0 0 -100px;
+            opacity: 0.8;
+        }
+
+        .header__bottom--circle--imgyellow {
+            grid-column: 3/4;
+            width: 115%;
+            height: 110%;
+            margin: -20px 0 0 -225px;
+            z-index: 1;
+        }
+
+        .header__bottom__content {
+            width: 100%;
+            position: absolute;
+            top: 270px;
+            z-index: 2;
+
+            .header__bottom__content--title {
+                width: 390px;
+                margin: 35px 0 0 210px;
+                color: #FFFFFF;
+                text-shadow: 0px 5px 7px rgb(146, 143, 143, 0.6);
+                @include font($font-family: $primary-font , $font-size: 3rem);
+            }
+
+            .header__bottom__content--description {
+                width: 240px;
+                margin: 40px 0 0 210px;
+                line-height: 20px;
+                color: #FFFFFF;
+                @include font($font-family: $secondary-font , $font-size: 1rem);
+
+            }
+
+            .header__bottom__content--btn {
+                position: relative;
+                top: 90px;
+                left: 220px;
+               
+
+                button {
+                    @include size ($width: 130px, $height: 45px);
+                    border-radius: 50px;
+                    border: transparent;
+                }
+
+                .header__bottom__content--btn--left {
+                    background-color: #C11D62;
+                    p {
+                        color: white;
+                        @include font($font-family: $primary-font);
+                    }
+                }
+
+                .header__bottom__content--btn--right {
+                    background-color: #1E1E1E;
+                    margin-left: 20px;
+
+                    p {
+                        color: white;
+                        @include font($font-family: $primary-font);
+                    }
+                }
+            }
+            .header__bottom__content--img {
+              position: relative;
+              top: -350px;
+              left: 680px;
+            }
+        }
+
+
+    }
+}
+
+// body {
+//     background-color: black;
+// }
