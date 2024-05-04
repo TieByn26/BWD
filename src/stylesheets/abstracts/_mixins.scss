@@ -11,6 +11,16 @@
         height: $height;
     }
 }
+//mixin shadow
+@mixin shadow($tshadow: false, $bshadow: false){
+    @if tshadow !=false {
+        text-shadow: $tshadow;
+    }
+
+    @if bshadow !=false {
+        box-shadow: $bshadow;
+    }
+}
 
 //mixin_boder
 
