@@ -19,6 +19,14 @@
             .contentB{
                 @include font($font-family:$secondary-font, $font-style:italic ,$font_size: 24px);
             }
+            .btn{
+                .btnA{
+                    @include color($color:$button-color-black,$background:white);
+                }
+                .btnB{
+                    @include color($color:$text-color-yellow,$background:$button-color-black);
+                }
+            }
         }
     }
 }
