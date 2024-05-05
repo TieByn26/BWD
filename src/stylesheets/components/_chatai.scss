@@ -1,0 +1,24 @@
+@use "../abstracts/" as *;
+
+.chatai{
+    width: 100%;
+    margin: auto;
+    margin-top: 100px;
+    .chatai-content{
+        margin: auto;
+        @include size($width: 1125px, $height: 505px);
+        @include flex($display:flex, $justify:space-between, $align: center,$gap:40px);
+        .chatai-content-main{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            .contentA{
+                @include font($font_size: 38px);
+                text-shadow: 1px 9px 10px #969595;
+            }
+            .contentB{
+                @include font($font-family:$secondary-font, $font-style:italic ,$font_size: 24px);
+            }
+        }
+    }
+}
