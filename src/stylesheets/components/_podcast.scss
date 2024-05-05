@@ -4,9 +4,10 @@
     width: 100%;
     margin: auto;
     margin-top: 100px;
+    padding-bottom: 300px;
     .podcast-content{
         margin: auto;
-        @include size($width: 1203px, $height: 429px);
+        @include size($width: 1203px, $height: 520px);
         @include flex($display: flex, $align: center, $justify: space-between, $gap: 40px);
 
         .podcast-content-main{
