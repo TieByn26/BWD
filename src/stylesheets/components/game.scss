@@ -1,0 +1,99 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+.main-container__section-game {
+    width: 100%;
+    height: 565px;
+    margin-top: 150px;
+
+    .section-game__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+
+        .section-game__text--title {
+            @include font ($font-family: $primary-font, $font_size: pxToRem(38));
+            text-shadow: 1px 9px 10px #969595;
+        }
+
+        .section-game__text--description {
+            width: 958px;
+
+            @include font ($font-family: $secondary-font, $font_size: pxToRem(24),$font-style: italic);
+        }
+    }
+
+    .section-game__img {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+
+        .section-game__img--game1 {
+            margin-left: -10px;
+            @include size ($width: 289px, $height: 239px);
+        }
+
+        .section-game__img--game2 {
+            position: relative;
+            left: -10px;
+            @include size ($width: 264px, $height: 266px);
+        }
+
+        .section-game__img--game3 {
+            margin: -70px 0 0 -65px;
+            @include size ($width: 399px, $height: 378px);
+        }
+
+        .section-game__img--game4 {
+
+            margin: -70px 0 0 -65px;
+            @include size ($width: 292px, $height: 378px);
+        }
+    }
+
+    .section-game__btn {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+
+        button {
+            border-radius: 27px;
+            background-color: transparent;
+            border: 3px solid black;
+            @include size ($width: pxToRem(214), $height: pxToRem(65));
+        }
+        a {
+            text-decoration: none;
+            @include font ($font-family: $primary-font, $font_size: pxToRem(24));
+        }
+        .section-game__btn--btn1 {
+
+            .section-game__btn--btn1--link {
+                color: black;
+            }
+        }
+
+        .section-game__btn--btn2 {
+            background-color: black;
+            .section-game__btn--btn2--link {
+                color: #FDD030;
+            }
+        }
+
+        .section-game__btn--btn3 {
+
+            .section-game__btn--btn3--link {
+                color: black;
+            }
+        }
+
+        .section-game__btn--btn4 {
+            background-color: black;
+            .section-game__btn--btn4--link {
+                color: #FDD030;
+            }
+        }
+    }
+
+}

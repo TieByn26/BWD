@@ -79,7 +79,7 @@ header {
                 width: 500px;
                 margin: 30px 0 0 160px;
                 color: #FFFFFF;
-                text-shadow: 0px 5px 7px rgb(146, 143, 143, 0.6);
+                text-shadow: 0px 5px 9px rgb(146, 143, 143, 0.6);
                 @include font($font-family: $primary-font , $font_size: pxToRem(64));
             }
 
@@ -104,6 +104,7 @@ header {
                     @include size ($width: 214px, $height: 65px);
                     border-radius: 50px;
                     border: transparent;
+                    box-shadow: 0 7px 9px gray ;
                 }
 
                 
