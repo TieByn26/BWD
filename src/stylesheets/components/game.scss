@@ -14,11 +14,13 @@
 
         .section-game__text--title {
             @include font ($font-family: $primary-font, $font_size: pxToRem(38));
+            text-shadow: 1px 9px 10px #969595;
         }
 
         .section-game__text--description {
             width: 958px;
-            @include font ($font-family: $secondary-font, $font_size: pxToRem(24));
+
+            @include font ($font-family: $secondary-font, $font_size: pxToRem(24),$font-style: italic);
         }
     }
 
