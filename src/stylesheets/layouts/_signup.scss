@@ -1,0 +1,140 @@
+@use "../abstracts/" as *;
+
+@keyframes hide-eyes-hand-left {
+    100% {
+     top: pxToRem(-120);
+     left: pxToRem(170);
+     transform: rotate(160deg);
+    }
+ }
+ 
+ @keyframes hide-eyes-hand-right {
+   100% {
+    top: pxToRem(-120);
+    left: pxToRem(265);
+    transform: rotate(160deg);
+   }
+ }
+ 
+ @keyframes board {
+   100% {
+     top: pxToRem(-220);
+     left: pxToRem(20);
+     transform: rotate(10deg);
+   }
+ }
+
+.login-container {
+    padding: pxToRem(30) pxToRem(100);
+    margin: auto;
+    margin-top: pxToRem(190);
+    @include size($width: 35%);
+    @include boder($boder-radius: 30px, $boder: 1px solid black);
+
+    .login-container__signup {
+        @include flex($display: flex, $direction: column, $gap: pxToRem(20));
+
+        .header-signup {
+            .header-signup__container {
+                position: absolute;
+                
+
+                .figure-img1 {
+                    position: absolute;
+                    .figure-img1--head {
+                        @include size($width: pxToRem(190), $height: pxToRem(150));
+                    }
+                    top: pxToRem(-170);
+                    left: pxToRem(150);
+                    
+                }
+
+                .figure-img2 {
+                    position: absolute;
+                    .figure-img2--board {
+                        @include size($width: 200px, $height: 200px);
+                    }
+                    top: -220px;
+                    left: 40px;
+                    z-index: 1;
+                    animation: board 0.7s forwards, scaleUp 0.3s forwards;
+                }
+
+                .figure-img3 {
+                    position: absolute;
+                    .figure-img3--left {
+                        @include size($width: pxToRem(60), $height:  pxToRem(50));
+                    }
+                    top: pxToRem(-60);
+                    left: pxToRem(140);
+                    z-index: 1;
+                    animation: hide-eyes-hand-left 0.7s forwards, scaleUp 0.3s forwards;
+                }
+
+                .figure-img4 {
+                    position: absolute;
+                    .figure-img4--right {
+                        @include size($width: pxToRem(60), $height: pxToRem(50));
+                    }
+                    top: pxToRem(-50);
+                    left: pxToRem(260);
+                    animation: hide-eyes-hand-right 0.7s forwards, scaleUp 0.3s forwards;
+                }
+            }
+        }
+
+        .main-signup {
+            .main-signup__container {
+                .main-signup__container--text {
+                    @include flex($display: flex, $direction: column, $gap: pxToRem(12));
+
+                    input {
+                        @include size($width: 100%, $height: pxToRem(40));
+                        border-radius: 10px;
+
+                        &::placeholder {
+                            @include font($font-family: $primary-font, $font_size: pxToRem(10));
+                            padding-left: pxToRem(20);
+                        }
+                    }
+
+                    span {
+                        padding-left: pxToRem(20);
+                        @include font($font-family: normal, $font_size: pxToRem(16));
+                        @include color($color: red);
+                    }
+                }
+            }
+        }
+
+        .footer-signup {
+            .footer-signup__container {
+                .footer-signup__container--button {
+                    @include flex($display: flex, $direction: column, $align: center, $gap: pxToRem(15));
+
+                    span{
+                        @include flex($display: flex,$align: center);
+                        input{
+                            @include size($width: pxToRem(18),$height: pxToRem(18));
+                        }
+                        p {
+                            @include font($font-family: arial, $font-style: italic, $font-weight: 400, $font_size: pxToRem(16));
+                        }
+                    }
+
+                    button {
+                        @include size($width: pxToRem(167), $height: pxToRem(35));
+                        @include boder($boder-radius: pxToRem(27), $boder: 1px solid black);
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
