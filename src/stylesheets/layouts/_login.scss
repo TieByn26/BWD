@@ -1,0 +1,298 @@
+@use "../abstracts/" as *;
+
+.signIn-container {
+  display: none;
+  @include size($width: 430px, $height: 100%);
+  .container-SignIn {
+    @include size($width: pxToRem(400), $height: pxToRem(430));
+    // background: rgba(255, 255, 255, 0.20);
+    background-color: rebeccapurple;
+    backdrop-filter: blur(7.5px);
+    border-radius: 30px;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    &__heading {
+      .figure {
+        @include position(
+          $position: absolute,
+          $top: false,
+          $bottom: false,
+          $left: false,
+          $right: false
+        );
+      }
+      &--bear-head {
+        @include size($width: pxToRem(190), $height: pxToRem(150));
+        top: pxToRem(-140);
+        left: pxToRem(150);
+      }
+
+      &--hand-left-bear {
+        @include size($width: pxToRem(60), $height: pxToRem(50));
+        top: pxToRem(-30);
+        left: pxToRem(140);
+        z-index: 1;
+      }
+
+      &--hand-left-bear.active {
+        @include size($width: pxToRem(60), $height: pxToRem(50));
+        top: pxToRem(-30);
+        left: pxToRem(140);
+        z-index: 1;
+        animation: hide-eyes-hand-left 0.7s forwards, scaleUp 0.3s forwards;
+      }
+
+      &--hand-left-bear.re-active {
+        @include size($width: pxToRem(60), $height: pxToRem(50));
+        top: pxToRem(-30);
+        left: pxToRem(140);
+        z-index: 1;
+        animation:  re-set-animation-hide-eyes-hand-left  0.7s ease forwards, scaleUp 0.3s ease forwards;
+      }
+
+      &--hand-right-bear {
+        @include size($width: pxToRem(60), $height: pxToRem(50));
+        top: pxToRem(-20);
+        left: pxToRem(260);
+      }
+
+      &--hand-right-bear.active {
+        @include size($width: pxToRem(60), $height: pxToRem(50));
+        top: pxToRem(-20);
+        left: pxToRem(260);
+        animation: hide-eyes-hand-right 0.7s forwards, scaleUp 0.3s forwards;
+      }
+
+      &--hand-right-bear.re-active {
+        @include size($width: pxToRem(60), $height: pxToRem(50));
+        top: pxToRem(-20);
+        left: pxToRem(260);
+        animation:  re-set-animation-hide-eyes-hand-right  0.7s ease forwards, scaleUp 0.3s ease forwards;
+        
+      }
+
+      &--board-bear {
+        @include size($width: 200px, $height: 200px);
+        top: -190px;
+        left: 40px;
+      }
+
+      &--board-bear.active {
+        @include size($width: 200px, $height: 200px);
+        top: -190px;
+        left: 40px;
+        animation: board 0.7s forwards, scaleUp 0.3s forwards;
+      }
+
+      &--board-bear.re-active {
+        @include size($width: 200px, $height: 200px);
+        top: -190px;
+        left: 40px;
+        animation:  re-set-animation-board  0.7s ease forwards, scaleUp 0.3s ease forwards;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .body__form {
+      @include flex($display: flex, $direction: column);
+
+      .input {
+        @include size($width: pxToRem(300), $height: pxToRem(50));
+        border-radius: pxToRem(15);
+        border: transparent;
+        position: relative;
+        left: 50%;
+        top: pxToRem(40);
+        transform: translateX(-50%);
+        background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.5) 0%,
+          rgba(255, 255, 255, 0.5) 100%
+        );
+        &:placeholder-shown {
+          @include font(
+            $font-family: $primary-font,
+            $font_size: pxToRem(12),
+            $font-weight: 400,
+            $font-style: false,
+            $line-height: false
+          );
+        }
+      }
+      #body__form--password {
+        margin-top: pxToRem(20);
+      }
+      span {
+        @include position(
+          $position: relative,
+          $top: pxToRem(50),
+          $bottom: false,
+          $left: 50%,
+          $right: false
+        );
+        @include font(
+          $font-family: $secondary-font,
+          $font_size: pxToRem(13),
+          $font-weight: 700,
+          $font-style: false,
+          $line-height: false
+        );
+        @include size($width: pxToRem(300));
+        transform: translateX(-42%);
+        color: rgb(236, 18, 18);
+        visibility: hidden;
+      }
+      .body__form--eyes {
+        position: absolute;
+        top: pxToRem(141);
+        right: pxToRem(60);
+        cursor: pointer;
+        @include size($width: pxToRem(25), $height: pxToRem(15));
+        img {
+          @include size($width: 100%, $height: 100%);
+          object-fit: cover;
+        }
+      }
+    }
+    .body__bottom {
+      @include flex(
+        $display: flex,
+        $justify: center,
+        $align: center,
+        $gap: pxToRem(100)
+      );
+      margin-top: pxToRem(70);
+
+      .body__bottom--btnSigin {
+        @include size($width: pxToRem(300), $height: pxToRem(52));
+        border-radius: pxToRem(25);
+        background: #000;
+        border: #000;
+
+        .btnSigin-content {
+          @include font(
+            $font-family: $primary-font,
+            $font_size: pxToRem(20),
+            $font-weight: 400,
+            $font-style: false,
+            $line-height: 150%
+          );
+          color: #fff;
+          text-align: center;
+        }
+      }
+    }
+    .container-SignIn__footer {
+      @include flex(
+        $display: flex,
+        $direction: column,
+        $align: center,
+        $justify: center,
+        $wrap: false,
+        $gap: pxToRem(20)
+      );
+      margin-top: pxToRem(20);
+      .footer__line {
+        @include size($width: pxToRem(300), $height: pxToRem(0.5));
+        background-color: black;
+      }
+      .footer__bottom {
+        @include flex(
+          $display: flex,
+          $direction: column,
+          $align: center,
+          $justify: center,
+          $wrap: false,
+          $gap: pxToRem(15)
+        );
+        &--resetPass {
+          @include size($width: pxToRem(198), $height: pxToRem(52));
+          border-radius: pxToRem(25);
+          border: 1px solid #000;
+          background: rgba(0, 0, 0, 0);
+
+          .resetPass-content {
+            @include font(
+              $font-family: $primary-font,
+              $font_size: 16px,
+              $font-weight: 400,
+              $font-style: false,
+              $line-height: 150%
+            );
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes hide-eyes-hand-left {
+  100% {
+    top: pxToRem(-90);
+    left: pxToRem(170);
+    transform: rotate(160deg);
+  }
+}
+
+@keyframes hide-eyes-hand-right {
+  100% {
+    top: pxToRem(-90);
+    left: pxToRem(265);
+    transform: rotate(160deg);
+  }
+}
+
+@keyframes board {
+  100% {
+    top: pxToRem(-190);
+    left: pxToRem(20);
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes re-set-animation-hide-eyes-hand-left {
+  0% {
+    top: pxToRem(-90);
+    left: pxToRem(170);
+  }
+  
+  100% {
+    top: pxToRem(-30);
+    left: pxToRem(140);
+    transform: rotate(-160deg);
+  }
+}
+
+@keyframes re-set-animation-hide-eyes-hand-right {
+  0% {
+    top: pxToRem(-90);
+    left: pxToRem(265);
+  }
+  100% {
+    top: pxToRem(-20);
+    left: pxToRem(260);
+    transform: rotate(-160deg);
+  }
+}
+
+@keyframes re-set-animation-board {
+  0% {
+    top: pxToRem(-190);
+    left: pxToRem(20);
+  }
+  100% {
+    top: -190px;
+    left: 40px;
+    transform: rotate(-10deg);
+  }
+}
