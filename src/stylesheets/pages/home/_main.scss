@@ -1,5 +1,28 @@
 @use "../../abstracts/" as *;
 
-body{
-    background-image: linear-gradient(to bottom ,#a8e8fe 0%,rgb(254, 253, 192) 75%);
+body {
+    background-image: linear-gradient(to bottom, #a8e8fe 0%, rgb(254, 253, 192) 75%);
+}
+
+.main-container {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+section {
+    opacity: 0;
+    /* Ẩn phần tử khi chưa được kích hoạt */
+    transform: translateY(50px);
+    /* Đặt phần tử dưới màn hình */
+    transition: opacity 1s, transform 1s;
+    /* Áp dụng hiệu ứng chuyển đổi */
+}
+
+section.active {
+    opacity: 1;
+    /* Hiển thị phần tử khi được kích hoạt */
+    transform: translateY(0);
+    /* Di chuyển phần tử lên vị trí ban đầu */
 }
