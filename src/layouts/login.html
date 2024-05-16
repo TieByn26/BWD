@@ -1,4 +1,4 @@
-<div class="login-container">
+<div class="signIn-container">
     <!-- start sign in  -->
     <div class="container-SignIn">
         <div class="container-SignIn__heading">
@@ -50,51 +50,52 @@
 </div>
 <!-- end sign in  -->
 
-
-    <!-- start sign up -->
-    <div class="login-container__signup">
-        <!-- start header of sign up -->
-        <header class="header-signup">
-            <div class="header-signup__container">
-                <include src="./components/boxImg.html" locals='{
-                    "list":[{"classNameFigure":"figure-img1","classImg":"figure-img1--head","srcImg":"../assets/img/bear-head.png", "alts":"image"},
-                    {"classNameFigure":"figure-img2","classImg":"figure-img2--board","srcImg":"../assets/img/Sign-up-board.png","alts":"image"},
-                    {"classNameFigure":"figure-img3","classImg":"figure-img3--left","srcImg":"../assets/img/hand-left-bear.png","alts":"image"},
-                    {"classNameFigure":"figure-img4","classImg":"figure-img4--right","srcImg":"../assets/img/hand-right-bear.png","alts":"image"}]
-                }'>
-                    
-                </include>
-            </div>
-        </header>
-        <!-- end header of sign up -->
-        <!-- start main of sign up -->
-        <main class="main-signup">
-            <div class="main-signup__container">
-                <div class="main-signup__container--text">
-                    <input type="text" placeholder="username">
-                    <span>Tên tài khoản không hợp lệ!</span>
-                    <input type="text" placeholder="password">
-                    <span>Mật khẩu đăng ký không hợp lệ!</span>
-                    <input type="text" placeholder="password_confirm">
-                    <span>Vui lòng nhập đúng mật khẩu đăng ký!</span>
-                    <input type="text" placeholder="email">
-                    <span>Email không hợp lệ!</span>
-                </div>
-            </div>
-        </main>
-        <!-- end main of sign up -->
-        <!-- start footer of sign up -->
-        <footer class="footer-signup">
-            <div class="footer-signup__container">
-                <div class="footer-signup__container--button">
-                    <span><input type="checkbox"><p> I agree with terms and conditions</p></span>
-                    <button>Sign Up</button>
-                    <a href="#">I already have an account</a>
-                </div>
-            </div>
-        </footer>
-        <!-- end footer of sign up -->
-    </div>
-    <!-- end of sign up -->
 </div>
 
+<div class="signUp-container">
+    <!-- start sign up -->
+<div class="login-container__signup">
+    <!-- start header of sign up -->
+    <div class="header-signup">
+        <div class="header-signup__container">
+            <include src="./components/boxImg.html" locals='{
+                "list":[{"classNameFigure":"figure-img1","classImg":"figure-img1--head","srcImg":"../assets/img/bear-head.png", "alts":"image"},
+                {"classNameFigure":"figure-img2","classImg":"figure-img2--board","srcImg":"../assets/img/Sign-up-board.png","alts":"image"},
+                {"classNameFigure":"figure-img3","classImg":"figure-img3--left","srcImg":"../assets/img/hand-left-bear.png","alts":"image"},
+                {"classNameFigure":"figure-img4","classImg":"figure-img4--right","srcImg":"../assets/img/hand-right-bear.png","alts":"image"}]
+            }'>
+                
+            </include>
+        </div>
+    </div>
+    <!-- end header of sign up -->
+    <!-- start main of sign up -->
+    <main class="main-signup">
+        <div class="main-signup__container">
+            <div class="main-signup__container--text">
+                <input type="text" placeholder="username">
+                <span>Tên tài khoản không hợp lệ!</span>
+                <input type="text" placeholder="password">
+                <span>Mật khẩu đăng ký không hợp lệ!</span>
+                <input type="text" placeholder="password_confirm">
+                <span>Vui lòng nhập đúng mật khẩu đăng ký!</span>
+                <input type="text" placeholder="email">
+                <span>Email không hợp lệ!</span>
+            </div>
+        </div>
+    </main>
+    <!-- end main of sign up -->
+    <!-- start footer of sign up -->
+    <footer class="footer-signup">
+        <div class="footer-signup__container">
+            <div class="footer-signup__container--button">
+                <span><input type="checkbox"><p> I agree with terms and conditions</p></span>
+                <button>Sign Up</button>
+                <a href="#">I already have an account</a>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer of sign up -->
+</div>
+<!-- end of sign up -->
+</div>

@@ -1,6 +1,7 @@
 @use "../abstracts/" as *;
 
-.login-container {
+.signIn-container {
+  display: none;
   @include size($width: 430px, $height: 100%);
   .container-SignIn {
     @include size($width: pxToRem(400), $height: pxToRem(430));
