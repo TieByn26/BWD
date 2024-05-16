@@ -1,31 +1,27 @@
 @use "../abstracts/" as *;
 
-.forum{
+.podcast{
     width: 100%;
     margin: auto;
     margin-top: 100px;
-    .forum-content{
-        @include size($width: 1169px,$height: 421px);
-        @include flex($display:flex,$align:center,$justify:space-between,$gap:40px);
+    padding-bottom: 300px;
+    .podcast-content{
         margin: auto;
-        .img1{
-            @include size($width: 349px, $height:421px);
-        }
-        .img2{
-            @include size($width: 285px, $height:352);
-            margin-left: -90px;
-            margin-top: 50px;
-        }
-        .forum-content-main{
-            margin-left: 40px;
-            @include flex($display:flex,$direction:column,$justify:space-between,$gap:30px);
+        @include size($width: 1203px, $height: 520px);
+        @include flex($display: flex, $align: center, $justify: space-between, $gap: 40px);
 
+        .podcast-content-main{
+            margin-left: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
             .contentA{
-                @include font($font_size:38px);
+                @include font($font_size: 38px);
                 text-shadow: 1px 9px 10px #969595;
             }
             .contentB{
-                @include font($font-family:$secondary-font,$font_size:24px,$font-style:italic);
+                @include size($width:358px,$height:116px);
+                @include font($font-family:$secondary-font, $font-style:italic ,$font_size: 24px);
             }
             .contentC{
                 @include size($width:214px, $height:65px);
