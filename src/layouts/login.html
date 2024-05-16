@@ -1,0 +1,51 @@
+
+    <!-- start sign in  -->
+    <div class="container-SignIn">
+        <div class="container-SignIn__heading">
+            <include src="./components/boxImg.html" locals='{
+                "list": [
+                 {"classNameFigure": "figure container-SignIn__heading--bear-head", "classImg": "", "srcImg": "../assets/img/bear-head.png", "alts" :"bear head"},
+                 {"classNameFigure": " figure container-SignIn__heading--hand-left-bear", "classImg": "", "srcImg": "../assets/img/hand-left-bear.png", "alts" :"hand-left-bea"},
+                 {"classNameFigure": "figure container-SignIn__heading--hand-right-bear", "classImg": "", "srcImg": "../assets/img/hand-right-bear.png", "alts" :"hand-right-bea"},
+                 {"classNameFigure": "figure container-SignIn__heading--board-bear", "classImg": "", "srcImg": "../assets/img/board-bear.png", "alts" :"board bear"}
+                ]
+            }'>
+            </include>  
+        </div>
+        <div class="container-SignIn__body">
+            <form class="body__form" action="">
+                <input class="input" type="text" name="user-name" id="body__form--user-name" required placeholder="User name">
+                <span>thông tin tài khoản không hợp lệ!!</span>
+                <input class="input"  type="text" name="password" id="body__form--password" required placeholder="Password">
+                <include src="./components/boxImg.html" locals='{
+                    "list": [
+                     {"classNameFigure": "body__form--eyes", "classImg": "", "srcImg": "../assets/icon/eyes-icon-login.svg", "alts" :"icon eyes"}
+                    ]
+                }'>
+                </include> 
+                <span>Thông tin mật khẩu không chính xác</span>
+            </form>
+            <div class="body__bottom">
+                <include src="./components/button2.html" locals='{
+                    "list": [
+                     {"classNameBtn": "body__bottom--btnSigin", "classContent": "btnSigin-content", "content": "LOGIN"}
+                    ]
+                }'>
+                </include>
+
+        </div>
+    </div>
+    <div class="container-SignIn__footer">
+        <div class="footer__line"></div>
+        <div class="footer__bottom">
+            <include src="./components/button2.html" locals='{
+                "list": [
+                 {"classNameBtn": "footer__bottom--resetPass", "classContent": "resetPass-content", "content": "RESET PASSWORD"}
+                ]
+            }'>
+            </include>
+            <p class="footer__bottom--newMember">SIGN UP IF YOU’RE NEW </p>
+        </div>
+    </div>
+</div>
+<!-- end sign in  -->
