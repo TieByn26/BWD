@@ -1,7 +1,7 @@
 @use "../abstracts/" as *;
 
 .signIn-container {
-  display: none;
+  // display: none;
   @include size($width: 430px, $height: 100%);
   .container-SignIn {
     @include size($width: pxToRem(400), $height: pxToRem(430));
@@ -39,19 +39,11 @@
       }
 
       &--hand-left-bear.active {
-        @include size($width: pxToRem(60), $height: pxToRem(50));
-        top: pxToRem(-30);
-        left: pxToRem(140);
-        z-index: 1;
-        animation: hide-eyes-hand-left 0.7s forwards, scaleUp 0.3s forwards;
+        animation: hide-eyes-hand-left-signIN 0.7s forwards, scaleUp 0.3s forwards;
       }
 
       &--hand-left-bear.re-active {
-        @include size($width: pxToRem(60), $height: pxToRem(50));
-        top: pxToRem(-30);
-        left: pxToRem(140);
-        z-index: 1;
-        animation:  re-set-animation-hide-eyes-hand-left  0.7s ease forwards, scaleUp 0.3s ease forwards;
+        animation:  re-set-animation-hide-eyes-hand-left-signIN  0.7s ease forwards, scaleUp 0.3s ease forwards;
       }
 
       &--hand-right-bear {
@@ -61,38 +53,26 @@
       }
 
       &--hand-right-bear.active {
-        @include size($width: pxToRem(60), $height: pxToRem(50));
-        top: pxToRem(-20);
-        left: pxToRem(260);
-        animation: hide-eyes-hand-right 0.7s forwards, scaleUp 0.3s forwards;
+        animation: hide-eyes-hand-right-signIN 0.7s forwards, scaleUp 0.3s forwards;
       }
 
       &--hand-right-bear.re-active {
-        @include size($width: pxToRem(60), $height: pxToRem(50));
-        top: pxToRem(-20);
-        left: pxToRem(260);
-        animation:  re-set-animation-hide-eyes-hand-right  0.7s ease forwards, scaleUp 0.3s ease forwards;
+        animation:  re-set-animation-hide-eyes-hand-right-signIN  0.7s ease forwards, scaleUp 0.3s ease forwards;
         
       }
 
       &--board-bear {
         @include size($width: 200px, $height: 200px);
         top: -190px;
-        left: 40px;
+        left:35px;
       }
 
       &--board-bear.active {
-        @include size($width: 200px, $height: 200px);
-        top: -190px;
-        left: 40px;
-        animation: board 0.7s forwards, scaleUp 0.3s forwards;
+        animation: board-signIN 0.7s forwards, scaleUp 0.3s forwards;
       }
 
       &--board-bear.re-active {
-        @include size($width: 200px, $height: 200px);
-        top: -190px;
-        left: 40px;
-        animation:  re-set-animation-board  0.7s ease forwards, scaleUp 0.3s ease forwards;
+        animation:  re-set-animation-board-signIN  0.7s ease forwards, scaleUp 0.3s ease forwards;
       }
 
       img {
@@ -236,7 +216,7 @@
   }
 }
 
-@keyframes hide-eyes-hand-left {
+@keyframes hide-eyes-hand-left-signIN {
   100% {
     top: pxToRem(-90);
     left: pxToRem(170);
@@ -244,7 +224,7 @@
   }
 }
 
-@keyframes hide-eyes-hand-right {
+@keyframes hide-eyes-hand-right-signIN {
   100% {
     top: pxToRem(-90);
     left: pxToRem(265);
@@ -252,7 +232,7 @@
   }
 }
 
-@keyframes board {
+@keyframes board-signIN {
   100% {
     top: pxToRem(-190);
     left: pxToRem(20);
@@ -260,7 +240,7 @@
   }
 }
 
-@keyframes re-set-animation-hide-eyes-hand-left {
+@keyframes re-set-animation-hide-eyes-hand-left-signIN {
   0% {
     top: pxToRem(-90);
     left: pxToRem(170);
@@ -273,7 +253,7 @@
   }
 }
 
-@keyframes re-set-animation-hide-eyes-hand-right {
+@keyframes re-set-animation-hide-eyes-hand-right-signIN {
   0% {
     top: pxToRem(-90);
     left: pxToRem(265);
@@ -285,14 +265,14 @@
   }
 }
 
-@keyframes re-set-animation-board {
+@keyframes re-set-animation-board-signIN {
   0% {
     top: pxToRem(-190);
     left: pxToRem(20);
   }
   100% {
     top: -190px;
-    left: 40px;
+    left:35px;
     transform: rotate(-10deg);
   }
 }
