@@ -2,13 +2,13 @@
 
 .signIn-container {
   // display: none;
-  @include size($width: 430px, $height: 100%);
+  @include size($width: pxToRem(430), $height: 100%);
   .container-SignIn {
     @include size($width: pxToRem(400), $height: pxToRem(430));
     // background: rgba(255, 255, 255, 0.20);
     background-color: rebeccapurple;
-    backdrop-filter: blur(7.5px);
-    border-radius: 30px;
+    backdrop-filter: blur(pxToRem(7.5));
+    border-radius: pxToRem(30);
     position: absolute;
     left: 50%;
     top: 60%;
@@ -62,9 +62,9 @@
       }
 
       &--board-bear {
-        @include size($width: 200px, $height: 200px);
-        top: -190px;
-        left:35px;
+        @include size($width: pxToRem(200), $height: pxToRem(200));
+        top: pxToRem(-190);
+        left: pxToRem(35);
       }
 
       &--board-bear.active {
@@ -197,13 +197,13 @@
         &--resetPass {
           @include size($width: pxToRem(198), $height: pxToRem(52));
           border-radius: pxToRem(25);
-          border: 1px solid #000;
+          border: pxToRem(1) solid #000;
           background: rgba(0, 0, 0, 0);
 
           .resetPass-content {
             @include font(
               $font-family: $primary-font,
-              $font_size: 16px,
+              $font_size: pxToRem(16),
               $font-weight: 400,
               $font-style: false,
               $line-height: 150%
@@ -271,8 +271,8 @@
     left: pxToRem(20);
   }
   100% {
-    top: -190px;
-    left:35px;
+    top: pxToRem(-190);
+    left: pxToRem(30);
     transform: rotate(-10deg);
   }
 }
