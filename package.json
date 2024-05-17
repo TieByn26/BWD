@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@parcel/transformer-sass": "^2.10.0",
+    "animate.css": "^4.1.1",
     "posthtml": "^0.16.6"
   }
 }
