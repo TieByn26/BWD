@@ -71,25 +71,45 @@
                 interact with other users as well</p>
 
         </div>
-  
-    <div class="section-game__img">
-        <img class="section-game__img--game1" src="../assets/img/game1.png" alt="game1">
-        <img class="section-game__img--game2" src="../assets/img/game2.png" alt="game2">
-        <img class="section-game__img--game3" src="../assets/img/game3.png" alt="game3">
-        <img class="section-game__img--game4" src="../assets/img/game4.png" alt="game4">
-    </div>
-    <div class="section-game__btn">
-        <include src="./components/button_tagA.html" locals='{
-            "list": [
-              {"name_class_btn" : "section-game__btn--btn1", "name_class_a" : "section-game__btn--btn1--link", "link" : "#" , "content": "GAME 1" },
-              {"name_class_btn" : "section-game__btn--btn2", "name_class_a" : "section-game__btn--btn2--link", "link" : "#" , "content": "GAME 2" },
-              {"name_class_btn" : "section-game__btn--btn3", "name_class_a" : "section-game__btn--btn3--link", "link" : "#" , "content": "GAME 3" },
-              {"name_class_btn" : "section-game__btn--btn4", "name_class_a" : "section-game__btn--btn4--link", "link" : "#" , "content": "GAME 4" }
-            ]
-           }'>
-
-        </include>
-    </div>
+        <!-- Code new -->
+        <div class="section-game">
+            <div class="section-game_children">
+                <img class="section-game__img--game1" src="../assets/img/game1.png" alt="game1">
+                <include src="./components/btnGame.html" locals='{
+                    "list": [
+                      {"contentG": "GAME 1", "bgButton":"bgGame-lightGray"}
+                    ]
+                   }'>
+                </include>
+            </div>
+            <div class="section-game_children">
+                <img class="section-game__img--game2" src="../assets/img/game2.png" alt="game2">
+                <include src="./components/btnGame.html" locals='{
+                    "list": [
+                      {"contentG": "GAME 2", "bgButton":"bgGame-Black"}
+                    ]
+                   }'>
+                </include>
+            </div>
+            <div class="section-game_children">
+                <img class="section-game__img--game3" src="../assets/img/game3.png" alt="game3">
+                <include src="./components/btnGame.html" locals='{
+                    "list": [
+                      {"contentG": "GAME 3", "bgButton":"bgGame-lightGray"}
+                    ]
+                   }'>
+                </include>
+            </div>
+            <div class="section-game_children">
+                <img class="section-game__img--game4" src="../assets/img/game4.png" alt="game4">
+                <include src="./components/btnGame.html" locals='{
+                    "list": [
+                      {"contentG": "GAME 4", "bgButton":"bgGame-Black"}
+                    ]
+                   }'>
+                </include>
+            </div>
+        </div>
 
 
     <!-- end section game -->

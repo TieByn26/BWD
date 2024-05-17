@@ -1,0 +1,28 @@
+@use "../abstracts/" as *;
+
+.btnGame{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    p{
+        @include font($font-family:$primary-font,$font_size:24px);
+    }
+    .btnG{
+        @include size($width:214px,$height:65px);
+        @include boder($boder-radius:27px,$boder:3px solid black);
+        box-shadow: 1px 9px 10px #969595;
+    }
+    button:hover{
+        scale: 1.1;
+    }
+}
+
+.bgGame-Black{
+    color: yellow;
+    background-color: black;
+}
+
+.bgGame-lightGray{
+    color: black;
+    background-color: #f0f0f0;
+}
