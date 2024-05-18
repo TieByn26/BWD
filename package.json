@@ -4,8 +4,8 @@
   "description": "- This document introduces my project with time to do it, the target i want to get, the technical i have used, the link to view my website and source code of it and the final is the way to run my project on your local machine.",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel ./src/pages/index.html",
-    "build": "parcel build ./src/pages/index.html --out-dir public",
+    "dev": "parcel ./src/pages/login.html",
+    "build": "parcel build ./src/pages/login.html --out-dir public",
     "lint": "eslint src",
     "test": "jest"
   },
@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@parcel/transformer-sass": "^2.10.0",
+    "animate.css": "^4.1.1",
     "posthtml": "^0.16.6"
   }
 }

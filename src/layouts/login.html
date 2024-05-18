@@ -1,17 +1,17 @@
-<div class="signIn-container">
+<div class="signIn-container"> 
     <!-- start sign in  -->
-    <div class="container-SignIn">
-        <div class="container-SignIn__heading">
-            <include src="./components/boxImg.html" locals='{
-                "list": [
-                 {"classNameFigure": "figure container-SignIn__heading--bear-head", "classImg": "", "srcImg": "../assets/img/bear-head.png", "alts" :"bear head"},
-                 {"classNameFigure": " figure container-SignIn__heading--hand-left-bear", "classImg": "", "srcImg": "../assets/img/hand-left-bear.png", "alts" :"hand-left-bea"},
-                 {"classNameFigure": "figure container-SignIn__heading--hand-right-bear", "classImg": "", "srcImg": "../assets/img/hand-right-bear.png", "alts" :"hand-right-bea"},
-                 {"classNameFigure": "figure container-SignIn__heading--board-bear", "classImg": "", "srcImg": "../assets/img/board-bear.png", "alts" :"board bear"}
-                ]
-            }'>
-            </include>
-        </div>
+    <div class="signIn-container__content  animate__animated ">
+        <include src="./components/boxImg.html" locals='{
+            "list": [
+             {"classNameFigure": "figure signIn-container__content--bear-head", "classImg": "", "srcImg": "../assets/img/bear-head.png", "alts" :"bear head"},
+             {"classNameFigure": " figure signIn-container__content--hand-left-bear", "classImg": "", "srcImg": "../assets/img/hand-left-bear.png", "alts" :"hand-left-bea"},
+             {"classNameFigure": "figure signIn-container__content--hand-right-bear", "classImg": "", "srcImg": "../assets/img/hand-right-bear.png", "alts" :"hand-right-bea"},
+             {"classNameFigure": "figure signIn-container__content--board-bear", "classImg": "", "srcImg": "../assets/img/board-bear.png", "alts" :"board bear"}
+            ]
+        }'>
+        </include>
+    </div>
+    <div class="container-SignIn  animate__animated  ">
         <div class="container-SignIn__body">
             <form class="body__form" action="">
                 <input class="input" type="text" name="user-name" id="body__form--user-name" required
@@ -33,7 +33,6 @@
                     ]
                 }'>
                 </include>
-
             </div>
         </div>
         <div class="container-SignIn__footer">
@@ -54,22 +53,21 @@
 </div>
 
 <div class="signUp-container">
-    <!-- start sign up -->
-    <div class="login-container__signup">
-        <!-- start header of sign up -->
-        <div class="header-signup">
-            <div class="header-signup__container">
+         <!-- start header of sign up -->
+         <div class="header-signup animate__animated ">
+            <div class="header-signup__container ">
                 <include src="./components/boxImg.html" locals='{
                 "list":[{"classNameFigure":"figure-img1","classImg":"figure-img1--head","srcImg":"../assets/img/bear-head.png", "alts":"image"},
                 {"classNameFigure":"figure-img2","classImg":"figure-img2--board","srcImg":"../assets/img/Sign-up-board.png","alts":"image"},
                 {"classNameFigure":"figure-img3","classImg":"figure-img3--left","srcImg":"../assets/img/hand-left-bear.png","alts":"image"},
                 {"classNameFigure":"figure-img4","classImg":"figure-img4--right","srcImg":"../assets/img/hand-right-bear.png","alts":"image"}]
             }'>
-
                 </include>
             </div>
         </div>
         <!-- end header of sign up -->
+    <!-- start sign up -->
+    <div class="login-container__signup animate__animated">
         <!-- start main of sign up -->
         <main class="main-signup">
             <div class="main-signup__container">
@@ -98,7 +96,7 @@
                         <p> I agree with terms and conditions</p>
                     </span>
                     <button>Sign Up</button>
-                    <a href="#">I already have an account</a>
+                    <p class="changed-to-SignIn" href="#">I already have an account</p>
                 </div>
             </div>
         </footer>

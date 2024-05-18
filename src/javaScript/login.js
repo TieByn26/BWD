@@ -1,14 +1,20 @@
-var hand_left_bear = document.querySelector('.container-SignIn__heading--hand-left-bear');
-var hand_right_bear = document.querySelector('.container-SignIn__heading--hand-right-bear');
-var board_bear = document.querySelector('.container-SignIn__heading--board-bear');
-var body__form__eyes = document.querySelector('.body__form--eyes');
+var hand_left_bear = document.querySelector(
+  ".signIn-container__content--hand-left-bear"
+);
+var hand_right_bear = document.querySelector(
+  ".signIn-container__content--hand-right-bear"
+);
+var board_bear = document.querySelector(
+  ".signIn-container__content--board-bear"
+);
+var body__form__eyes = document.querySelector(".body__form--eyes");
 
 console.log(body__form__eyes);
 
 var checkClickEyes = true; // kiem tra dang bat hay tat hieu ung che mat con gau
 
-body__form__eyes.addEventListener('click', (e) => {
-   if(checkClickEyes) {
+body__form__eyes.addEventListener("click", (e) => {
+  if (checkClickEyes) {
     hand_left_bear.classList.add("active");
     hand_right_bear.classList.add("active");
     board_bear.classList.add("active");
@@ -18,8 +24,7 @@ body__form__eyes.addEventListener('click', (e) => {
     board_bear.classList.remove("re-active");
 
     checkClickEyes = false; // da bat hieu ung
-   }
-   else {
+  } else {
     hand_left_bear.classList.remove("active");
     hand_right_bear.classList.remove("active");
     board_bear.classList.remove("active");
@@ -29,6 +34,79 @@ body__form__eyes.addEventListener('click', (e) => {
     board_bear.classList.add("re-active");
 
     checkClickEyes = true; // da tat hieu ung
-   }
+  }
 });
 
+// biến bên signIn
+var container_SignIn = document.querySelector(".container-SignIn");
+var signIn_container__content = document.querySelector(
+  ".signIn-container__content"
+);
+var signUp = document.querySelector(".footer__bottom--newMember");
+var signIn_container = document.querySelector(".container-SignIn");
+
+// biến bên signUp
+var login_container__signup = document.querySelector(
+  ".login-container__signup"
+);
+var header_signup = document.querySelector(".header-signup");
+var signIn = document.querySelector(".changed-to-SignIn");
+var signUp_container = document.querySelector(".signUp-container");
+
+// chuyen doi khung dang ki -> dang nhap
+signUp.addEventListener("click", (e) => {
+  //remove seted class animate
+  remove_seted_class_animate_pane_signIn("animate__zoomInDown", "tinUpIn");
+
+  add_animate_SignIN("rotateLeft", "slideDown");
+
+  setTimeout((e) => {
+    //remove seted class animate
+    remove_seted_class_animate_pane_signUp("rotateLeft_signUp", "slideDown");
+
+    add_animate_SignUp("animate__zoomInDown", "tinUpIn");
+
+    signUp_container.style.display = "block";
+    signIn_container.style.display = "none";
+  }, 2000);
+});
+
+// chuyen doi khung dang nhap -> dang ki
+signIn.addEventListener("click", (e) => {
+  //remove seted class animate
+  remove_seted_class_animate_pane_signUp("animate__zoomInDown", "tinUpIn");
+
+  //set animate
+  add_animate_SignUp("rotateLeft_signUp", "slideDown");
+
+  setTimeout((e) => {
+    //remove seted class animate
+    remove_seted_class_animate_pane_signIn("rotateLeft","slideDown");
+
+    //set animate
+    add_animate_SignIN("animate__zoomInDown", "tinUpIn");
+
+    signUp_container.style.display = "none";
+    signIn_container.style.display = "block";
+  }, 2000);
+});
+
+function remove_seted_class_animate_pane_signIn(pane_signIn, bear) {
+  container_SignIn.classList.remove(`${pane_signIn}`);
+  signIn_container__content.classList.remove(`${bear}`);
+}
+
+function remove_seted_class_animate_pane_signUp(pane_signUp, bear) {
+  login_container__signup.classList.remove(`${pane_signUp}`);
+  header_signup.classList.remove(`${bear}`);
+}
+
+function add_animate_SignUp(pane_signUp, bear) {
+  login_container__signup.classList.add(`${pane_signUp}`);
+  header_signup.classList.add(`${bear}`);
+}
+
+function add_animate_SignIN(pane_signUp, bear) {
+  container_SignIn.classList.add(`${pane_signUp}`);
+  signIn_container__content.classList.add(`${bear}`);
+}
