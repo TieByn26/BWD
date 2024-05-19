@@ -24,8 +24,46 @@
   }
 }
 
+@keyframes re-set-animation-hide-eyes-hand-left-signUp {
+  0% {
+    top: pxToRem(-120);
+    left: pxToRem(170);
+  }
+
+  100% {
+    top: pxToRem(-60);
+    left: pxToRem(140);
+    transform: rotate(-160deg);
+  }
+}
+
+@keyframes re-set-animation-hide-eyes-hand-right-signUp {
+  0% {
+    top: pxToRem(-120);
+    left: pxToRem(265);
+  }
+  100% {
+    top: pxToRem(-50);
+    left: pxToRem(260);
+    transform: rotate(-160deg);
+  }
+}
+
+@keyframes re-set-animation-board-signUp {
+  0% {
+    top: pxToRem(-220);
+    left: pxToRem(20);
+  }
+  100% {
+    top: -220px;
+    left: 40px;
+    transform: rotate(-10deg);
+  }
+}
+
+
 .signUp-container {
-  display: none;  
+  display: none;
   @include size($width: pxToRem(493));
   margin: auto;
 
@@ -36,7 +74,7 @@
       position: relative;
       top: pxToRem(30);
       left: pxToRem(40);
-     
+
       .figure-img1 {
         position: absolute;
         .figure-img1--head {
@@ -54,7 +92,12 @@
         top: -220px;
         left: 40px;
         z-index: 1;
+       }
+      .figure-img2.activeSignUp {
         animation: boardd 0.7s forwards, scaleUp 0.3s forwards;
+      }
+      .figure-img2.re_activeSignUp {
+        animation: re-set-animation-board-signUp  0.7s forwards, scaleUp 0.3s forwards;
       }
 
       .figure-img3 {
@@ -65,7 +108,12 @@
         top: pxToRem(-60);
         left: pxToRem(140);
         z-index: 1;
+      }
+      .figure-img3.activeSignUp {
         animation: hide-eyes-hand-leftt 0.7s forwards, scaleUp 0.3s forwards;
+      }
+      .figure-img3.re_activeSignUp {
+        animation: re-set-animation-hide-eyes-hand-left-signUp 0.7s forwards, scaleUp 0.3s forwards;
       }
 
       .figure-img4 {
@@ -75,47 +123,69 @@
         }
         top: pxToRem(-50);
         left: pxToRem(260);
+      }
+      .figure-img4.activeSignUp {
         animation: hide-eyes-hand-rightt 0.7s forwards, scaleUp 0.3s forwards;
+      }
+      .figure-img4.re_activeSignUp {
+        animation: re-set-animation-hide-eyes-hand-right-signUp  0.7s forwards, scaleUp 0.3s forwards;
       }
     }
   }
 
   .login-container__signup {
+    background-color: #124f98;
     @include flex($display: flex, $direction: column, $gap: pxToRem(20));
     padding: pxToRem(30) pxToRem(100);
     @include size($width: 100%);
     @include boder($boder-radius: 30px, $boder: 1px solid black);
-    
+
     .main-signup {
       .main-signup__container {
         .main-signup__container--text {
-          @include flex($display: flex, $direction: column, $gap: pxToRem(12));
+          @include flex($display: flex, $direction: column, $gap: pxToRem(7));
 
           input {
-            @include size($width: 100%, $height: pxToRem(40));
+            @include size($width: 100%, $height: pxToRem(50));
             border-radius: 10px;
+            padding-left: pxToRem(10);
+            padding-right: pxToRem(10);
+            font-size: pxToRem(16);
+            background: linear-gradient(
+              0deg,
+              rgba(255, 255, 255, 0.5) 0%,
+              rgba(255, 255, 255, 0.5) 100%
+            );
+            color: #fff;
+            border: transparent;
 
             &::placeholder {
               @include font(
                 $font-family: $primary-font,
-                $font_size: pxToRem(10)
+                $font_size: pxToRem(12)
               );
-              padding-left: pxToRem(20);
+              color: rgb(227, 223, 223);
             }
           }
-
+          .password_signUp {
+            padding-right: pxToRem(45);
+          }
+          .re_type_password_signUp {
+            padding-right: pxToRem(45);
+          }
           span {
-            padding-left: pxToRem(20);
             @include font($font-family: normal, $font_size: pxToRem(16));
             @include color($color: red);
+            visibility: hidden;
           }
         }
         .main-signup__container--img {
           &--img1 {
             position: relative;
-            top: pxToRem(-223);
+            top: pxToRem(-222);
             left: pxToRem(245);
             z-index: 3;
+            cursor: pointer;
             @include size($width: pxToRem(30), $height: pxToRem(30));
           }
           &--img2 {
@@ -123,6 +193,7 @@
             top: pxToRem(-143);
             left: pxToRem(213);
             z-index: 3;
+            cursor: pointer;
             @include size($width: pxToRem(30), $height: pxToRem(30));
           }
         }
@@ -152,19 +223,25 @@
                 $font_size: pxToRem(16)
               );
             }
+
+            margin-top: -50px;
           }
 
           button {
-            @include size($width: pxToRem(167), $height: pxToRem(35));
+            @include size($width: pxToRem(167), $height: pxToRem(40));
             @include boder($boder-radius: pxToRem(27), $boder: 1px solid black);
-            &:hover {
-              transform: scale(1.1);
-            }
+            // &:hover {
+            //   transform: scale(1.1);
+            // }
+            color: rgb(227, 223, 223);
+            font-size: pxToRem(16);
+            font-weight: 700;
+            background: #103667;
           }
 
           p {
             cursor: pointer;
-            text-decoration: none;
+            color: rgb(227, 223, 223);
           }
         }
       }

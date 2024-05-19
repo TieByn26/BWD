@@ -1,3 +1,4 @@
+//animate bear
 var hand_left_bear = document.querySelector(
   ".signIn-container__content--hand-left-bear"
 );
@@ -37,6 +38,8 @@ body__form__eyes.addEventListener("click", (e) => {
   }
 });
 
+//aniamte changed pane sign in and sign up
+
 // biến bên signIn
 var container_SignIn = document.querySelector(".container-SignIn");
 var signIn_container__content = document.querySelector(
@@ -53,41 +56,19 @@ var header_signup = document.querySelector(".header-signup");
 var signIn = document.querySelector(".changed-to-SignIn");
 var signUp_container = document.querySelector(".signUp-container");
 
-// chuyen doi khung dang ki -> dang nhap
+// chuyen doi khung dang nhap -> dang ki
 signUp.addEventListener("click", (e) => {
   //remove seted class animate
   remove_seted_class_animate_pane_signIn("animate__zoomInDown", "tinUpIn");
-
   add_animate_SignIN("rotateLeft", "slideDown");
 
   setTimeout((e) => {
     //remove seted class animate
     remove_seted_class_animate_pane_signUp("rotateLeft_signUp", "slideDown");
-
     add_animate_SignUp("animate__zoomInDown", "tinUpIn");
 
     signUp_container.style.display = "block";
     signIn_container.style.display = "none";
-  }, 2000);
-});
-
-// chuyen doi khung dang nhap -> dang ki
-signIn.addEventListener("click", (e) => {
-  //remove seted class animate
-  remove_seted_class_animate_pane_signUp("animate__zoomInDown", "tinUpIn");
-
-  //set animate
-  add_animate_SignUp("rotateLeft_signUp", "slideDown");
-
-  setTimeout((e) => {
-    //remove seted class animate
-    remove_seted_class_animate_pane_signIn("rotateLeft","slideDown");
-
-    //set animate
-    add_animate_SignIN("animate__zoomInDown", "tinUpIn");
-
-    signUp_container.style.display = "none";
-    signIn_container.style.display = "block";
   }, 2000);
 });
 
@@ -110,3 +91,20 @@ function add_animate_SignIN(pane_signUp, bear) {
   container_SignIn.classList.add(`${pane_signUp}`);
   signIn_container__content.classList.add(`${bear}`);
 }
+
+//changed type input text -> pass and reverse
+var inputElement = document.querySelector('.inputPass_signIn');
+var hide_or_show_pass = document.querySelector('.body__form--eyes');
+
+var is_hide_pass = false;
+
+hide_or_show_pass.addEventListener('click',(e) => {
+ if(is_hide_pass == false) {
+  inputElement.type = "password";
+  is_hide_pass = true;
+ }
+ else {
+  inputElement.type = "text";
+  is_hide_pass = false;
+ }
+});
