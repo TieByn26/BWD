@@ -61,40 +61,40 @@
         </div>
     </section>
     <!-- end of section chat AI -->
-    
-     <!-- start section game -->
-
-     <section id="section" class="main-container__section-game">
-        <div class="section-game__text">
-            <h3 class="section-game__text--title">PLAY VIDEO GAMES FOR FUN</h3>
-            <p class="section-game__text--description">We have variety of games to play if you’re bored. You can also
-                interact with other users as well</p>
-
+    <!-- start section game -->
+   <section id="tranding" class="game">
+        <div class="game-container">
+            <div class="game-container__content">
+                <p class="game-container__content--title">PlAY VIDEO GAME FOR FUN</p>
+               <p class="game-container__content--description">We have variety of games to play if you're bored. You can
+                   also interact with other users as well</p>
+           </div>
+   
+           <div class="swiper tranding-slider">
+               <div class="swiper-wrapper">
+                   <!-- slide-start -->
+                           <include src="./components/box.html" locals='{
+                                   "list":[{"img":"game1","button":"GAME 1"},
+                                   {"img":"game2","button":"GAME 2"},
+                                   {"img":"game3","button":"GAME 3"}]
+                               }'>
+                   <!-- slide-end -->
+               </div>
+           </div>
+   
+             <div class="tranding-slider-control">
+               <div class="swiper-button-prev slider-arrow">
+                 <ion-icon name="arrow-back-outline"></ion-icon>
+               </div>
+               <div class="swiper-button-next slider-arrow">
+                 <ion-icon name="arrow-forward-outline"></ion-icon>
+               </div>
+               <div class="swiper-pagination"></div>
+             </div>
         </div>
-  
-    <div class="section-game__img">
-        <img class="section-game__img--game1" src="../assets/img/game1.png" alt="game1">
-        <img class="section-game__img--game2" src="../assets/img/game2.png" alt="game2">
-        <img class="section-game__img--game3" src="../assets/img/game3.png" alt="game3">
-        <img class="section-game__img--game4" src="../assets/img/game4.png" alt="game4">
-    </div>
-    <div class="section-game__btn">
-        <include src="./components/button_tagA.html" locals='{
-            "list": [
-              {"name_class_btn" : "section-game__btn--btn1", "name_class_a" : "section-game__btn--btn1--link", "link" : "#" , "content": "GAME 1" },
-              {"name_class_btn" : "section-game__btn--btn2", "name_class_a" : "section-game__btn--btn2--link", "link" : "#" , "content": "GAME 2" },
-              {"name_class_btn" : "section-game__btn--btn3", "name_class_a" : "section-game__btn--btn3--link", "link" : "#" , "content": "GAME 3" },
-              {"name_class_btn" : "section-game__btn--btn4", "name_class_a" : "section-game__btn--btn4--link", "link" : "#" , "content": "GAME 4" }
-            ]
-           }'>
+    </section>
 
-        </include>
-    </div>
-
-
-    <!-- end section game -->
-  </section>
-
+    <!-- end of section game -->
     <!-- start section podcast -->
     <section id="section" class="podcast">
         <div class="podcast-content">
@@ -104,7 +104,7 @@
                     dealing with depression !!</p>
 
                 <button class="contentC">
-                    <p>FORUM</p>
+                    <p>PODCAST</p>
                 </button>
             </div>
 

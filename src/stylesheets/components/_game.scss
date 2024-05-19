@@ -1,99 +1,76 @@
 @use "../abstracts/" as *;
-@use "../base/" as *;
 
-.main-container__section-game {
-    width: 100%;
-    height: 565px;
-    margin-top: 150px;
+.game {
+  width: 100%;
+  margin: auto;
 
-    .section-game__text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        row-gap: 30px;
+  &-container {
+    width: 80%;
+    margin: auto;
+    @include flex($display: flex, $direction: column, $gap: pxToRem(50));
 
-        .section-game__text--title {
-            @include font ($font-family: $primary-font, $font_size: pxToRem(38));
-            text-shadow: 1px 9px 10px #969595;
-        }
+    &__content {
+      margin: auto;
 
-        .section-game__text--description {
-            width: 958px;
+      &--title {
+        @include font($font-family: $primary-font, $font_size: pxToRem(36), $font-weight: 600);
+        text-align: center;
+      }
 
-            @include font ($font-family: $secondary-font, $font_size: pxToRem(24),$font-style: italic);
-        }
+      &--description {
+        @include font($font-family: $secondary-font, $font_size: pxToRem(26), $font-weight: 400, $font-style: italic);
+        text-align: center;
+      }
     }
 
-    .section-game__img {
-        display: flex;
-        justify-content: center;
-        margin-top: 40px;
+    .swiper {
+      width: 100%;
+      height: 500px;
 
-        .section-game__img--game1 {
-            margin-left: -10px;
-            @include size ($width: 289px, $height: 239px);
-        }
-
-        .section-game__img--game2 {
-            position: relative;
-            left: -10px;
-            @include size ($width: 264px, $height: 266px);
-        }
-
-        .section-game__img--game3 {
-            margin: -70px 0 0 -65px;
-            @include size ($width: 399px, $height: 378px);
-        }
-
-        .section-game__img--game4 {
-
-            margin: -70px 0 0 -65px;
-            @include size ($width: 292px, $height: 378px);
-        }
+      .swiper-wrapper {
+        width: 40%;
+        height: 400px;
+      }
     }
-    
-    .section-game__btn {
-        display: flex;
-        justify-content: center;
-        gap: 50px;
+  }
+}
 
-        button {
-            border-radius: 27px;
-            background-color: transparent;
-            border: 3px solid black;
-            @include size ($width: pxToRem(214), $height: pxToRem(65));
-        }
-        a {
-            text-decoration: none;
-            @include font ($font-family: $primary-font, $font_size: pxToRem(24));
-        }
-        .section-game__btn--btn1 {
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
 
-            .section-game__btn--btn1--link {
-                color: black;
-            }
-        }
+.tranding-slider-control {
+  width: 40%;
+  position: relative;
+  bottom: 5rem;
+  left: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-        .section-game__btn--btn2 {
-            background-color: black;
-            .section-game__btn--btn2--link {
-                color: #FDD030;
-            }
-        }
-
-        .section-game__btn--btn3 {
-
-            .section-game__btn--btn3--link {
-                color: black;
-            }
-        }
-
-        .section-game__btn--btn4 {
-            background-color: black;
-            .section-game__btn--btn4--link {
-                color: #FDD030;
-            }
-        }
+  .slider-arrow {
+    ion-icon {
+      font-size: 2rem;
+      color: #222224;
     }
 
+    &::after {
+      content: '';
+    }
+  }
+
+  .swiper-pagination {
+    position: relative;
+    width: 15rem;
+    bottom: 1rem;
+
+    .swiper-pagination-bullet {
+      filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+    }
+
+    .swiper-pagination-bullet-active {
+      background: var(--primary);
+    }
+  }
 }
