@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Forum</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="../stylesheets/forum.scss" />
+    <!-- put jquery before owl carousel -->
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- owl carousel -->
+</head>
+
+<body>
+    <header class=" container-fluid ">
+        <div class=" d-flex flex-row-reverse justify-content-between row">
+            <div class="col-lg-3 col-md-6 col-sm-12 row justify-content-center align-self-center shadow " id="USERNAME">
+                <p class="col-lg-8 text-center">USERNAME1</p>
+
+                <img class="col-lg-4" src="../assets/icon/user1.svg" alt="user1">
+            </div>
+
+            <div class="col-lg-8 col-md-6 col-sm-12  align-self-xl-center">
+                <nav id="nav-container" class=" shadow ">
+                    <div class="d-flex justify-content-end">
+                        <div class="nav-item shadow">
+                            <a href="" class="nav-link">FORUM</a>
+                        </div>
+                        <div class="nav-item shadow">
+                            <a href="" class="nav-link">MUSIC</a>
+                        </div>
+                        <div class="nav-item shadow">
+                            <a href="" class="nav-link">PODCAST</a>
+                        </div>
+                        <div class="nav-item shadow">
+                            <a href="" class="nav-link">GAME</a>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+
+
+        </div>
+    </header>
+    <main>
+        <div class="container-fluid">
+
+            <div class="row px-0 d-flex">
+
+                <div id="session1" class="col-lg-3 col-md-3 col-sm-12 section">
+                    <!-- forum con tain er -->
+                    <div id="forum-container" class="overflow-auto mainItem ">
+                        <div class="item col-12 shadow">
+                            <a href="?">Forum1</a>
+                        </div>
+                        <div class="item col-12 shadow">
+                            <a href="?">Forum2</a>
+                        </div>
+                        <div class="item col-12 shadow">
+                            <a href="?">Forum3</a>
+                        </div>
+                        <div class="item col-12 shadow">
+                            <a href="?">Forum4</a>
+                        </div>
+                        <div class="item col-12 shadow">
+                            <a href="?">Forum5</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg col-md-9  col-sm-12 mainItem" id="chat">
+                    <div class="section px-3">
+                        <!-- chat history -->
+                        <div id="chat-section" class="overflow-auto">
+                            <!-- reply -->
+                            <div class="reply d-flex">
+                                <img class="col-md-1 ava align-self-start" src="../assets/icon/male.svg">
+                                <div class="reply-content align-self-center col-md-6 shadow-lg">Lorem ipsum dolor sit,
+                                    amet consectetur
+                                    adipisicing
+                                    elit. Aperiam magni impedit tempora sapiente. Unde alias quos quisquam officiis
+                                    perspiciatis vero animi numquam? Odit, eum ducimus! Nisi recusandae fuga qui
+                                    officia!</div>
+                            </div>
+                            <!-- msg -->
+                            <div class="msg d-flex flex-row-reverse">
+                                <img class="col-md-1 ava align-self-start" src="../assets/icon/female.svg">
+                                <div class="reply-content align-self-center col-md-6 shadow-lg">Lorem ipsum dolor sit,
+                                    amet consectetur
+                                    adipisicing
+                                    elit. Aperiam magni impedit tempora sapiente. Unde alias quos quisquam officiis
+                                    perspiciatis vero animi numquam? Odit, eum ducimus! Nisi recusandae fuga qui
+                                    officia!</div>
+                            </div>
+
+                        </div>
+                        <br>
+                        <!-- typing erea -->
+                        <div id="typing" class="d-flex .justify-content-evenly rounded-pill shadow">
+                            <button class="col-1 align-self-center">
+                                <img src="../assets/icon/msg.svg" alt="">
+                            </button>
+                            <input class="col-10 align-self-center" name="typing" id="type"></input>
+                            <button type="submit" class="col-1 align-self-center" id="send"><img
+                                    src="../assets/icon/send.svg" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-12 col-sm-12 mainItem">
+                    <div id="friends" class="section d-flex flex-column justify-content-between shadow">
+                        <div class="friends-container shadow d-flex flex-column justify-content-evenly">
+                            
+                            <div class="item-friend d-flex justify-content-evenly">
+                                <img src="../assets/icon/annie.svg" alt="ava" class="friend-ava align-self-center ">
+                                <span class="col align-self-center">ANNIE</span>
+                                <img src="../assets/icon/3dot.svg" alt="dots" class="align-self-center threedot">
+                            </div>
+
+                            <div class="item-friend d-flex justify-content-between">
+                                <img src="../assets/icon/andrew.svg" alt="ava" class="friend-ava align-self-center ">
+                                <span class="col align-self-center">ANDREW</span>
+                                <img src="../assets/icon/3dot.svg" alt="dots" class="align-self-center threedot">
+                            </div>
+
+                            <div class="item-friend d-flex justify-content-between">
+                                <img src="../assets/icon/harrol.svg" alt="ava" class="friend-ava align-self-center ">
+                                <span class="col align-self-center">HARROL</span>
+                                <img src="../assets/icon/3dot.svg" alt="dots" class="align-self-center threedot">
+                            </div>
+                            
+                            <div class="item-friend d-flex justify-content-between">
+                                <img src="../assets/icon/lana.svg" alt="ava" class="friend-ava align-self-center ">
+                                <span class="col align-self-center">LANA</span>
+                                <img src="../assets/icon/3dot.svg" alt="dots" class="align-self-center threedot">
+                            </div>
+
+
+                        </div>
+                        <div class="friends-container shadow d-flex flex-column justify-content-evenly">
+                            
+                            <div class="item-friend d-flex justify-content-evenly">
+                                <img src="../assets/icon/jamal.svg" alt="ava" class="friend-ava align-self-center ">
+                                <span class="col align-self-center">JAMAL</span>
+                                <img src="../assets/icon/3dot.svg" alt="dots" class="align-self-center threedot">
+                            </div>
+
+                            <div class="item-friend d-flex justify-content-between">
+                                <img src="../assets/icon/han.svg" alt="ava" class="friend-ava align-self-center ">
+                                <span class="col align-self-center">HAN</span>
+                                <img src="../assets/icon/3dot.svg" alt="dots" class="align-self-center threedot">
+                            </div>
+
+                            <div class="item-friend d-flex justify-content-between">
+                                <img src="../assets/icon/cat.svg" alt="ava" class="friend-ava align-self-center ">
+                                <span class="col align-self-center">FAT CAT</span>
+                                <img src="../assets/icon/3dot.svg" alt="dots" class="align-self-center threedot">
+                            </div>
+                            
+                            <div class="item-friend d-flex justify-content-between">
+                                <img src="../assets/icon/kfc.svg" alt="ava" class="friend-ava align-self-center ">
+                                <span class="col align-self-center">KFC FAN</span>
+                                <img src="../assets/icon/3dot.svg" alt="dots" class="align-self-center threedot">
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Bootstrap Java align-self-startScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <!-- slider forum -->
+    <script>
+        var items = $('#forum-container .item');
+        var visibleCount = 5;
+        var currentIndex = 0;
+        var itemCount = items.length;
+
+        // Hide all items except the first 'visibleCount' items
+        items.slice(visibleCount).hide();
+
+        function slideNext() {
+            var currentItem = $(items[currentIndex]);
+            var nextIndex = (currentIndex + 1) % itemCount;
+            var nextItem = $(items[nextIndex]);
+            currentItem.slideUp(500, function () {
+                $(this).appendTo('#forum-container').show();
+            });
+
+            nextItem.slideDown(500);
+
+            currentIndex = nextIndex;
+        }
+
+        // Set an interval to automatically slide
+        setInterval(slideNext, 3000)
+    </script>
+
+    <!-- chat simulate -->
+    <script>
+        function send_msg() {
+            let msg = $('input').val();
+            let src = []
+            $('.reply, .msg').each(function () {
+                let imgSrc = $(this).find('img').attr('src');
+                if (imgSrc) {
+                    src.push(imgSrc);
+                }
+            });
+            console.log(src);
+
+            if (msg !== null && msg !== "") {
+                let rep = `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam magni impedit tempora sapiente. Unde alias quos quisquam officiis perspiciatis vero animi numquam? Odit, eum ducimus! Nisi recusandae fuga qui officia!`;
+                let randnum = Math.floor(Math.random() + 150);
+                rep = rep.substring(0, 200 + randnum);
+
+                $('input').val("");
+
+                $('#chat-section').append(
+                    `<div class="msg d-flex flex-row-reverse">
+                <img class="col-md-1 ava align-self-start" src="${src[1]}">
+                <div class="reply-content align-self-center col-md-6 shadow-lg">${msg}</div>
+            </div>
+            <div class="reply d-flex">
+                <img class="col-md-1 ava align-self-start" src="${src[0]}">
+                <div class="reply-content align-self-center col-md-6 shadow-lg">${rep}</div>
+            </div>`
+                );
+
+                $('#chat-section').scrollTop($('#chat-section')[0].scrollHeight);
+                console.log(src);
+            }
+        }
+
+
+        $('#send').click(function () {
+            send_msg()
+        })
+        $(document).keypress(function (e) {
+            if (e.which == 13) {
+                send_msg()
+            }
+        });
+    </script>
+
+</body>
+
+</html>
