@@ -1,0 +1,15 @@
+@use "../abstracts/" as *;
+
+.translate {
+    @include size($width: pxToRem(70), $height: pxToRem(68));
+
+
+    position: fixed;
+    z-index: 10;
+    right: 0px;
+    top: 25%;
+    &:hover{
+        transform: scale(1.1);
+    }
+
+}

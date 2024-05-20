@@ -1,13 +1,14 @@
 <main class="main-container">
     <!-- start section forum -->
     <section class="forum">
-        <div class="forum-content">
+        <div class="animate__slideInUp animate__animated  forum-content">
             <img class="img1" src="../assets/img/pc-forum.png" alt="">
             <img class="img2" src="../assets/img/pic-forumcouple.png" alt="">
-            
+
             <div class="forum-content-main">
                 <p class="contentA">Have Conversations With People In <br>Our Forum</p>
-                <p class="contentB">We will be delighted if you’re <br> willing to share what you’ve been <br>through</p>
+                <p class="contentB">We will be delighted if you’re <br> willing to share what you’ve been <br>through
+                </p>
                 <button class="contentC">
                     <p>FORUM</p>
                 </button>
@@ -17,16 +18,17 @@
     <!-- end for section forum -->
 
     <!-- start section music -->
-    <section class="music">
+    <section id="section" class="music">
         <div class="music-content">
             <div class="music-content-main">
                 <p class="contentA">Music And <br>Customized <br>Playlists</p>
-                <p class="contentB">Music is crucial to deal with <br>stress. So we customize a play <br>list for you !!</p>
-                
+                <p class="contentB">Music is crucial to deal with <br>stress. So we customize a play <br>list for you !!
+                </p>
+
                 <include src="./components/button.html" locals='{
                     "list":[{"contentA":"SONG","contentB":"PLAYLIST"}]
                 }'>
-                    
+
                 </include>
             </div>
             <div class="music-img">
@@ -39,6 +41,78 @@
     <!-- end of section music -->
 
     <!-- start section chat AI -->
-    
+    <section id="section" class="chatai">
+        <div class="chatai-content">
+            <div class="img-content">
+                <img src="../assets/img/pic-chatai.png" alt="chat ai img">
+            </div>
+
+            <div class="chatai-content-main">
+                <p class="contentA">CHAT WITH OUR <br> AI - POWERED <br>THERAPIST</p>
+                <p class="contentB">Our website connect to <br>therapists all over the world but <br> you can use
+                    TheraAI to chat too</p>
+
+                <include src="./components/button.html" locals='{
+                        "list":[{"contentA":"THERA-AI","contentB":"THERAPIST"}]
+                    }'>
+
+                </include>
+            </div>
+        </div>
+    </section>
     <!-- end of section chat AI -->
+    
+     <!-- start section game -->
+
+     <section id="section" class="main-container__section-game">
+        <div class="section-game__text">
+            <h3 class="section-game__text--title">PLAY VIDEO GAMES FOR FUN</h3>
+            <p class="section-game__text--description">We have variety of games to play if you’re bored. You can also
+                interact with other users as well</p>
+
+        </div>
+  
+    <div class="section-game__img">
+        <img class="section-game__img--game1" src="../assets/img/game1.png" alt="game1">
+        <img class="section-game__img--game2" src="../assets/img/game2.png" alt="game2">
+        <img class="section-game__img--game3" src="../assets/img/game3.png" alt="game3">
+        <img class="section-game__img--game4" src="../assets/img/game4.png" alt="game4">
+    </div>
+    <div class="section-game__btn">
+        <include src="./components/button_tagA.html" locals='{
+            "list": [
+              {"name_class_btn" : "section-game__btn--btn1", "name_class_a" : "section-game__btn--btn1--link", "link" : "#" , "content": "GAME 1" },
+              {"name_class_btn" : "section-game__btn--btn2", "name_class_a" : "section-game__btn--btn2--link", "link" : "#" , "content": "GAME 2" },
+              {"name_class_btn" : "section-game__btn--btn3", "name_class_a" : "section-game__btn--btn3--link", "link" : "#" , "content": "GAME 3" },
+              {"name_class_btn" : "section-game__btn--btn4", "name_class_a" : "section-game__btn--btn4--link", "link" : "#" , "content": "GAME 4" }
+            ]
+           }'>
+
+        </include>
+    </div>
+
+
+    <!-- end section game -->
+  </section>
+
+    <!-- start section podcast -->
+    <section id="section" class="podcast">
+        <div class="podcast-content">
+            <div class="podcast-content-main">
+                <p class="contentA">PODCASTS FOR MOTIVATION</p>
+                <p class="contentB">Our soul need to be nutured and care from the in side. Podcast is the best way to
+                    dealing with depression !!</p>
+
+                <button class="contentC">
+                    <p>FORUM</p>
+                </button>
+            </div>
+
+            <div class="img-content">
+                <img src="../assets/img/pic-podcast.png" alt="podcast image">
+            </div>
+        </div>
+    </section>
+    <!-- end of section podcast -->
+
 </main>
