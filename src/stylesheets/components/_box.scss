@@ -1,0 +1,30 @@
+@use "../abstracts/" as *;
+
+.swiper-slide {
+    background-color: cyan;
+    margin: auto;
+    @include boder($boder-radius: pxToRem(27), $boder: 2px solid black);
+    @include size($width: 30%);
+    @include flex($display: flex, $direction: column, $align: center, $gap: pxToRem(40));
+
+    .box-game--img {
+        margin: 0 auto;
+        img {
+            margin-left: 80px;
+            @include size($width: 60%, $height: pxToRem(200));
+        }
+    }
+
+    .box-game--button {
+        button {
+            @include size($width: pxToRem(216), $height: pxToRem(65));
+            @include boder($boder-radius: pxToRem(27), $boder: 3px solid black);
+            @include font($font-family: $primary-font, $font_size: pxToRem(24));
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        margin-top: 50px;
+        margin-left: 100px;
+    }
+}
