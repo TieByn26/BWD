@@ -16,6 +16,11 @@ body {
     max-width: 1800px;
     margin: 0 auto;
     min-width: 320px;
+
+    @include tablet{
+        max-width: $tablet;
+        min-width: $medium;
+    }
 }
 ::-webkit-scrollbar{
     width: 2px;
