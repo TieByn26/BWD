@@ -1,0 +1,228 @@
+
+body {
+    background: rgb(12, 106, 136);
+    background: linear-gradient(84deg, rgba(12, 106, 136, 1) 0%, rgba(138, 255, 206, 1) 48%, rgba(12, 106, 136, 1) 100%, rgba(12, 106, 136, 1) 100%);
+    background-size: cover;
+    // height: 100vh;
+
+    header {
+        padding-top: 5vh;
+        padding-bottom: 3vh;
+
+        //nav bar
+        #nav-container {
+            background-color: #d0bfbf90;
+            padding-right: 20px;
+            border-radius: 15px;
+            height: 100%;
+
+            .d-flex {
+                gap: 5%;
+            }
+
+            .nav-item {
+                background-color: #ffffff93;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                border-radius: 12px;
+
+                .nav-link {
+                    margin: 7px;
+                    font-size: 20px;
+                    color: #41A083;
+                }
+            }
+
+        }
+
+        #USERNAME {
+
+            background-color: #ffffff93;
+            border-bottom-left-radius: 30px;
+            border-top-left-radius: 30px;
+
+            p {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                font-size: 20px;
+                color: #41A083;
+                @include font ($font-family: $primary-font, $font-weight: bold);
+            }
+
+            img {
+                width: 65px;
+                // position: absolute ;
+                margin-top: -25px;
+
+            }
+        }
+    }
+
+}
+
+.section {
+    height: 82vh;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+//forum container
+#forum-container {
+    padding-top: 0;
+
+    .item {
+        background-image: url(../assets/icon/itemForum.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin-top: 25px;
+        margin-left: 10px;
+        // background-color: #cccccc;
+        // height: 95px;
+
+        width: 100%;
+
+
+        a {
+            display: block;
+            height: 95px;
+            width: 100%;
+            padding-top: 35.5px;
+            color: black;
+            font-size: 25px;
+            text-align: center;
+            text-decoration: none;
+        }
+    }
+
+    .item:hover {
+        transform: scale(1.05);
+    }
+}
+
+//chat containner scss
+#chat {
+    // margin: 0px 25px;
+    padding: 0px 20px;
+    background-color: rgba(247, 247, 247, 0.363);
+    border-radius: 35px;
+
+    .section #chat-section {
+        height: 90%;
+        border-radius: 35px;
+    }
+
+}
+
+//input for chat scss
+#typing {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 5px;
+
+
+    button {
+        background: transparent;
+        border: transparent;
+    }
+
+    input {
+
+        background: transparent;
+        padding-left: 10px;
+        border: none;
+        outline: none;
+    }
+}
+
+// chat history 
+.reply,
+.msg {
+    margin: pxToRem(10);
+}
+
+.reply-content {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: pxToRem(5);
+    border-radius: 15px;
+}
+
+#friends {
+    border-top-left-radius: 35px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom-left-radius: 35px;
+
+    .friends-container {
+        border-bottom-left-radius: 32px;
+        padding: 15px;
+        padding-left: 15px;
+        border-top-left-radius: 32px;
+        margin-left: 5%;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        height: 44%;
+        background-color: rgba(255, 255, 255, 0.65);
+    }
+
+    .item-friend {
+        // height: 20%;
+
+        span {
+            font-size: 32px;
+            color: #41A083;
+            margin-left: 10px;
+            // padding-top: 7%;
+            // height: 100%;
+        }
+
+        .threedot,
+        .friend-ava {
+            height: 7vh;
+        }
+
+        .threedot {
+            padding-bottom: 3%;
+        }
+    }
+}
+
+#main {
+    .d-flex {
+        gap: 40px;
+    }
+}
+
+.mainItem {
+    margin-top: 2vh;
+}
+
+@media only screen and (max-width: 768px) {
+    #USERNAME {
+        display: none;
+    }
+    #session1{
+        height: 290px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    #USERNAME {
+        img {
+            display: none;
+        }
+    }
+    #nav-container{
+        .d-flex {
+            gap: 3%;
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 1200px) and (min-width:992px) {
+    
+    .friend-ava{
+        display: none;
+    }
+    
+    
+}
