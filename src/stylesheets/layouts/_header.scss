@@ -30,15 +30,17 @@ header {
 
             li {
                 padding: 20px;
-
                 a {
                     text-decoration: none;
                     font-size: 1.5rem;
-                }
+                    text-shadow: 1px 2px 9px rgb(75, 75, 75);
+                    
+                   }
             }
 
             .header__top__Nav__listItem--item1--link {
                 color: #FFCB11;
+             
             }
 
             .header__top__Nav__listItem--item2--link {
@@ -62,57 +64,32 @@ header {
     }
 
     .header__bottom {
+        position: relative;
 
-
-        .header__bottom--circle {
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            margin: 0 auto;
-            margin-top: 40px;
-        }
-
-        .header__bottom--circle--imgPink {
-            grid-column: 1/2;
-            width: 70%;
-            height: 70%;
-            margin: 80px 0 0 160px;
-        }
-
-        .header__bottom--circle--imgBlue {
-            grid-column: 2/3;
-            width: 110%;
-            height: 110%;
-            margin: -60px 0 0 -100px;
-            opacity: 0.8;
-        }
-
-        .header__bottom--circle--imgyellow {
-            grid-column: 3/4;
-            width: 115%;
-            height: 110%;
-            margin: -20px 0 0 -225px;
-            z-index: 1;
+        .header__bottom--circleImg {
+            margin:-20px 0 0 100px;
         }
 
         .header__bottom__content {
             width: 90%;
-            height: 70%;
+            height: 200px;
             position: absolute;
-            top: 270px;
+            top: 170px;
             z-index: 2;
 
             .header__bottom__content--title {
+                position: absolute;
+                top: -80px;
                 width: 500px;
-                margin: 35px 0 0 220px;
+                margin: 30px 0 0 160px;
                 color: #FFFFFF;
-                text-shadow: 0px 5px 7px rgb(146, 143, 143, 0.6);
+                text-shadow: 0px 5px 9px rgb(146, 143, 143, 0.6);
                 @include font($font-family: $primary-font , $font_size: pxToRem(64));
             }
 
             .header__bottom__content--description {
                 width: 355px;
-                margin: 30px 0 0 220px;
+                margin: 200px 0 0 160px;
                 line-height: 20px;
                 color: #FFFFFF;
 
@@ -122,7 +99,7 @@ header {
 
             .header__bottom__content--btn {
                 position: relative;
-                top: 120px;
+                top: 90px;
                 left: 220px;
                 width: 455px;
 
@@ -131,6 +108,7 @@ header {
                     @include size ($width: 214px, $height: 65px);
                     border-radius: 50px;
                     border: transparent;
+                    box-shadow: 0 7px 9px gray ;
                 }
 
                 
@@ -143,6 +121,7 @@ header {
                 .header__bottom__content--btn--left {
 
                     background-color: #C11D62;
+                    margin-left: -50px;
 
                     .header__btn--left {
                         color: white;
@@ -162,16 +141,62 @@ header {
             }
 
             .header__bottom__content--img {
-                position: relative;
-                top: -350px;
-                left: 680px;
+                position: absolute;
+                top: 20px;
+                left: 720px;
+                width: 589px;
+                height:500px ;
             }
         }
-
-
     }
 }
 
-// body {
-//     background-color: black;
-// }
+.star {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(250, 245, 245);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    opacity: 0;
+    pointer-events: none;
+    animation: explode 1s ease-out forwards;
+  }
+  
+  @keyframes explode {
+    from {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.5) translate(var(--x), var(--y));
+        opacity: 0;
+    }
+  }
+  
+  .smoke {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background: radial-gradient(circle, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 70%);
+    opacity: 0.5;
+    animation: fadeOut 2s forwards, moveRandom 2s forwards;
+    pointer-events: none;
+}
+@keyframes fadeOut {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+@keyframes moveRandom {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(var(--randomX), var(--randomY));
+    }
+}

@@ -1,0 +1,61 @@
+@use "../abstracts/" as *;
+
+.footer {
+    @include color($background: white);
+    padding: pxToRem(70) 0;
+
+    .footer__container {
+        margin: auto;
+        @include flex($display: flex, $direction: column, $gap: pxToRem(50));
+
+        .footer__container__top {
+            @include flex($display: flex, $direction: column, $gap: pxToRem(30));
+
+            .footer__container__top--description {
+                p {
+                    text-align: center;
+                    @include font($font_size: pxToRem(30), $font-weight: 600);
+                }
+            }
+
+            .footer__container__top--icon {
+                margin: auto;
+                @include size($width: 30%);
+
+                ul {
+                    @include flex($display: flex, $gap: pxToRem(40));
+
+                    li:hover {
+                        transform: scale(1.1);
+                    }
+                }
+
+            }
+        }
+
+        .footer__container__bottom {
+            @include flex($display: flex, $justify: space-between);
+            @include size($width: 80%);
+            margin: auto;
+
+            .footer__container__bottom--left {
+                @include font($font_size: pxToRem(16), $font-weight: 500);
+                @include flex($display: flex, $direction: column, $gap: pxToRem(10));
+            }
+
+            .footer__container__bottom--right {
+                @include flex($display: flex, $direction: column, $gap: pxToRem(10));
+
+                a {
+                    @include font($font_size: pxToRem(16), $font-weight: 500);
+                    @include color($color: black);
+                    text-decoration: none;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}

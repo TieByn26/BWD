@@ -1,0 +1,39 @@
+@use "../abstracts/" as *;
+
+.podcast{
+    width: 100%;
+    margin: auto;
+    margin-top: 100px;
+    padding-bottom: 300px;
+    .podcast-content{
+        margin: auto;
+        @include size($width: 1203px, $height: 520px);
+        @include flex($display: flex, $align: center, $justify: space-between, $gap: 40px);
+
+        .podcast-content-main{
+            margin-left: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            .contentA{
+                @include font($font_size: 38px);
+                text-shadow: 1px 9px 10px #969595;
+            }
+            .contentB{
+                @include size($width:358px,$height:116px);
+                @include font($font-family:$secondary-font, $font-style:italic ,$font_size: 24px);
+            }
+            .contentC{
+                @include size($width:214px, $height:65px);
+                @include boder($boder-radius:30px,$boder:none);
+                @include color($color:$text-color-yellow,$background:$button-color-black);
+                @include font($font-family:$primary-font,$font_size:24px);
+                box-shadow: 1px 9px 10px #5f5e5e;
+
+                &:hover{
+                    scale: 1.1;
+                }
+            }
+        }
+    }
+}
