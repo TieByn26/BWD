@@ -4,28 +4,58 @@
     width: 100%;
     margin: auto;
     margin-top: 100px;
+    @include tablet{
+        margin-top: -200px; 
+    }
+
     .forum-content{
         @include size($width: 1169px,$height: 421px);
         @include flex($display:flex,$align:center,$justify:space-between,$gap:40px);
         margin: auto;
+        
+        @include tablet{
+            @include size($width: 100%, $height: 421px);
+        }
+
         .img1{
             @include size($width: 349px, $height:421px);
+
+            @include tablet{
+                @include size($width: 250px, $height: 300px);
+                margin-left: -200px;
+            }
         }
         .img2{
             @include size($width: 285px, $height:352);
             margin-left: -90px;
             margin-top: 50px;
+
+            @include tablet{
+                @include size($width: 250px, $height: 250px);
+                margin-left: -90px;
+                margin-top: 20px;
+            }
         }
         .forum-content-main{
             margin-left: 40px;
             @include flex($display:flex,$direction:column,$justify:space-between,$gap:30px);
+            
+            @include tablet{
+                margin-left: auto;
+                margin-right: 5px;
 
+            }
             .contentA{
                 @include font($font_size:38px);
                 text-shadow: 1px 9px 10px #969595;
+
+                @include tablet{@include font($font_size:22px);}
             }
             .contentB{
                 @include font($font-family:$secondary-font,$font_size:24px,$font-style:italic);
+                @include tablet{
+                    @include font($font-family:$secondary-font,$font_size:16px,$font-style:italic)
+                }
             }
             .contentC{
                 @include size($width:214px, $height:65px);
@@ -36,6 +66,16 @@
 
                 &:hover{
                     scale: 1.1;
+                }
+
+                @include tablet{
+                    @include size($width:214px, $height:35px);
+                    font-size: 16px;
+                    p{
+                        height: 30px;
+                        width: 100%;
+                        margin-top: -9px;
+                    }
                 }
             }
         }
