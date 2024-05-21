@@ -4,20 +4,47 @@
     width: 100%;
     margin: auto;
     margin-top: 100px;
+
+    @include tablet{
+        margin-top: -150px;
+    }
     .chatai-content{
         margin: auto;
         @include size($width: 1125px, $height: 505px);
         @include flex($display:flex, $justify:space-between, $align: center,$gap:40px);
+
+        @include tablet{
+            width: 100%;
+        }
+
+        .img-content img{
+            @include tablet{
+                @include size($width: 80%, $height: auto);
+                margin-left: 60px;
+            }
+        }
+
         .chatai-content-main{
             display: flex;
             flex-direction: column;
             gap: 50px;
+
+            @include tablet{
+                margin-right: 30px;
+            }
+
             .contentA{
                 @include font($font_size: 38px);
                 text-shadow: 1px 9px 10px #969595;
+                @include tablet{
+                    font-size: 30px;
+                }
             }
             .contentB{
                 @include font($font-family:$secondary-font, $font-style:italic ,$font_size: 24px);
+                @include tablet{
+                    font-size: 18px;
+                }
             }
             .btn{
                 .btnA{

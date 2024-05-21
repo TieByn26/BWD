@@ -21,8 +21,7 @@
             @include size($width: 349px, $height:421px);
 
             @include tablet{
-                @include size($width: 250px, $height: 300px);
-                margin-left: -200px;
+                @include size($width: 28%, $height: auto);
             }
         }
         .img2{
@@ -31,7 +30,7 @@
             margin-top: 50px;
 
             @include tablet{
-                @include size($width: 250px, $height: 250px);
+                @include size($width: 22%, $height: auto);
                 margin-left: -90px;
                 margin-top: 20px;
             }
