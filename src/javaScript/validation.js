@@ -2,20 +2,32 @@ function Validator(options) {
   var form = document.querySelector(options.form);
 
   if (form) {
-    options.rule.forEach(element => {
-        var input = document.querySelector(element.selector);
-        input.onblur = () => {
-            if (element.test(input.value)) {
-                var span = document.querySelector(`${element.selector} ~ span`);
-                span.innerText = "vui long nhap truong nay!";
-                span.style.visibility = 'visible';
-              }
-              else {
-                var span = document.querySelector(`${element.selector} ~ span`);
-                span.innerText = "thong tin khong dung";
-                span.style.visibility = 'hidden';
-              }
+    options.rule.forEach((element) => {
+      var input = document.querySelector(element.selector);
+      input.onblur = () => {
+        if (element.test(input.value)) {
+          if (options.form == ".main-signup__container--text") {
+            input.classList.add("wrongInput_signUp");
+          } else {
+            input.classList.add("wrongInput_signIn");
+          }
+
+          var span = document.querySelector(`${element.selector} ~ span`);
+          span.innerText = "vui long nhap truong nay!";
+          span.style.visibility = "visible";
+        } else {
+          
+          if (options.form == ".main-signup__container--text") {
+            input.classList.remove("wrongInput_signUp");
+          } else {
+            input.classList.remove("wrongInput_signIn");
+          }
+
+          var span = document.querySelector(`${element.selector} ~ span`);
+          span.innerText = "thong tin khong dung";
+          span.style.visibility = "hidden";
         }
+      };
     });
   }
 }
@@ -36,16 +48,15 @@ Validator({
   rule: [
     Validator.isRequire(".inputUser_signIn"),
     Validator.isRequire(".inputPass_signIn"),
-  ]
+  ],
 });
 
 Validator({
-    form: ".main-signup__container--text",
-    rule: [
-      Validator.isRequire(".user_signUp"),
-      Validator.isRequire(".password_signUp"),
-      Validator.isRequire(".re_type_password_signUp"),
-      Validator.isRequire(".email_signUp")
-    ]
-  });
-  
+  form: ".main-signup__container--text",
+  rule: [
+    Validator.isRequire(".user_signUp"),
+    Validator.isRequire(".password_signUp"),
+    Validator.isRequire(".re_type_password_signUp"),
+    Validator.isRequire(".email_signUp"),
+  ],
+});

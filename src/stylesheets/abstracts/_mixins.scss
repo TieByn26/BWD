@@ -127,6 +127,12 @@
 
 //mixin_responsive
 
+@mixin mobile {
+    @media screen and (max-width: $small) {
+        @content;
+    }
+}
+
 @mixin tablet {
     @media (min-width:$small) and (max-width: $tablet) {
         @content;

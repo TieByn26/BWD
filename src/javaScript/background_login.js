@@ -1,101 +1,105 @@
-particlesJS('particles-js', {
-    particles: {
-        number: {
-            value: 80,
-            density: {
-                enable: true,
-                value_area: 800
+particlesJS("particles-js", {
+    "particles": {
+        "number": {
+            "value": 200,
+            "density": {
+                "enable": true,
+                "value_area": 800
             }
         },
-        color: {
-            value: "#000000" /* Màu đen cho particles */
+        "color": {
+            "value": ["#FFCCBC", "#EF9A9A", "#81D4FA", "#90CAF9"]
         },
-        shape: {
-            type: "circle",
-            stroke: {
-                width: 0,
-                color: "#000000"
+        "shape": {
+            "type": "circle",
+            "stroke": {
+                "width": 0,
+                "color": "#000000"
+            },
+            "polygon": {
+                "nb_sides": 5
             }
         },
-        opacity: {
-            value: 0.6,
-            random: true,
-            anim: {
-                enable: false,
-                speed: 1,
-                opacity_min: 0.1,
-                sync: false
+        "opacity": {
+            "value": 1,
+            "random": true,
+            "anim": {
+                "enable": true,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
             }
         },
-        size: {
-            value: 5,
-            random: true,
-            anim: {
-                enable: false,
-                speed: 40,
-                size_min: 0.1,
-                sync: false
+        "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+                "enable": true,
+                "speed": 20,
+                "size_min": 0.1,
+                "sync": false
             }
         },
-        line_linked: {
-            enable: false
+        "line_linked": {
+            "enable": true,
+            "distance": 100,
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1
         },
-        move: {
-            enable: true,
-            speed: 1,
-            direction: "none",
-            random: false,
-            straight: false,
-            out_mode: "out",
-            bounce: false,
-            attract: {
-                enable: false,
-                rotateX: 600,
-                rotateY: 1200
-            }
-        }
-    },
-    interactivity: {
-        detect_on: "canvas",
-        events: {
-            onhover: {
-                enable: true,
-                mode: "bubble"
-            },
-            onclick: {
-                enable: true,
-                mode: "repulse"
-            },
-            resize: true
-        },
-        modes: {
-            grab: {
-                distance: 400,
-                line_linked: {
-                    opacity: 1
-                }
-            },
-            bubble: {
-                distance: 150, /* Khoảng cách hiệu ứng gần hơn */
-                size: 2,  /* Kích thước tăng lên */
-                duration: 0.5,  /* Thời gian hiệu ứng ngắn hơn */
-                opacity: 1,  /* Độ mờ tăng lên */
-                color: {
-                    value: ["#00ff00", "#ff00ff", "#0000ff", "#ff0000", "#ffff00"] /* Chuyển sang màu xanh, hồng, xanh dương, đỏ, và vàng */
-                }
-            },
-            repulse: {
-                distance: 200,
-                duration: 0.4
-            },
-            push: {
-                particles_nb: 4
-            },
-            remove: {
-                particles_nb: 2
+        "move": {
+            "enable": true,
+            "speed": 1,
+            "direction": "none",
+            "random": true,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
             }
         }
     },
-    retina_detect: true
-  });
-  
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": {
+                "enable": true,
+                "mode": "repulse"
+            },
+            "onclick": {
+                "enable": true,
+                "mode": "push"
+            },
+            "resize": true
+        },
+        "modes": {
+            "grab": {
+                "distance": 400,
+                "line_linked": {
+                    "opacity": 1
+                }
+            },
+            "bubble": {
+                "distance": 1400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+            },
+            "repulse": {
+                "distance": 200,
+                "duration": 0.4
+            },
+            "push": {
+                "particles_nb": 4
+            },
+            "remove": {
+                "particles_nb": 2
+            }
+        }
+    },
+    "retina_detect": true
+});
