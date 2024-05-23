@@ -1,3 +1,4 @@
+@use "../abstracts/" as *;
 
 body {
     background: rgb(12, 106, 136);
@@ -46,7 +47,7 @@ body {
                 margin-bottom: 10px;
                 font-size: 20px;
                 color: #41A083;
-                @include font ($font-family: $primary-font, $font-weight: bold);
+                @include font($font-family: $primary-font, $font-weight: bold);
             }
 
             img {
