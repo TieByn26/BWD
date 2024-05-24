@@ -1,13 +1,17 @@
 @use "../abstracts/" as *;
 
 .header-container{
-    padding: 0 pxToRem(100);
+    background-color: rgba(0,0,0,0.7);
+    padding: pxToRem(20);
     @include flex($display: flex, $align: center, $justify: space-between);
-    .header-container__logo{
-        .header-container__logo--main{
-            img{
-                @include size($width: pxToRem(130), $height: pxToRem(100));
-            }
+    .header-container__logo--left{
+        .header-container__logo--left--main{
+            
+        }
+    }
+    .header-container__logo--right{
+        .header-container__logo--right--main{
+
         }
     }
     .header-container__navigation{
