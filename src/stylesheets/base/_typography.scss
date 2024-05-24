@@ -9,6 +9,17 @@
     src: url(../assets/font/Inter-Regular.ttf) format("truetype");
 }
 
+@font-face {
+    font-family: Livvic;
+    src: url(../assets/font/Livvic-Thin.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: Margarine;
+    src: url(../assets/font/Margarine-Regular.ttf) format("truetype");
+}
+
+
 body {
     font-family: $primary-font;
     font-weight: 400;
