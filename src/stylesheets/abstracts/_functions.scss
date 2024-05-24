@@ -1,6 +1,20 @@
 @use "sass:math";
-
+@use "./_variables.scss" as *;
 // px-to-rem
 @function pxToRem($px, $rem: 16) {
   @return math.div($px, $rem) * 1rem;
+}
+//px to vw of desktop
+@function px-to-vw-desktop($px) {
+  @return calc(#{$px} / #{$viewport-width-desktop} * 100vw);
+}
+
+//px to vw of tablet
+@function px-to-vw-tablet($px) {
+  @return calc(#{$px} / #{$viewport-width-tablet} * 100vw);
+}
+
+//px to vw of mobile
+@function px-to-vw-mobile($px) {
+  @return calc(#{$px} / #{$viewport-width-mobile} * 100vw);
 }
