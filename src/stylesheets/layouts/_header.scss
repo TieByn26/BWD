@@ -1,0 +1,18 @@
+@use "../abstracts/" as *;
+
+.header-container{
+    padding: 0 pxToRem(100);
+    @include flex($display: flex, $align: center, $justify: space-between);
+    .header-container__logo{
+        .header-container__logo--main{
+            img{
+                @include size($width: pxToRem(130), $height: pxToRem(100));
+            }
+        }
+    }
+    .header-container__navigation{
+        ul{
+            @include flex($display: flex, $align: center, $justify: space-between, $gap: pxToRem(60));
+        }
+    }
+}

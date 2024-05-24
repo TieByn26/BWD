@@ -8,6 +8,10 @@
     font-family: interRegular;
     src: url(../assets/font/Inter-Regular.ttf) format("truetype");
 }
+@font-face {
+    font-family: margarineRegular;
+    src: url(../assets/font/Margarine-Regular.ttf) format("truetype");
+}
 
 body {
     font-family: $primary-font;
