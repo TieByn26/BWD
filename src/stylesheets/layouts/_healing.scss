@@ -77,26 +77,6 @@
         color: #fff;
       }
     }
-    &--footer {
-      .footer-content {
-        @include flex($display: flex, $gap: pxToRem(60), $align: center);
-        position: absolute;
-        top: pxToRem(650);
-        left: 0;
-        z-index: 12;
-        &--text {
-          color: #fff;
-          margin-left: pxToRem(80);
-          @include font(
-            $font-family: Margarine,
-            $font_size: pxToRem(24),
-            $font-weight: 400
-          );
-          
-
-        }
-      }
-    }
   }
   .background-healing {
     background-image: url("../assets/img/backgroung-healing.png");
