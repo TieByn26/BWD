@@ -18,6 +18,9 @@
         @include flex($display: flex);
         margin: auto;
         margin-left: 25%;
+        @include tablet{
+            padding-top: 180px;
+        }
 
         .music-container__content--center {
             @include flex($display: flex, $direction: column, $align: center, $gap: pxToRem(10));
@@ -31,6 +34,15 @@
             .content--center-img {
                 @include size($width: pxToRem(650), $height: pxToRem(348));
                 animation: zoomImg 10s infinite;
+            }
+            @include tablet{
+                margin-left: -100px;
+                .content--center-head{
+                    font-size: 80px;
+                }
+                .content--center-img{
+                    @include size($width: pxToRem(500), $height: pxToRem(308));
+                }
             }
         }
 
@@ -48,6 +60,18 @@
 
             .music-container__content--right-a {
                 @include flex($display: flex, $align: center, $gap: pxToRem(30));
+            }
+            @include tablet{
+                padding-top: 80px;
+                margin-left: -100px;
+                .music-container__content--right-p {
+                 font-size: 14px;
+                }
+                .music-container__content--right-a {
+                    a{
+                        font-size: 14px;
+                    }
+                }
             }
         }
     }

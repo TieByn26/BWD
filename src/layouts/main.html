@@ -44,10 +44,10 @@
           <div class="forum-container">
             <div class="forum-container-text">
               <div class="text1">
-                <span>We will be delighted if you’re willing to share</span>
+                <p>We will be delighted if you’re willing to share</p>
               </div>
               <div class="text2">
-                what you’ve been through
+                <p>what you’ve been through</p>
               </div>
               <div class="forum-button">
                 <include src="./components/taga.html" locals='{
@@ -56,7 +56,7 @@
               </div>
             </div>
             <div class="forum-container-imgAndHeader">
-              <div class="forum-content">
+              <div class="forum-content"> 
                 <span>FORUM</span>
               </div>
               <div class="forum-image">
@@ -102,10 +102,14 @@
             <!-- start section-therapist__content--desc  -->
             <div class="section-therapist__content--desc">
               <p class="main-desc">
-                Our Community will give a hand for people who suffer from
-                self-harm, trauma and pain
+                Our Ai and online therapist will support you no matter what
               </p>
-              <p class="sub-desc">MORE</p>
+              <div class="sub-desc">
+                <include src="./components/taga.html" locals='{
+                  "list":[{"content":"THERA-AI"},{"content":"THERAPIST"}]
+              }'>
+                </include>
+              </div>
             </div>
             <!-- end section-therapist__content--desc  -->
 
@@ -124,7 +128,7 @@
             <!-- end section-therapist__content--img  -->
             <!-- start section-therapist__content--title  -->
             <div class="section-therapist__content--title">
-              <p class="sub-title">THE BEAUTY OF</p>
+              <p class="sub-title">AI-POWERED</p>
               <p class="main-title">THERAPIST</p>
             </div>
             <!-- end section-therapist__content--title  -->
@@ -169,6 +173,12 @@
                   <!-- end section-podcasts__content--title  -->
                 </div>
                 <!-- end section-podcasts__content  -->
+                <div class="button-joinnow">
+                  <include src="./components/taga.html" locals='{
+                    "list":[{"content":"Join Now"}]
+                }'>
+                  </include>
+                </div>
               </div>
             </div>
           </div>

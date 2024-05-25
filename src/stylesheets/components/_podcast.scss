@@ -24,6 +24,12 @@
         top: pxToRem(80);
         z-index: 2;
         animation: zoomBackground 10s infinite;
+        @include tablet{
+            margin-left: -100px;
+            img{
+                scale: 0.6;
+            }
+        }
       }
       &--title {
         position: absolute;
@@ -55,6 +61,14 @@
           );
         }
       }
+    
+    }
+    .button-joinnow{
+        z-index: 100;
+        margin-left: -120px;
+        @include tablet{
+            margin-left: -190px;
+        }
     }
   }
 }
