@@ -1,0 +1,25 @@
+<each loop="item in {{list}}">
+    <div class="{{item.ClassBox}} bottom__content ">
+     <div class="{{item.ClassBox}} bottom__content--left">
+        <figure class="top--img">
+            <img src="{{item.srcImg}}" alt="img comics">
+          </figure>
+     </div>
+     <div class="{{item.ClassBox}} bottom__content--right">
+        <div class="right-heading">
+            <p class="right-heading-text">{{item.contentRightHeading}}</p>
+        </div>
+        <div class="right-body">
+            <p class="right-body-text">{{item.contentRightBody}}</p>
+        </div>
+        <div class="right-footer">
+            <figure class="right-footer--btnLeft">
+                <img src="../assets/icon/btn-play-now.png" alt="btn left">
+            </figure>
+            <figure class="right-footer--btnRight">
+                <img src="../assets/icon/btn-details.png" alt="btn right">
+            </figure>
+        </div>
+     </div>
+    </div>
+  </each>
