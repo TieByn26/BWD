@@ -8,6 +8,10 @@
         color: white;
         position: relative;
         padding-bottom: 5px;
+        &:hover{
+            font-weight: 900;
+            color: cyan;
+        }
 
         &::after {
             content: '';
