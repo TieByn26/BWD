@@ -1,13 +1,17 @@
 var swiper = new Swiper(".mySwiper", {
-    direction: "vertical",
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
+  direction: "vertical",
+  grabCursor: true,
+  centeredSlides: true,
+  loop: true,
+  slidesPerView: 1,
+  effect: 'slide', // Chỉ hiển thị 1 slide tại một thời điểm  
+  autoplay: {
+      delay: 4000, 
+      disableOnInteraction: false, 
+  },
+  pagination: {
+      el: '.swiper-pagination',
       clickable: true,
-    },
-    loop: true, // Cho phép lặp lại slide
-    speed: 800 // Tốc độ chuyển đổi giữa các slide (800ms)
-  });
+  },
+  speed: 800 // Tốc độ chuyển đổi giữa các slide (800ms)
+});

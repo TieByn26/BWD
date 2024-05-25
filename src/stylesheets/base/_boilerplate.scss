@@ -13,3 +13,8 @@ html {
     margin: auto;
     padding: 0;
   }
+  html,
+  body,main {
+    position: relative;
+    height: 100%;
+  }
