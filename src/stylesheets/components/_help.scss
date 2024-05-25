@@ -72,17 +72,24 @@
   }
   @include tablet {
     .section-help__content {
+        overflow-x: scroll;
       &--top {
         .top-text {
           font-size: pxToRem(45);
         }
       }
+
       &--bottom {
         flex-direction: row;
         margin-top: pxToRem(50);
+        width: 100%;
         .bottom-content {
-          width: pxToRem(250);
-          transform: translateX(-167%);
+          width:30%;
+          height: auto;
+          padding-bottom: 30px;
+          position: unset;
+          transform: unset;
+          margin: 0 auto;
 
           &__body {
             margin-top: pxToRem(36);
@@ -92,7 +99,7 @@
 
             .body-desc {
               font-size: pxToRem(16);
-              width: pxToRem(200);
+              width: 90%;
             }
           }
         }
@@ -101,6 +108,7 @@
   }
   @include desktop {
     .section-help__content {
+        overflow-x: scroll;
         &--top {
         .top-text {
             font-size: pxToRem(60);
@@ -109,10 +117,19 @@
         &--bottom {
         flex-direction: row;
         margin-top: pxToRem(50);
+        width: 100%;
         .bottom-content {
-            width: pxToRem(300);
-            transform: translateX(-167%);
-
+            width: 33%;
+            margin: 0 auto;
+            position: unset;
+            transform: unset;
+  
+            &__heading {
+                img {
+                    width: 120px;
+                    height: 120px;
+                }
+            }
             &__body {
             margin-top: pxToRem(36);
             .body-title {
