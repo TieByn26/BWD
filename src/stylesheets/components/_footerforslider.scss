@@ -1,0 +1,39 @@
+@use "../abstracts/" as *;
+
+.footer-main-container{
+    position: absolute;
+    // top: 670px;
+    top: 90%;
+    z-index: 1000;
+    @include size($width: 100%, $height: false);
+    @include color($background: rgba(0,0,0,0));
+    @include flex ($display: flex, $align: center);
+    padding: 0 70px;
+    .footer-main-container__right{
+        @include font($font-family: $third-font, $font_size: 16px, $font-weight: 900); 
+        @include color($color: white);
+    }
+    .footer-main-container__center{
+        margin-left: 15%;
+        ul{
+            scale: 0.8;
+            @include flex ($display: flex, $align: center, $gap: 30px);
+            li{
+                &:hover{
+                    transform: scale(1.3);
+                }
+            }
+        }
+    }
+    .footer-main-container__left{
+        margin-left: auto;
+        scale: 0.8;
+        @include flex ($display: flex, $align: center, $gap: 10px);
+        #figure-icon--up{
+            cursor: pointer;
+        }
+        #figure-icon--down{
+            cursor: pointer;
+        }
+    }
+}

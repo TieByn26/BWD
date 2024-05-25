@@ -14,12 +14,23 @@
     }
     .header-container__logo--right{
         .header-container__logo--right--main{
-
+            img{
+                scale: 0.7;
+            }
         }
     }
     .header-container__navigation{
         ul{
             @include flex($display: flex, $align: center, $justify: space-between, $gap: pxToRem(60));
+            @include tablet{
+                gap: 45px;
+            }
         }
+    }
+    @include tablet{
+        padding: pxToRem(20) pxToRem(30);
+    }
+    @include mobile{
+
     }
 }
