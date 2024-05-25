@@ -2,6 +2,7 @@
 
 .section-comics {
   &__content {
+    margin-top: 700px;
     &--top {
       .top-title {
         color: #000;
@@ -98,6 +99,7 @@
     }
   }
   @include tablet {
+    margin-top: -700px;
     &__content {
         
       &--top {
@@ -150,6 +152,7 @@
   }
 
   @include desktop {
+    margin-top: -700px;
     &__content {
       &--top {
         .top-title {

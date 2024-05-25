@@ -1,9 +1,10 @@
 @use "../abstracts/" as *;
 
 .section-help {
-    position: relative;
-    z-index: 2;
     margin-bottom: 30px;
+    height: 800px;
+    // overflow-x: scroll;
+    // overflow-y: hidden;
   .section-help__content {
     &--top {
       margin-top: pxToRem(100);
@@ -23,6 +24,7 @@
       flex-direction: column;
       gap: pxToRem(32);
       margin-top: pxToRem(50);
+      height: 550px;
       .bottom-content {
         width: pxToRem(398);
         height: pxToRem(450);
@@ -75,7 +77,8 @@
   }
   @include tablet {
     .section-help__content {
-        overflow-x: scroll;
+        // overflow-x: scroll;
+        // overflow-y: hidden;
         height: 670px;
       &--top {
         .top-text {
@@ -112,7 +115,8 @@
   }
   @include desktop {
     .section-help__content {
-        overflow-x: scroll;
+        // overflow-x: scroll;
+        // overflow-y: hidden;
         &--top {
         .top-text {
             font-size: pxToRem(60);
