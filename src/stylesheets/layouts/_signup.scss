@@ -76,7 +76,6 @@
 .signUp-container {
   display: none;
   @include size($width: pxToRem(493));
-  transform: translateX(-43%);
   margin-top: 160px;
 
   .header-signup {
