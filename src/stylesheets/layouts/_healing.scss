@@ -2,6 +2,7 @@
 
 .healing {
   height: 100vh;
+
   background-image: url("./../assets/img/backgroundhealing.png");
   background-size: cover;
   background-position: center;
@@ -24,6 +25,13 @@
         @include font($font-family: $secondary-font, $font_size: pxToRem(24));
         @include size($width: false, $height: 90px);
       }
+      @include tablet{
+        margin-left: -50px;
+        .sub-title {
+          font-size: 18px;
+          height: 40px;
+        }
+      }
 
     }
 
@@ -33,6 +41,13 @@
       .figure-img-healing {
         img {
           @include size($width: pxToRem(550), $height: pxToRem(400));
+        }
+        @include tablet{
+          img{
+            @include size($width: pxToRem(410), $height: pxToRem(310));
+          }
+          margin-left: -250px;
+          padding-top: 100px;
         }
       }
     }
@@ -50,6 +65,14 @@
           a{
             margin-left: 120px;
           }
+        }
+      }
+      @include tablet{
+        margin-left: -300px;
+        margin-top: 130px;
+        .main-desc{
+          font-size: 14px;
+          height: 100px;
         }
       }
     }

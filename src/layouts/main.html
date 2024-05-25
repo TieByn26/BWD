@@ -60,8 +60,7 @@
                 <span>FORUM</span>
               </div>
               <div class="forum-image">
-                <img src="./../assets/img/pc-forum.png" alt="">
-                <img src="./../assets/img/pic-forumcouple.png" alt="">
+                <img src="../assets/img/forumsectionimage.png" alt="image">
               </div>
             </div>
           </div>
@@ -187,6 +186,30 @@
 
   <!-- start footer main -->
   <section class="footer-main-container">
-    
+    <div class="footer-main-container__right">
+      <p>24 May 2024</p>
+    </div>
+    <div class="footer-main-container__center">
+      <ul>
+        <include src="./components/iconList.html" locals='{
+          "list":[{"icon":"githubwhite.svg"},
+          {"icon":"mailwhite.svg"},
+          {"icon":"linkedinwhite.svg"}]
+        }'>
+          
+        </include>
+      </ul>
+    </div>
+    <div class="footer-main-container__left">
+      <figure id="figure-icon--up">
+        <img src="../assets/icon/arrow-up.svg" alt="icon">
+      </figure>
+      <figure class="figure-icon--line">
+        <img src="../assets/icon/line.svg" alt="icon">
+      </figure>
+      <figure id="figure-icon--down">
+        <img src="../assets/icon/arrow-down.svg" alt="icon">
+      </figure>
+    </div>
   </section>
 </main>

@@ -29,6 +29,9 @@
             .forum-button{
                 font-size: pxToRem(46);
             }
+            @include tablet{
+
+            }
         }
         
         .forum-container-imgAndHeader{
@@ -40,7 +43,7 @@
             }
             .forum-image{
                 img{
-                    @include size($width: pxToRem(270), $height: auto);
+                    @include size($width: pxToRem(470), $height: 350px);
                 }
                 animation: zoomImg 5.5s infinite;
             }

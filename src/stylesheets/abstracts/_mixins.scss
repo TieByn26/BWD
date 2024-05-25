@@ -131,3 +131,8 @@
     @content;
   }
 }
+@mixin mobile {
+  @media screen and (max-width: $small) {
+    @content;
+  }
+}
