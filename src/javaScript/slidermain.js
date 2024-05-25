@@ -13,5 +13,8 @@ var swiper = new Swiper(".mySwiper", {
       el: '.swiper-pagination',
       clickable: true,
   },
-  speed: 800 // Tốc độ chuyển đổi giữa các slide (800ms)
+  speed: 800, // Tốc độ chuyển đổi giữa các slide (800ms)
+  mousewheel: {
+    invert: false, // Nếu bạn muốn đảo ngược hướng cuộn, đặt thành true
+  },
 });

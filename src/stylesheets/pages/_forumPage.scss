@@ -1,0 +1,155 @@
+@use "../abstracts/" as *;
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #FFC700, #E05296);
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        @include font($font-family: $third-font, $font_size: pxToRem(18), $font-weight: 400, $font-style: false, $line-height: false); 
+        padding-top: pxToRem(30);
+
+        .nav{
+            display: flex;
+            @include size($width: 65%, $height: pxToRem(52));
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 30px;
+            background-color: rgba(59, 58, 58, 0.226);
+            margin-left: pxToRem(30);
+
+            .nav-list{
+                
+                ul{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+
+                    li {
+                        width: pxToRem(120);
+                        height: pxToRem(34);
+                        margin-left: pxToRem(30);
+                    
+                        div {
+                          @include size(100%, 100%);
+                          border-radius: 6px;
+                          background-color: #eae7e7;
+                          display: flex;
+                          justify-content: center;
+                          align-items: center;
+                    
+                          a {
+                            text-decoration: none;
+                          }
+                        }
+                    
+                    }
+                    
+                }
+            }
+
+
+            .user-Online{
+                display: flex;
+                padding-right: pxToRem(20);
+                .user-Online-status{
+                    @include size($width: pxToRem(10), $height: pxToRem(10));
+                    border-radius: 50%;
+                    background-color: green;
+                }
+                .user-Online-count{
+                    margin-left: pxToRem(5);
+                    color: white;
+                }
+            }
+            
+        }
+
+        .infoUser{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include size($width: 20%, $height: pxToRem(52));
+            border-radius: 30px 0 0 30px;
+            background-color: #eae7e7;
+
+            .infoUser-user-Name a{
+                text-decoration: none;
+                padding-left: pxToRem(30);
+                font-size: larger;
+            }
+
+            .infoUser-avatar-user{
+                margin:  pxToRem(-20) pxToRem(20) pxToRem(20) 0;
+                img{
+                    @include size($width: pxToRem(50), $height: pxToRem(50));
+                    border-radius: 50%;
+                }
+            }
+            
+               
+        }
+    }
+
+    main{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: pxToRem(10);
+        padding-top: pxToRem(80);
+        margin: 0 pxToRem(30);
+
+        .box{
+            @include size($width: 45%, $height: 80%);
+            background-color: #aba7a976;
+            border-radius: 30px;
+        }
+
+        .chatForum{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            .chatForum-boxChat{
+                padding-top: pxToRem(15);
+                @include size($width: 90%, $height: 90%);
+            }
+
+            .chatForum-input-Mess{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                input{
+                    @include size($width: 90%, $height: pxToRem(40));
+                    border-radius: 22px; 
+                    padding-left: 20px;
+                    font-size: 18px;
+                }
+           } 
+        }
+
+        .callAudio{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            .callAudio-users{
+                padding-top: pxToRem(15);
+                @include size($width: 90%, $height: 90%);
+            }
+
+            .callAudio-btn-mic{
+                display: flex;
+                img{
+                    @include size($width: pxToRem(60), $height: pxToRem(60));
+                    padding: 0 0 20px 20px;
+                }
+            }
+        }
+        
+    }
+}
