@@ -1,33 +1,46 @@
 <main class="main-container">
-
-    <div class="swiper mySwiper">
-        <!-- Start Swiper -->
-        <div class="swiper-wrapper"> 
-            <div class="swiper-slide">
-                <!-- Start section forum -->
-                <section class="forum">
-
-                </section>
-                <!-- End forum -->
+  <div class="swiper mySwiper">
+    <!-- Start Swiper -->
+    <div class="swiper-wrapper">
+      <!-- start slide 5 -->
+      <div class="swiper-slide">
+        <!-- start section-podcasts  -->
+        <section id="section-podcasts">
+          <!-- start background  -->
+          <div class="background-podcasts">
+            <div class="container">
+              <div class="podcasts-wrap">
+                <!-- start section-podcasts__content  -->
+                <div class="section-podcasts__content">
+                  <!-- start section-podcasts__content--img  -->
+                  <div class="section-podcasts__content--img">
+                    <include
+                      src="./components/boxImg.html"
+                      locals='{
+          "list" : [
+           {"classNameFigure": "img-podcasts", "classNameImg": "img-podcasts--img", "srcImg": "../assets/img/section-podcasts-img.png", "alts": "img podcasts"}
+          ]
+      }'
+                    >
+                    </include>
+                  </div>
+                  <!-- end section-podcasts__content--img  -->
+                  <!-- start section-podcasts__content--title  -->
+                  <div class="section-podcasts__content--title">
+                    <p class="sub-title">MOTIVATIONAL</p>
+                    <p class="main-title">PODCASTS</p>
+                  </div>
+                  <!-- end section-podcasts__content--title  -->
+                </div>
+                <!-- end section-podcasts__content  -->
+              </div>
             </div>
-            <!-- <div class="swiper-slide"> -->
-                <!-- Start section music -->
-                <!-- <section class="music">
-                    <div class="music-container">
-                        <div class="music-container__content--center">
-                            <p class="content--head">MUSICS</p>
-                            <img src="../assets/img/music.png" alt="img">
-                        </div>
-                        <div class="music-container__content--right">
-                            <p></p>
-                            <p></p>
-                        </div>
-                    </div>
-                </section> -->
-                <!-- End music -->
-            <!-- </div> -->
-        </div>
-        <!-- End Swiper -->
+          </div>
+          <!-- end background  -->
+        </section>
+        <!-- end section-podcasts  -->
+      </div>
+      <!-- end slide 5 -->
     </div>
-
+  </div>
 </main>

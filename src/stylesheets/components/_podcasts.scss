@@ -1,0 +1,55 @@
+@use "../abstracts/" as *;
+
+#section-podcasts {
+  position: relative;
+  .background-podcasts {
+    background-image: url("../assets/img/background-podcasts.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+  .podcasts-wrap {
+    @include flex($display: flex, $justify: center, $align: center);
+    @include size($width: 100%);
+    .section-podcasts__content {
+      &--img {
+        // height: pxToRem(700);
+        position: relative;
+        top: pxToRem(90);
+        z-index: 2;
+        transform: scale(0.9);
+      }
+      &--title {
+        position: absolute;
+        top: pxToRem(100);
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        .sub-title {
+          color: #fff;
+          text-align: center;
+          text-shadow: 25px 25px 50px #000;
+          position: absolute;
+          left: 34%;
+          @include font(
+            $font-family: Livvic,
+            $font_size: pxToRem(24),
+            $font-weight: 400
+          );
+        }
+
+        .main-title {
+          height: 238px;
+          color: #fff;
+         margin-top: pxToRem(70);
+          @include font(
+            $font-family: Margarine,
+            $font_size: pxToRem(100),
+            $font-weight: 400
+          );
+        }
+      }
+    }
+  }
+}
