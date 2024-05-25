@@ -1,112 +1,75 @@
 @use "../abstracts/" as *;
 
-#section-healing {
+.healing {
+  height: 100vh;
+  background-image: url("./../assets/img/backgroundhealing.png");
+  background-size: cover;
   .section-healing__content {
-    @include flex($display: flex, $align: center, $justify: center);
-    position: relative;
-    left: 47%;
-    transform: translateX(-50%);
-    z-index: 2;
-    width: 100vw;
-    height: 100vh;
-    &--title {
-      @include flex($display: flex, $direction: column, $gap: pxToRem(60));
-      position: relative;
-      left: pxToRem(160);
-      top: pxToRem(-90);
-      z-index: 3;
+    margin: auto;
+    padding-top: 200px;
+    padding-left: 100px;
+    @include size($width: 80%);
+    @include flex($display: flex, $align: c);
+
+    .section-healing__content--title {
+      margin-right: -100px;
+      @include color($color: white);
       .main-title {
-        @include font(
-          $font-family: Margarine,
-          $font_size: pxToRem(90),
-          $font-weight: 100,
-          $line-height: 120%
-        );
-        position: relative;
-        color: #ffffff;
+        @include font($font-family: $third-font, $font_size: pxToRem(100));
       }
+
       .sub-title {
-        @include font(
-          $font-family: Livvic,
-          $font_size: pxToRem(16),
-          $font-weight: 100,
-          $line-height: 120%
-        );
-        color: #ffffff;
-        position: relative;
-        //   left: pxToRem(450);
+        @include font($font-family: $secondary-font, $font_size: pxToRem(24));
+        @include size($width: false, $height: 90px);
       }
+
     }
 
-    &--img {
-      .img-healing {
-        @include size($width: pxToRem(690));
-        animation: zoomImg 10s ease-in-out infinite;
-        z-index: 2;
+    .section-healing__content--img {
+      @include size($width: pxToRem(550), $height: pxToRem(400));
+      .figure-img-healing {
+        
         img {
-          @include size($width: 100%, $height: 100%);
-          object-fit: cover;
+          @include size($width: pxToRem(550), $height: pxToRem(400));
         }
       }
     }
 
-    &--desc {
-      @include flex($display: flex, $direction: column, $gap: pxToRem(50));
-      position: relative;
-      left: pxToRem(-100);
-      top: pxToRem(50);
-      z-index: 3;
-      .main-desc {
-        @include size($width: pxToRem(253));
-        @include font(
-          $font-family: Livvic,
-          $font_size: pxToRem(24),
-          $font-weight: 400
-        );
-        color: #ffffff;
+    .section-healing__content--desc {
+      margin-left: -60px;
+      margin-top: 70px;
+      .main-desc{
+        @include size($width: pxToRem(200), $height: pxToRem(150));
+        @include color($color: white);
+        @include font($font-family: $secondary-font, $font_size: pxToRem(18), $line-height: 1.5);
       }
-
-      .sub-desc {
-        @include font(
-          $font-family: Margarine,
-          $font_size: pxToRem(28),
-          $font-weight: 400
-        );
-        position: relative;
-        left: pxToRem(150);
-        color: #fff;
+      .second-desc{
+        .taga-button{
+          a{
+            margin-left: 120px;
+          }
+        }
       }
     }
   }
-  .background-healing {
-    background-image: url("../assets/img/backgroung-healing.png");
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-position: 100% 100%;
-    animation: zoomBackground 10s infinite;
-  }
 }
 
-@keyframes zoomBackground {
-  0% {
-    background-position: 100% 100%;
-  }
+// @keyframes zoomBackground {
+//   0% {
+//     background-position: 100% 100%;
+//   }
 
-  100% {
-    background-position: 100% 90%;
-  }
-}
+//   100% {
+//     background-position: 100% 90%;
+//   }
+// }
 
-@keyframes zoomImg {
-  0% {
-    transform: scale(1);
-  }
+// @keyframes zoomImg {
+//   0% {
+//     transform: scale(1);
+//   }
 
-  100% {
-    transform: scale(1.1);
-  }
-}
+//   100% {
+//     transform: scale(1.1);
+//   }
+// }

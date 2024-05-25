@@ -1,127 +1,103 @@
 <main class="main-container">
   <div class="swiper mySwiper">
-    <!-- Start Swiper -->
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <!-- Start section forum -->
-        <section class="forum"></section>
-        <!-- End forum -->
-      </div>
-      <!-- start slide 1 -->
-      <div class="swiper-slide">
         <!-- start section-healing  -->
-        <section id="section-healing">
+        <section class="healing">
           <!-- start section-healing__content  -->
           <div class="section-healing__content">
-            <!-- start section-healing__content--title  -->
             <div class="section-healing__content--title">
               <p class="sub-title">THE BEAUTY OF</p>
               <p class="main-title">HEALING</p>
-    <div class="swiper mySwiper">
-        <!-- Start Swiper -->
-        <div class="swiper-wrapper"> 
-            <div class="swiper-slide">
-                <!-- Start section forum -->
-                <section class="forum">
-                    <div class="forum-container">
-                        <div class="forum-container-text">
-                            <div class="text1"> 
-                                <span>We will be delighted if you’re willing to share</span>
-                            </div>
-                            <div class="text2">
-                                what you’ve been through
-                            </div>
-                            <div class="forum-button">
-                                <include src="./components/taga.html" locals='{
-                                    "list":[{"content":"FORUM"}]
-                                }'>
-                            </div>
-                        </div>
-                        <div class="forum-container-imgAndHeader">
-                            <div class="forum-content">
-                                <span>FORUM</span>
-                            </div>
-                            <div class="forum-image">
-                                <img src="./../assets/img/pc-forum.png" alt="">
-                                <img src="./../assets/img/pic-forumcouple.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- End forum -->
+              <!-- end section-healing__content--title  -->
             </div>
-            <!-- end section-healing__content--title  -->
+              <!-- start section-healing__content--img  -->
+              <div class="section-healing__content--img">
+                <figure class="figure-img-healing">
+                  <img src="../assets/img/section-healing-img.png" alt="image">
+                </figure>
+              </div>
+              <!-- end section-healing__content--img  -->
 
-            <!-- start section-healing__content--img  -->
-            <div class="section-healing__content--img">
-              <include
-                src="./components/boxImg.html"
-                locals='{
-          "list" : [
-           {"classNameFigure": "img-healing", "classNameImg": "img-healing--img", "srcImg": "../assets/img/section-healing-img.png", "alts": "img healing"}
-          ]
-      }'
-              >
-              </include>
+              <!-- start section-healing__content--desc  -->
+              <div class="section-healing__content--desc">
+                <p class="main-desc">
+                  Our Community will give a hand for people who suffer from
+                  self-harm, trauma and pain
+                </p>
+                <div class="second-desc">
+                  <include src="./components/taga.html" locals='{
+                    "list":[{"content":"MORE"}]
+                  }'>
+                    
+                  </include>
+                </div>
+              </div>
+              <!-- end section-healing__content--desc  -->
             </div>
-            <!-- end section-healing__content--img  -->
-
-            <!-- start section-healing__content--desc  -->
-            <div class="section-healing__content--desc">
-              <p class="main-desc">
-                Our Community will give a hand for people who suffer from
-                self-harm, trauma and pain
-              </p>
-              <p class="sub-desc">MORE</p>
-            </div>
-            <!-- end section-healing__content--desc  -->
-          </div>
-          <!-- end section-healing__content  -->
-
-          <!-- start background  -->
-          <div class="background-healing"></div>
-          <!-- end background  -->
         </section>
-        <!-- end section-healing  -->
       </div>
-      <!-- end slide 1 -->
-
-      <!-- <div class="swiper-slide"> -->
-      <!-- Start section music -->
-      <!-- <section class="music">
-            <div class="swiper-slide">
-                <!-- Start section music -->
-                <section class="music">
-                    <div class="music-container">
-                        <div class="music-container__content--center">
-                            <p class="content--center-head">MUSICS</p>
-                            <img class="content--center-img" src="../assets/img/music.png" alt="img">
-                        </div>
-                        <div class="music-container__content--right">
-                            <p class="music-container__content--right-p">Music is crucial to deal with stress. So we customized the playlist for you</p>
-                            <div class="music-container__content--right-a">
-                                <include src="./components/taga.html" locals='{
-                                    "list":[{"content":"MUSIC"},{"content":"PLAYLIST"}]
-                                }'>
-                                    
-                                </include>
-                            </div>
-                            <p class="content--head">MUSICS</p>
-                            <img src="../assets/img/music.png" alt="img music">
-                        </div>
-                        <div class="music-container__content--right">
-
-                        </div>
-                    </div>
-                </section> -->
-      <!-- End music -->
-      <!-- </div> -->
-                </section>
-                <!-- End music -->
+      <!-- end section-healing  -->
+      <div class="swiper-slide">
+        <!-- Start section forum -->
+        <section class="forum">
+          <div class="forum-container">
+            <div class="forum-container-text">
+              <div class="text1">
+                <span>We will be delighted if you’re willing to share</span>
+              </div>
+              <div class="text2">
+                what you’ve been through
+              </div>
+              <div class="forum-button">
+                <include src="./components/taga.html" locals='{
+                              "list":[{"content":"FORUM"}]
+                          }'>
+              </div>
             </div>
-        </div>
-        <!-- End Swiper -->
+            <div class="forum-container-imgAndHeader">
+              <div class="forum-content">
+                <span>FORUM</span>
+              </div>
+              <div class="forum-image">
+                <img src="./../assets/img/pc-forum.png" alt="">
+                <img src="./../assets/img/pic-forumcouple.png" alt="">
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End forum -->
+      </div>
+      <!-- end swiper-slide -->
+      
+      <div class="swiper-slide">
+        <!-- Start section music -->
+        <section class="music">
+          <div class="music-container">
+            <div class="music-container__content--center">
+              <p class="content--center-head">MUSICS</p>
+              <img class="content--center-img" src="../assets/img/music.png" alt="img">
+            </div>
+            <div class="music-container__content--right">
+              <p class="music-container__content--right-p">Music is crucial to deal with stress. So we customized
+                the
+                playlist for you</p>
+              <div class="music-container__content--right-a">
+                <include src="./components/taga.html" locals='{
+                                  "list":[{"content":"MUSIC"},{"content":"PLAYLIST"}]
+                              }'>
+                </include>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End music -->
+      </div>
+      <!-- end swiper-slide -->
+      
     </div>
-    <!-- End Swiper -->
+    <div class="swiper-pagination"></div>
+    <!-- end swiper-wrapper -->
   </div>
+  <!-- end swiper -->
 </main>
