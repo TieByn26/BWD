@@ -4,6 +4,8 @@
   height: 100vh;
   background-image: url("./../assets/img/backgroundhealing.png");
   background-size: cover;
+  background-position: center;
+  animation: zoomBackground 10s infinite;
   .section-healing__content {
     margin: auto;
     padding-top: 200px;
@@ -27,8 +29,8 @@
 
     .section-healing__content--img {
       @include size($width: pxToRem(550), $height: pxToRem(400));
+      animation: zoomImg 10s infinite;
       .figure-img-healing {
-        
         img {
           @include size($width: pxToRem(550), $height: pxToRem(400));
         }
@@ -54,22 +56,21 @@
   }
 }
 
-// @keyframes zoomBackground {
-//   0% {
-//     background-position: 100% 100%;
-//   }
+@keyframes zoomBackground {
+  0% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(1.1);
+  }
+}
 
-//   100% {
-//     background-position: 100% 90%;
-//   }
-// }
+@keyframes zoomImg {
+  0% {
+    transform: scale(1);
+  }
 
-// @keyframes zoomImg {
-//   0% {
-//     transform: scale(1);
-//   }
-
-//   100% {
-//     transform: scale(1.1);
-//   }
-// }
+  100% {
+    transform: scale(1.1);
+  }
+}

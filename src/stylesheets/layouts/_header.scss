@@ -1,9 +1,12 @@
 @use "../abstracts/" as *;
 
 .header-container{
-    background-color: rgba(0,0,0,0.7);
-    padding: pxToRem(20);
+    position: absolute;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.1);
+    padding: pxToRem(20) pxToRem(60);
     @include flex($display: flex, $align: center, $justify: space-between);
+    @include size($width: 100%, $height: false);
     .header-container__logo--left{
         .header-container__logo--left--main{
             

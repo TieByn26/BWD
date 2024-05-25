@@ -1,0 +1,117 @@
+@use "../abstracts/" as *;
+
+#section-therapist {
+  .section-therapist__content {
+    @include flex($display: flex, $align: center, $justify: center);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    &--title {
+        @include size($width: pxToRem(400));
+      @include flex($display: flex, $direction: column, $gap: pxToRem(60));
+      position: relative;
+      left: pxToRem(-160);
+      top: pxToRem(-200);
+      z-index: -2;
+      .main-title {
+        @include font(
+          $font-family: Margarine,
+          $font_size: pxToRem(90),
+          $font-weight: 100,
+          $line-height: 120%
+        );
+        color: #ffffff;
+
+      }
+      .sub-title {
+        @include font(
+          $font-family: Livvic,
+          $font_size: pxToRem(16),
+          $font-weight: 100,
+          $line-height: 120%
+        );
+        position: absolute;
+        top: pxToRem(-30);
+        right: 0;
+        color: #ffffff;
+      }
+    }
+
+    &--img {
+      .img-therapist {
+        @include size($width: pxToRem(690));
+        animation: zoomImg 10s ease-in-out infinite;
+       
+        position: relative;
+        left: pxToRem(120);
+         z-index: 2;
+        img {
+          @include size($width: 100%, $height: 100%);
+          object-fit: cover;
+        }
+      }
+    }
+
+    &--desc {
+      @include flex($display: flex, $direction: column, $gap: pxToRem(50));
+      position: relative;
+      left: pxToRem(150);
+      top: pxToRem(20);
+      z-index: 3;
+      .main-desc {
+        @include size($width: pxToRem(253));
+        @include font(
+          $font-family: Livvic,
+          $font_size: pxToRem(24),
+          $font-weight: 400
+        );
+        color: #ffffff;
+      }
+
+      .sub-desc {
+        @include font(
+          $font-family: Margarine,
+          $font_size: pxToRem(28),
+          $font-weight: 400
+        );
+        position: relative;
+        left: pxToRem(150);
+        color: #fff;
+      }
+    }
+  }
+  .background-therapist {
+    background-image: url("../assets/img/background-therapist.png");
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-position: 100% 100%;
+    animation: zoomBackground 10s infinite;
+  }
+}
+
+@keyframes zoomBackground {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes zoomImg {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}

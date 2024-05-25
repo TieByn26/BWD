@@ -5,6 +5,8 @@
     background-image: url(./../assets/img/backgroundmusic.png);
     background-size: cover;
     margin: auto;
+    background-position: center;
+    animation: zoomBackground 10s infinite;
     @include tablet{
 
     }
@@ -28,6 +30,7 @@
 
             .content--center-img {
                 @include size($width: pxToRem(650), $height: pxToRem(348));
+                animation: zoomImg 10s infinite;
             }
         }
 
@@ -49,3 +52,21 @@
         }
     }
 }
+@keyframes zoomBackground {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+  }
+  
+  @keyframes zoomImg {
+    0% {
+      transform: scale(1);
+    }
+  
+    100% {
+      transform: scale(1.1);
+    }
+  }
