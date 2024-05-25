@@ -136,3 +136,8 @@
     @content;
   }
 }
+@mixin tablet-and-mobile {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}

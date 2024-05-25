@@ -1,0 +1,55 @@
+<!-- start footer -->
+<footer class="footer-container">
+    <div class="footer-container__top">
+        <div class="footer-container__top--right">
+            <p class="title-main">Healing.Me</p>
+            <p class="title-description">Healing.me offers therapy, natural healing, wellness programs, and community support. Start your healing journey with us.</p>
+            <ul>
+                <include src="./components/iconList.html" locals='{
+                    "list":[{"icon":"facebook.svg"},{"icon":"github2.svg"},{"icon":"linkedin2.svg"},{"icon":"mail2.svg"}]
+                }'>
+                    
+                </include>
+            </ul>
+        </div>
+        <div class="footer-container__top--center">
+            <div class="top--center--right">
+               <p class="title--main">Related Information</p>
+               <include src="./components/listp.html" locals='{
+                "list":[{"content":"Policies"},
+                {"content":"FAQ’S"},
+                {"content":"Contact Us"},
+                {"content":"Our License"}]
+               }'>
+                
+               </include>
+               
+            </div>
+            <div class="top--center--left">
+                <p class="title--main">Information</p>
+                <include src="./components/listp.html" locals='{
+                 "list":[{"content":"Policies"},
+                 {"content":"FAQ’S"},
+                 {"content":"Contact Us"},
+                 {"content":"Our License"}]
+                }'>
+                 
+                </include>
+                
+            </div>
+        </div>
+        <div class="footer-container__top--left">
+            <p class="title--main">Contact us</p>
+            <form action="">
+                <input class="input-mail" type="text" placeholder="Mail">
+                <textarea class="input-message" name="" id="" placeholder="Message"></textarea>
+                <button>Send</button>
+            </form>
+        </div>
+
+    </div>
+    <div class="footer-container__bottom">
+        <p>Copyright © 2024 Vietnam-Korea University of Information and Communication Technology - The University of Da Nang</p>
+    </div>
+</footer>
+<!-- end footer -->

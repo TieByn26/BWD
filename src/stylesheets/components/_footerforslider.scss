@@ -3,7 +3,11 @@
 .footer-main-container{
     position: absolute;
     // top: 670px;
-    top: 90%;
+    top: 47%;
+    @include mobile{
+        top: 25%;
+        padding: 0 10px;
+    }
     z-index: 1000;
     @include size($width: 100%, $height: false);
     @include color($background: rgba(0,0,0,0));
