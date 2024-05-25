@@ -1,0 +1,60 @@
+@use "../abstracts/" as *;
+
+.section-forum{
+  
+    .backround-forum {
+        background-image: url("../assets/img/darkMatter1.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+    .forum-wrap {
+        @include flex(
+            $display: flex,
+            $align: center,
+            $justify: center,
+          );
+          @include size($width: 100%, $height: 100vh);
+
+        .forum-container{
+            display: flex;
+            justify-content: center;
+            padding-top: pxToRem(100);
+            padding-bottom: pxToRem(60);
+    
+            .forum-container-text{
+                @include color($color: white);
+                @include size($width: pxToRem(320), $height: pxToRem(180));
+                padding-top: pxToRem(250);
+                div{
+                    margin-bottom: pxToRem(20);
+                }
+                .text1{
+                    @include font($font-family: $secondary-font, $font_size: pxToRem(20), $font-weight: false, $font-style: false, $line-height: false); 
+                }
+                .text2{
+                    @include font($font-family: $third-font, $font_size: pxToRem(44), $font-weight: false, $font-style: false, $line-height: false);  
+                }
+                .forum-button{
+                    font-size: pxToRem(46);
+                }
+            }
+            
+            .forum-container-imgAndHeader{
+                padding-top: pxToRem(90);
+                .forum-content{
+                    @include color($color: white);
+                    @include font($font-family: $third-font, $font-size: pxToRem(100));
+                    margin-bottom: pxToRem(-25);            
+                }
+                .forum-image{
+                    img{
+                        @include size($width: pxToRem(270), $height: auto);
+                    }
+                }
+                
+            }
+        }
+    }
+}
