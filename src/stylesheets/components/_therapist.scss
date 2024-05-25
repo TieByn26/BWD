@@ -41,6 +41,17 @@
           margin-top: 50px;
         }
       }
+      @include mobile{
+        margin-top: 20px;
+        margin-left: -510px;
+        .main-title{
+          margin-top: 40px;
+          font-size: 50px;
+        }
+        .sub-title{
+          margin-top: 50px;
+        }
+      }
     }
 
     &--img {
@@ -60,6 +71,11 @@
           padding-top: 100px;
           scale: 0.7;
           margin-left: -25%;
+        }
+        @include mobile{
+          margin-top: -20px ;
+          scale: 0.4;
+          margin-left: -55%;
         }
       }
     }
@@ -91,6 +107,21 @@
         }
         .sub-desc{
           font-size: pxToRem(20);
+        }
+      }
+      @include mobile{
+        padding-right: 20px;
+        padding-top: 250px;
+
+        .main-desc{
+          margin-bottom: -40px;
+          @include size($width: pxToRem(203));
+          font-size: 17px;
+        }
+        .sub-desc{
+          a{
+            font-size: pxToRem(15);
+          }
         }
       }
     }

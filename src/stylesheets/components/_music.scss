@@ -44,6 +44,16 @@
                     @include size($width: pxToRem(500), $height: pxToRem(308));
                 }
             }
+            @include mobile{
+                margin-top: -100px;
+                margin-left: -100px;
+                .content--center-head{
+                    font-size: 80px;
+                }
+                .content--center-img{
+                    @include size($width: pxToRem(400), $height: pxToRem(208));
+                }
+            }
         }
 
         .music-container__content--right {
@@ -68,6 +78,20 @@
                  font-size: 14px;
                 }
                 .music-container__content--right-a {
+                    a{
+                        font-size: 14px;
+                    }
+                }
+            }
+            @include mobile{
+                padding-top: 40px;
+                margin-left: -320px;
+                .music-container__content--right-p {
+                 font-size: 14px;
+                }
+                .music-container__content--right-a {
+                    gap: 10px;
+                    margin-top: -30px;
                     a{
                         font-size: 14px;
                     }

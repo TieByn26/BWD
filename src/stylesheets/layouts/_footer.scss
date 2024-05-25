@@ -1,0 +1,103 @@
+@use "../abstracts/" as *;
+
+.footer-container{
+
+    a{
+        text-decoration: none;
+        color: $button-color-black;
+        &:hover{
+            font-weight: 900;
+            color: gray;
+        }
+    }
+    @include font($font-family: $third-font, $font_size: 16px, $line-height: 1.5);
+    .footer-container__top{
+        @include tablet-and-mobile{
+            display: flex;
+            flex-direction: column;
+
+        }
+        @include mobile{
+            padding: 20px 20px;
+        }
+        
+        background-color: rgb(218, 213, 213);
+        padding: 20px 100px;
+        @include flex($display:flex, $justify: space-between);
+        .footer-container__top--right{
+            .title-main{
+                @include font($font_size: 28px, $font-weight: 700);
+            }
+            .title-description{
+                padding-top: 30px;
+                @include size($width: 300px, $height: false);
+            }
+            ul{
+                margin-left: -20px;
+                @include flex($display:flex, $align: center);
+                li{
+                    cursor: pointer;
+                    img{
+                        scale: 0.7;
+                    }
+                    &:hover{
+                        scale: 1.3;
+                    }
+                }
+            }
+        }
+        .footer-container__top--center{
+            @include flex($display:flex, $gap: 200px);
+            @include tablet-and-mobile{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .top--center--right{
+                @include flex($display:flex, $direction: column, $gap: 20px);
+                .title--main{
+                    @include font($font_size: 28px, $font-weight: 700);
+                }
+            }
+            .top--center--left{
+                @include flex($display:flex, $direction: column, $gap: 20px);
+                .title--main{
+                    @include font($font_size: 28px, $font-weight: 700);
+                }
+            }
+        }
+        .footer-container__top--left{
+            .title--main{
+                @include font($font_size: 28px, $font-weight: 700);
+            }
+            form{
+                @include flex($display:flex, $direction: column, $gap: 10px);
+                .input-mail{
+                    
+                }
+                .input-message{
+                    @include size($width: false, $height: 100px);
+                }
+                button{
+                    @include size($width: 100px, $height: false);
+                    border-radius: 30px;
+                    &:hover{
+                        background-color: gray;
+                    }
+                }
+                @include tablet-and-mobile{
+                    @include size($width: 300px, $height: false);
+                }
+            }
+        }
+    }
+    .footer-container__bottom{
+        padding: 10px 0;
+        @include color($background: black);
+        p{
+            color: white;
+            text-align: center;
+        }
+    }
+
+}

@@ -30,6 +30,13 @@
                 scale: 0.6;
             }
         }
+        @include mobile{
+            margin-left: -70px;
+            img{
+                margin-bottom: 130px;
+                scale: 0.4;
+            }
+        }
       }
       &--title {
         position: absolute;
@@ -43,10 +50,7 @@
           text-shadow: 25px 25px 50px #000;
           position: absolute;
           left: 34%;
-          @include font(
-            $font-family: Livvic,
-            $font_size: pxToRem(24),
-            $font-weight: 400
+          @include font($font-family: Livvic,$font_size: pxToRem(24),$font-weight: 400
           );
         }
 
@@ -54,11 +58,18 @@
           height: 238px;
           color: #fff;
          margin-top: pxToRem(70);
-          @include font(
-            $font-family: Margarine,
-            $font_size: pxToRem(100),
-            $font-weight: 400
-          );
+          @include font($font-family: Margarine,$font_size: pxToRem(100),$font-weight: 400);
+        }
+      }
+      @include mobile{
+        .sub-title{
+            font-size: 18px;
+            margin-left: -25px;
+
+        }
+        .main-title{
+            margin-top: 30px;
+            font-size: 40px;
         }
       }
     
@@ -68,6 +79,10 @@
         margin-left: -120px;
         @include tablet{
             margin-left: -190px;
+        }
+        @include mobile{
+            margin-right: 100px;
+            margin-left: -230px;
         }
     }
   }

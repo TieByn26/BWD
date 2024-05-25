@@ -10,6 +10,10 @@
   .section-healing__content {
     margin: auto;
     padding-top: 200px;
+    @include mobile{
+      padding-top: 150px;
+      padding-left: 120px;
+    }
     padding-left: 100px;
     @include size($width: 80%);
     @include flex($display: flex, $align: c);
@@ -19,11 +23,18 @@
       @include color($color: white);
       .main-title {
         @include font($font-family: $third-font, $font_size: pxToRem(100));
+        @include mobile{
+          font-size: 50px;
+        }
       }
 
       .sub-title {
         @include font($font-family: $secondary-font, $font_size: pxToRem(24));
         @include size($width: false, $height: 90px);
+        @include mobile{
+          font-size: 12px;
+          height: 20px;
+        }
       }
       @include tablet{
         margin-left: -50px;
@@ -32,6 +43,10 @@
           height: 40px;
         }
       }
+      @include mobile{
+        margin-left: -70px;
+      }
+
 
     }
 
@@ -41,6 +56,13 @@
       .figure-img-healing {
         img {
           @include size($width: pxToRem(550), $height: pxToRem(400));
+        }
+        @include mobile{
+          img{
+            margin-left: -50px;
+            margin-top: 40px;
+            @include size($width: pxToRem(310), $height: pxToRem(210));
+          }
         }
         @include tablet{
           img{
@@ -73,6 +95,14 @@
         .main-desc{
           font-size: 14px;
           height: 100px;
+        }
+      }
+      @include mobile{
+        margin-left: -540px;
+        margin-top: 230px;
+        .main-desc{
+          font-size: 12px;
+          height: 80px;
         }
       }
     }
