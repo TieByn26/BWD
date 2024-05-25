@@ -1,0 +1,210 @@
+@use "../abstracts/" as *;
+
+.section-comics {
+  &__content {
+    margin-top: 700px;
+    &--top {
+      .top-title {
+        color: #000;
+        -webkit-text-stroke-width: 1;
+        -webkit-text-stroke-color: #000;
+        font-family: Margarine;
+        font-size: pxToRem(45);
+        font-weight: 400;
+        text-align: center;
+        line-height: 160%;
+
+        span {
+          color: #032cff;
+        }
+      }
+      .top-desc {
+        color: #000;
+        text-align: center;
+        font-family: Margarine;
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 20px;
+        line-height: 160%;
+      }
+    }
+
+    &--bottom {
+      .bottom__content {
+        margin-top: 32px;
+        &--left {
+          .top--img {
+            width: 396px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+
+        &--right {
+          margin-top: 32px;
+          .right-heading-text {
+            color: #121312;
+            -webkit-text-stroke-width: 1;
+            -webkit-text-stroke-color: #000;
+            font-family: Margarine;
+            font-size: 30px;
+            font-weight: 400;
+            text-align: center;
+            line-height: 150%;
+          }
+
+          .right-body-text {
+            color: #000;
+            font-family: Margarine;
+            font-size: 15px;
+            font-weight: 400;
+            text-align: center;
+          }
+
+          .right-footer {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 32px;
+            .right-footer--btnLeft {
+              width: pxToRem(132);
+              height: pxToRem(40);
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 6px;
+              }
+            }
+
+            .right-footer--btnRight {
+              width: pxToRem(132);
+              height: pxToRem(40);
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 6px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include tablet {
+    margin-top: -700px;
+    &__content {
+        
+      &--top {
+        .top-title {
+          font-size: pxToRem(45);
+          span {
+            color: #032cff;
+          }
+        }
+        .top-desc {
+          font-size: 20px;
+        }
+      }
+
+      &--bottom {
+        .bottom__content {
+          display: flex;
+          gap: 20px;
+
+          .top--img {
+            width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                
+              }
+          }
+
+          &--right {
+            .right-body-text {
+              width: 90%;
+            }
+
+            .right-footer {
+              display: flex;
+              justify-content: space-evenly;
+
+              .right-footer--btnRight {
+                width: pxToRem(131);
+              }
+            }
+          }
+        }
+      }
+      .box2 {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  @include desktop {
+    margin-top: -700px;
+    &__content {
+      &--top {
+        .top-title {
+          font-size: pxToRem(45);
+          span {
+            color: #032cff;
+          }
+        }
+        .top-desc {
+          font-size: 20px;
+        }
+      }
+
+      &--bottom {
+        .bottom__content {
+          display: flex;
+          gap: 20px;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 900px;
+
+          .top--img {
+            width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                
+              }
+          }
+
+          &--right {
+            .right-body-text {
+              width: 90%;
+            }
+
+            .right-footer {
+              display: flex;
+              justify-content: space-evenly;
+
+              .right-footer--btnRight {
+                width: pxToRem(131);
+              }
+            }
+          }
+        }
+      }
+
+      .box2 {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}
