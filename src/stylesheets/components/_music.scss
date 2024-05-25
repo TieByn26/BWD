@@ -1,0 +1,51 @@
+@use "../abstracts/" as *;
+
+.music {
+    @include size($width: 100%, $height: 100vh);
+    background-image: url(./../assets/img/backgroundmusic.png);
+    background-size: cover;
+    margin: auto;
+    @include tablet{
+
+    }
+
+
+    .music-container {
+        padding-top: pxToRem(250);
+        @include size($width: 60%);
+        @include flex($display: flex);
+        margin: auto;
+        margin-left: 25%;
+
+        .music-container__content--center {
+            @include flex($display: flex, $direction: column, $align: center, $gap: pxToRem(10));
+
+            .content--center-head {
+                @include font($font-family: $third-font, $font_size: pxToRem(100));
+                @include color($color: white);
+                margin-bottom: pxToRem(-40);
+            }
+
+            .content--center-img {
+                @include size($width: pxToRem(650), $height: pxToRem(348));
+            }
+        }
+
+        .music-container__content--right {
+            margin-top: pxToRem(100);
+            margin-left: pxToRem(-50);
+            @include size($width: pxToRem(250), $height: pxToRem(200));
+            @include flex($display: flex, $direction: column, $align: center, $gap: pxToRem(30));
+
+            .music-container__content--right-p {
+                @include font($font-family: $secondary-font, $font_size: pxToRem(18), $font-weight: 400, $line-height: 1.5);
+                @include color($color: white);
+
+            }
+
+            .music-container__content--right-a {
+                @include flex($display: flex, $align: center, $gap: pxToRem(30));
+            }
+        }
+    }
+}
