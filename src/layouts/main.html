@@ -1,33 +1,54 @@
-<main class="main-container">
-
+<main>
     <div class="swiper mySwiper">
-        <!-- Start Swiper -->
-        <div class="swiper-wrapper"> 
-            <div class="swiper-slide">
-                <!-- Start section forum -->
-                <section class="forum">
-
-                </section>
-                <!-- End forum -->
+      <div class="swiper-wrapper">
+          <!-- start slide 1 -->
+        <div class="swiper-slide">
+            <!-- start section-healing  -->
+        <section id="section-healing">
+          <!-- start section-healing__content  -->
+          <div class="section-healing__content">
+            <!-- start section-healing__content--title  -->
+            <div class="section-healing__content--title">
+              <p class="sub-title">THE BEAUTY OF</p>
+              <p class="main-title">HEALING</p>
             </div>
-            <!-- <div class="swiper-slide"> -->
-                <!-- Start section music -->
-                <!-- <section class="music">
-                    <div class="music-container">
-                        <div class="music-container__content--center">
-                            <p class="content--head">MUSICS</p>
-                            <img src="../assets/img/music.png" alt="img">
-                        </div>
-                        <div class="music-container__content--right">
-                            <p></p>
-                            <p></p>
-                        </div>
-                    </div>
-                </section> -->
-                <!-- End music -->
-            <!-- </div> -->
-        </div>
-        <!-- End Swiper -->
-    </div>
+            <!-- end section-healing__content--title  -->
+  
+            <!-- start section-healing__content--img  -->
+            <div class="section-healing__content--img">
+              <include
+                src="./components/boxImg.html"
+                locals='{
+              "list" : [
+               {"classNameFigure": "img-healing", "classNameImg": "img-healing--img", "srcImg": "../assets/img/section-healing-img.png", "alts": "img healing"}
+              ]
+          }'
+              >
+              </include>
+            </div>
+            <!-- end section-healing__content--img  -->
+  
+            <!-- start section-healing__content--desc  -->
+            <div class="section-healing__content--desc">
+              <p class="main-desc">
+                Our Community will give a hand for people who suffer from
+                self-harm, trauma and pain
+              </p>
+              <p class="sub-desc">MORE</p>
+            </div>
+            <!-- end section-healing__content--desc  -->
 
-</main>
+  
+          </div>
+          <!-- end section-healing__content  -->
+  
+          <!-- start background  -->
+          <div class="background-healing"></div>
+          <!-- end background  -->
+        </section>
+        <!-- end section-healing  -->
+        </div>
+        <!-- end slide 1 -->
+      </div>
+    </div>
+  </main>

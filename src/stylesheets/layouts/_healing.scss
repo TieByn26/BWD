@@ -1,6 +1,8 @@
 @use "../abstracts/" as *;
 
 #section-healing {
+  width: 100vw;
+  height: 100vh;
   .section-healing__content {
     @include flex($display: flex, $align: center, $justify: center);
     position: relative;
@@ -40,7 +42,7 @@
 
     &--img {
       .img-healing {
-        @include size($width: pxToRem(690));
+        // @include size($width: pxToRem(690));
         animation: zoomImg 10s ease-in-out infinite;
         z-index: 2;
         img {
