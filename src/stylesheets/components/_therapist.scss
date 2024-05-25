@@ -7,36 +7,39 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
+
     &--title {
-        @include size($width: pxToRem(400));
+      @include size($width: pxToRem(400));
       @include flex($display: flex, $direction: column, $gap: pxToRem(60));
       position: relative;
       left: pxToRem(-160);
       top: pxToRem(-200);
       z-index: -2;
+
       .main-title {
-        @include font(
-          $font-family: Margarine,
-          $font_size: pxToRem(90),
-          $font-weight: 100,
-          $line-height: 120%
-        );
+        @include font($font-family: Margarine, $font_size: pxToRem(90),$font-weight: 100,$line-height: 120%);
         color: #ffffff;
 
       }
+
       .sub-title {
-        @include font(
-          $font-family: Livvic,
-          $font_size: pxToRem(16),
-          $font-weight: 100,
-          $line-height: 120%
-        );
+        @include font($font-family: Livvic, $font_size: pxToRem(16), $font-weight: 100, $line-height: 120%);
         position: absolute;
         top: pxToRem(-30);
         right: 0;
         color: #ffffff;
+      }
+      @include tablet{
+        padding-top: 50px;
+        margin-left: -410px;
+        .main-title{
+          font-size: 80px;
+        }
+        .sub-title{
+          margin-top: 50px;
+        }
       }
     }
 
@@ -44,13 +47,19 @@
       .img-therapist {
         @include size($width: pxToRem(690));
         animation: zoomImg 10s ease-in-out infinite;
-       
+
         position: relative;
         left: pxToRem(120);
-         z-index: 2;
+        z-index: 2;
+
         img {
           @include size($width: 100%, $height: 100%);
           object-fit: cover;
+        }
+        @include tablet{
+          padding-top: 100px;
+          scale: 0.7;
+          margin-left: -25%;
         }
       }
     }
@@ -61,31 +70,35 @@
       left: pxToRem(150);
       top: pxToRem(20);
       z-index: 3;
+
       .main-desc {
         @include size($width: pxToRem(253));
-        @include font(
-          $font-family: Livvic,
-          $font_size: pxToRem(24),
-          $font-weight: 400
-        );
+        @include font($font-family: Livvic, $font_size: pxToRem(24), $font-weight: 400);
         color: #ffffff;
       }
 
       .sub-desc {
-        @include font(
-          $font-family: Margarine,
-          $font_size: pxToRem(28),
-          $font-weight: 400
-        );
-        position: relative;
-        left: pxToRem(150);
+        @include flex($display: flex, $gap: 20px);
+        @include font($font-family: Margarine, $font_size: pxToRem(28), $font-weight: 400);
         color: #fff;
+      }
+      @include tablet{
+        padding-right: 20px;
+        padding-top: 200px;
+        .main-desc{
+          @include size($width: pxToRem(203));
+          font-size: 17px;
+        }
+        .sub-desc{
+          font-size: pxToRem(20);
+        }
       }
     }
   }
+
   .background-therapist {
     background-image: url("../assets/img/background-therapist.png");
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: absolute;
     top: 0;
