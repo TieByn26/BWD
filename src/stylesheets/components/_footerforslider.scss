@@ -3,9 +3,9 @@
 .footer-main-container{
     position: absolute;
     // top: 670px;
-    top: 47%;
+    top: 26%;
     @include mobile{
-        top: 25%;
+        top: 17%;
         padding: 0 10px;
     }
     z-index: 1000;
