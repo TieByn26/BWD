@@ -1,5 +1,8 @@
 @use "../abstracts/" as *;
 
+.owl-nav{
+  display: none;
+}
 .owl-carousel .item {
   display: flex;
   flex-direction: row;
