@@ -11,31 +11,31 @@
               <p class="main-title">HEALING</p>
               <!-- end section-healing__content--title  -->
             </div>
-              <!-- start section-healing__content--img  -->
-              <div class="section-healing__content--img">
-                <figure class="figure-img-healing">
-                  <img src="../assets/img/section-healing-img.png" alt="image">
-                </figure>
-              </div>
-              <!-- end section-healing__content--img  -->
+            <!-- start section-healing__content--img  -->
+            <div class="section-healing__content--img">
+              <figure class="figure-img-healing">
+                <img src="../assets/img/section-healing-img.png" alt="image">
+              </figure>
+            </div>
+            <!-- end section-healing__content--img  -->
 
-              <!-- start section-healing__content--desc  -->
-              <div class="section-healing__content--desc">
-                <p class="main-desc">
-                  Our Community will give a hand for people who suffer from
-                  self-harm, trauma and pain
-                </p>
-                <div class="second-desc">
-                  <include src="./components/taga.html" locals='{
+            <!-- start section-healing__content--desc  -->
+            <div class="section-healing__content--desc">
+              <p class="main-desc">
+                Our Community will give a hand for people who suffer from
+                self-harm, trauma and pain
+              </p>
+              <div class="second-desc">
+                <include src="./components/taga.html" locals='{
                     "list":[{"content":"MORE"}]
                   }'>
-                    
-                  </include>
-                </div>
+
+                </include>
               </div>
-              <!-- end section-healing__content--desc  -->
             </div>
-          </section>
+            <!-- end section-healing__content--desc  -->
+          </div>
+        </section>
       </div>
       <!-- end section-healing  -->
       <div class="swiper-slide">
@@ -56,7 +56,7 @@
               </div>
             </div>
             <div class="forum-container-imgAndHeader">
-              <div class="forum-content"> 
+              <div class="forum-content">
                 <span>FORUM</span>
               </div>
               <div class="forum-image">
@@ -68,7 +68,7 @@
         <!-- End forum -->
       </div>
       <!-- end swiper-slide -->
-      
+
       <div class="swiper-slide">
         <!-- Start section music -->
         <section class="music">
@@ -113,16 +113,13 @@
             </div>
             <!-- end section-therapist__content--desc  -->
 
-            <!-- start section-therapist__content--img  -->  
+            <!-- start section-therapist__content--img  -->
             <div class="section-therapist__content--img">
-              <include
-                src="./components/boxImg.html"
-                locals='{
+              <include src="./components/boxImg.html" locals='{
               "list" : [
                {"classNameFigure": "img-therapist", "classNameImg": "img-therapist--img", "srcImg": "../assets/img/img-therapist.png", "alts": "img therapist"}
               ]
-          }'  
-              >
+          }'>
               </include>
             </div>
             <!-- end section-therapist__content--img  -->
@@ -142,7 +139,7 @@
         <!-- end section-therapist  -->
       </div>
       <!-- end slide 1 -->
-            <!-- start slide 5 -->
+      <!-- start slide 5 -->
       <div class="swiper-slide">
         <!-- start section-podcasts  -->
         <section id="section-podcasts">
@@ -154,14 +151,11 @@
                 <div class="section-podcasts__content">
                   <!-- start section-podcasts__content--img  -->
                   <div class="section-podcasts__content--img">
-                    <include
-                      src="./components/boxImg.html"
-                      locals='{
+                    <include src="./components/boxImg.html" locals='{
           "list" : [
            {"classNameFigure": "img-podcasts", "classNameImg": "img-podcasts--img", "srcImg": "../assets/img/section-podcasts-img.png", "alts": "img podcasts"}
           ]
-      }'
-                    >
+      }'>
                     </include>
                   </div>
                   <!-- end section-podcasts__content--img  -->
@@ -187,7 +181,7 @@
         <!-- end section-podcasts  -->
       </div>
       <!-- end slide 5 -->
-      
+
     </div>
     <div class="swiper-pagination"></div>
     <!-- end swiper-wrapper -->
@@ -206,7 +200,7 @@
           {"icon":"mailwhite.svg"},
           {"icon":"linkedinwhite.svg"}]
         }'>
-          
+
         </include>
       </ul>
     </div>
@@ -230,7 +224,7 @@
       <div class="section-help__content--top">
         <p class="top-text">How can we <span>help you</span>?</p>
       </div>
-      <div class="section-help__content--bottom"> 
+      <div class="section-help__content--bottom">
         <include src="./components/box-section-help.html" locals='{
           "list" : [
             {"classNameCard" : "bottom-content", "linkImg": "../assets/icon/icon-enviroment-section-help.png", "alts": "icon enviroment", "title": "Create a Positive Environment", "desc" : "Provide opportunities for them to engage in social activities and stay connected with friends and family."},
@@ -242,28 +236,94 @@
       </div>
     </div>
   </section>
-    <!-- end section help  -->
+  <!-- end section help  -->
 
-    <!-- start section-comics  -->
-    <section class="section-comics">
-      <div class="section-comics__content">
-        <div class="section-comics__content--top">
-          <p class="top-title">Create <span>stories</span> your way</p>
-          <p class="top-desc">We will have 2 stories with different circumstances.</p>
-        </div>
-        <div class="section-comics__content--bottom">
-          <include src="./components/box-section-comics.html" locals='{
+  <!-- start section-comics  -->
+  <section class="section-comics">
+    <div class="section-comics__content">
+      <div class="section-comics__content--top">
+        <p class="top-title">Create <span>stories</span> your way</p>
+        <p class="top-desc">We will have 2 stories with different circumstances.</p>
+      </div>
+      <div class="section-comics__content--bottom">
+        <include src="./components/box-section-comics.html" locals='{
             "list" : [
              {"ClassBox": "box1","srcImg": "../assets/img/section-comics-farmer.png", "contentRightHeading": "Farmer simulation", "contentRightBody": "You will play the role of a farmer and you will write interesting stories at your discretion"},
              {"ClassBox": "box2", "srcImg": "../assets/img/section-comics-student.png", "contentRightHeading": "Student simulation", "contentRightBody": "You will take on the role of a high school student and you will create fascinating stories in your own style."}
             ]
           }'>
-          </include>
-          
+        </include>
 
+
+      </div>
+    </div>
+  </section>
+  <!-- end section-comics  -->
+
+  <div class="owl-carousel">
+    <div class="item">
+      <div class="img-content">
+        <img class="avatar" src="../assets/img/cuong.png" alt="cuong">
+      </div>
+      <div class="about-content">
+        <p> Truong Đinh Cuong</p>
+        <p>23AI004</p>
+        <br><br><br>
+        <p class="sologan">GO HARD OR GO HOME</p>
+        <br><br>
+        <div class="logo_container">
+          <a href="#">
+            <img src="../assets/icon/github.svg" alt="git">
+          </a>
+          <a href="#">
+            <img src="../assets/icon/github.svg" alt="git">
+          </a>
         </div>
       </div>
-    </section>
-    <!-- end section-comics  -->
+    </div>
+    <div class="item">
+      <div class="img-content">
+        <img class="avatar" src="../assets/img/tien.png" alt="cuong">
+      </div>
+      <div class="about-content">
+        <p> Dang Xuan Tien</p>
+        <p>23IT.B221</p>
+        <br><br><br>
+        <p class="sologan">NEVER STOP, NEVER GIVE UP</p>
+        <br><br>
+        <div class="logo_container">
+          <a href="#">
+            <img src="../assets/icon/github.svg" alt="git">
+          </a>
+          <a href="#">
+            <img src="../assets/icon/github.svg" alt="git">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="img-content">
+        <img class="avatar" src="../assets/img/cuong.png" alt="cuong">
+      </div>
+      <div class="about-content">
+        <p> Vuong Ngoc Thuan</p>
+        <p>23IT.B219</p>
+        <br><br><br>
+        <p class="sologan">THE MAGIC THAT YOU ARE LOOKING FOR IS IN THE WORK THAT YOU’RE AVOIDING</p>
+        <br><br>
+        <div class="logo_container">
+          <a href="#">
+            <img src="../assets/icon/github.svg" alt="git">
+          </a>
+          <a href="#">
+            <img src="../assets/icon/github.svg" alt="git">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="item">Item 4</div>
+  </div>
+
+
 
 </main>
