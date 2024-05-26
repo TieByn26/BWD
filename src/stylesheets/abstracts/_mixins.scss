@@ -118,6 +118,25 @@
   background-size: cover;
 }
 
+
+@mixin position ($position: false, $top : false, $bottom : false, $left: false, $right: false) {
+  @if($position != false ) {
+      position: $position;
+  }
+  @if($top != false ) {
+      top: $top;
+  }
+  @if($bottom != false ) {
+      bottom: $bottom;
+  }
+  @if($left != false ) {
+      left: $left;
+  }
+  @if($right != false ) {
+      right: $right;
+  }
+}
+
 //mixin_responsive
 
 @mixin tablet {

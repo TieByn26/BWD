@@ -1,0 +1,298 @@
+@use "../abstracts/" as *;
+
+@keyframes hide-eyes-hand-leftt {
+  100% {
+    top: pxToRem(-120);
+    left: pxToRem(170);
+    transform: rotate(160deg);
+  }
+}
+
+@keyframes hide-eyes-hand-rightt {
+  100% {
+    top: pxToRem(-120);
+    left: pxToRem(265);
+    transform: rotate(160deg);
+  }
+}
+
+@keyframes boardd {
+  100% {
+    top: pxToRem(-220);
+    left: pxToRem(20);
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes re-set-animation-hide-eyes-hand-left-signUp {
+  0% {
+    top: pxToRem(-120);
+    left: pxToRem(170);
+  }
+
+  100% {
+    top: pxToRem(-60);
+    left: pxToRem(140);
+    transform: rotate(-160deg);
+  }
+}
+
+@keyframes re-set-animation-hide-eyes-hand-right-signUp {
+  0% {
+    top: pxToRem(-120);
+    left: pxToRem(265);
+  }
+  100% {
+    top: pxToRem(-50);
+    left: pxToRem(260);
+    transform: rotate(-160deg);
+  }
+}
+
+@keyframes re-set-animation-board-signUp {
+  0% {
+    top: pxToRem(-220);
+    left: pxToRem(20);
+  }
+  100% {
+    top: -220px;
+    left: 40px;
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes wrongInput_signUp {
+  0% {
+    left: 0%;
+  }
+  50% {
+    left: 0.5%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+.signUp-container {
+  display: none;
+  @include size($width: pxToRem(493));
+  margin-top: 160px;
+
+  .header-signup {
+    position: relative;
+    z-index: 3;
+    .header-signup__container {
+      position: relative;
+      top: pxToRem(30);
+      left: pxToRem(40);
+
+      .figure-img1 {
+        position: absolute;
+        .figure-img1--head {
+          @include size($width: pxToRem(190), $height: pxToRem(150));
+        }
+        top: pxToRem(-170);
+        left: pxToRem(150);
+      }
+
+      .figure-img2 {
+        position: absolute;
+        .figure-img2--board {
+          @include size($width: 200px, $height: 200px);
+        }
+        top: -220px;
+        left: 40px;
+        z-index: 1;
+      }
+      .figure-img2.activeSignUp {
+        animation: boardd 0.7s forwards, scaleUp 0.3s forwards;
+      }
+      .figure-img2.re_activeSignUp {
+        animation: re-set-animation-board-signUp 0.7s forwards,
+          scaleUp 0.3s forwards;
+      }
+
+      .figure-img3 {
+        position: absolute;
+        .figure-img3--left {
+          @include size($width: pxToRem(60), $height: pxToRem(50));
+        }
+        top: pxToRem(-60);
+        left: pxToRem(140);
+        z-index: 1;
+      }
+      .figure-img3.activeSignUp {
+        animation: hide-eyes-hand-leftt 0.7s forwards, scaleUp 0.3s forwards;
+      }
+      .figure-img3.re_activeSignUp {
+        animation: re-set-animation-hide-eyes-hand-left-signUp 0.7s forwards,
+          scaleUp 0.3s forwards;
+      }
+
+      .figure-img4 {
+        position: absolute;
+        .figure-img4--right {
+          @include size($width: pxToRem(60), $height: pxToRem(50));
+        }
+        top: pxToRem(-50);
+        left: pxToRem(260);
+      }
+      .figure-img4.activeSignUp {
+        animation: hide-eyes-hand-rightt 0.7s forwards, scaleUp 0.3s forwards;
+      }
+      .figure-img4.re_activeSignUp {
+        animation: re-set-animation-hide-eyes-hand-right-signUp 0.7s forwards,
+          scaleUp 0.3s forwards;
+      }
+    }
+  }
+
+  .login-container__signup {
+    background-color: rgba(92, 186, 233, 0.5);
+    @include flex($display: flex, $direction: column, $gap: pxToRem(20));
+    padding: pxToRem(30) pxToRem(100);
+    @include size($width: 100%);
+    @include boder($boder-radius: 30px, $boder: transparent);
+
+    .main-signup {
+      .main-signup__container {
+        .main-signup__container--text {
+          @include flex($display: flex, $direction: column, $gap: pxToRem(7));
+
+          input {
+            @include size($width: 100%, $height: pxToRem(50));
+            position: relative;
+            left: 0%;
+            border-radius: 10px;
+            padding-left: pxToRem(10);
+            padding-right: pxToRem(10);
+            font-size: pxToRem(16);
+            background: linear-gradient(
+              0deg,
+              rgba(255, 255, 255, 0.5) 0%,
+              rgba(255, 255, 255, 0.5) 100%
+            );
+            color: rgb(50, 49, 49);
+            border: transparent;
+
+            &:placeholder-shown {
+              @include font(
+                $font-family: $primary-font,
+                $font_size: pxToRem(12),
+                $font-weight: 400,
+                $font-style: false,
+                $line-height: false
+              );
+              padding-left: 20px;
+            }
+            &::placeholder {
+              color: rgb(134, 130, 130);
+            }
+          }
+
+          .password_signUp {
+            padding-right: pxToRem(45);
+          }
+          .re_type_password_signUp {
+            padding-right: pxToRem(45);
+          }
+          .wrongInput_signUp {
+            animation: wrongInput_signUp 0.2s ease-in-out 6;
+          }
+          span {
+            @include font($font-family: normal, $font_size: pxToRem(16));
+            @include position(
+              $position: relative,
+              $bottom: false,
+              $left: 5%,
+              $right: false
+            );
+            color: rgb(255, 208, 0);
+            visibility: hidden;
+          }
+        }
+        .main-signup__container--img {
+          &--img1 {
+            position: relative;
+            top: pxToRem(-222);
+            left: pxToRem(245);
+            z-index: 3;
+            cursor: pointer;
+            @include size($width: pxToRem(30), $height: pxToRem(30));
+          }
+          &--img2 {
+            position: relative;
+            top: pxToRem(-143);
+            left: pxToRem(213);
+            z-index: 3;
+            cursor: pointer;
+            @include size($width: pxToRem(30), $height: pxToRem(30));
+          }
+        }
+      }
+    }
+
+    .footer-signup {
+      .footer-signup__container {
+        .footer-signup__container--button {
+          @include flex(
+            $display: flex,
+            $direction: column,
+            $align: center,
+            $gap: pxToRem(15)
+          );
+          span {
+            @include flex($display: flex, $align: center);
+            input {
+              @include size($width: pxToRem(18), $height: pxToRem(18));
+            }
+            p {
+              @include font(
+                $font-family: arial,
+                $font-style: italic,
+                $font-weight: 400,
+                $font_size: pxToRem(16)
+              );
+              cursor: pointer;
+              color: rgb(227, 223, 223);
+  
+            }
+
+            margin-top: -40px;
+          }
+
+          button {
+            @include size($width: pxToRem(167), $height: pxToRem(40));
+            @include boder($boder-radius: pxToRem(27), $boder: 1px solid black);
+            &:hover {
+              transform: scale(1.05);
+            }
+            color: rgb(227, 223, 223);
+            font-size: pxToRem(16);
+            font-weight: 700;
+            background: #103667;
+          }
+
+          .changed-to-SignIn {
+            cursor: pointer;
+            color: rgb(227, 223, 223);
+            font-family: $primary-font;
+
+            &:active {
+              color: rgb(255, 145, 0);
+              transform: scale(1.01);
+            }
+            &:hover {
+              color: rgb(255, 145, 0);
+              transform: scale(1.01);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    
+  }
+}

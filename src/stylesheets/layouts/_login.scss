@@ -1,0 +1,658 @@
+@use "../abstracts/" as *;
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+
+.signIn-container {
+  @include size($width: pxToRem(430), $height: 100%);
+  position: relative;
+  top: -60px;
+
+  &__content {
+    display: block;
+    z-index: 6;
+    @include size($width: pxToRem(200), $height: pxToRem(200));
+    @include position(
+      $position: relative,
+      $top: pxToRem(85),
+      $bottom: false,
+      $left: pxToRem(0),
+      $right: false
+    );
+
+    .figure {
+      @include position(
+        $position: absolute,
+        $top: false,
+        $bottom: false,
+        $left: false,
+        $right: false
+      );
+    }
+    &--bear-head {
+      @include size($width: pxToRem(190), $height: pxToRem(150));
+      top: pxToRem(75);
+      left: pxToRem(160);
+      z-index: 5;
+    }
+
+    &--hand-left-bear {
+      @include size($width: pxToRem(60), $height: pxToRem(50));
+      top: pxToRem(190);
+      left: pxToRem(150);
+      z-index: 6;
+    }
+
+    &--hand-left-bear.active {
+      animation: hide-eyes-hand-left-signIN 0.7s forwards, scaleUp 0.3s forwards;
+    }
+
+    &--hand-left-bear.re-active {
+      animation: re-set-animation-hide-eyes-hand-left-signIN 0.7s ease forwards,
+        scaleUp 0.3s ease forwards;
+    }
+
+    &--hand-right-bear {
+      @include size($width: pxToRem(60), $height: pxToRem(50));
+      top: pxToRem(195);
+      left: pxToRem(280);
+      z-index: 6;
+    }
+
+    &--hand-right-bear.active {
+      animation: hide-eyes-hand-right-signIN 0.7s forwards,
+        scaleUp 0.3s forwards;
+    }
+
+    &--hand-right-bear.re-active {
+      animation: re-set-animation-hide-eyes-hand-right-signIN 0.7s ease forwards,
+        scaleUp 0.3s ease forwards;
+    }
+
+    &--board-bear {
+      @include size($width: pxToRem(200), $height: pxToRem(200));
+      top: pxToRem(30);
+      left: pxToRem(50);
+      z-index: 5;
+    }
+
+    &--board-bear.active {
+      animation: board-signIN 0.7s forwards, scaleUp 0.3s forwards;
+    }
+
+    &--board-bear.re-active {
+      animation: re-set-animation-board-signIN 0.7s ease forwards,
+        scaleUp 0.3s ease forwards;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .container-SignIn {
+    @include size($width: pxToRem(400), $height: pxToRem(420));
+    // background: rgba(255, 255, 255, 0.20);
+    background-color: rgba(92, 186, 233,0.5);
+    backdrop-filter: blur(pxToRem(7.5));
+    border-radius: pxToRem(30);
+    position: absolute;
+    top: pxToRem(300);
+    left: 4%;
+    z-index: 2;
+   
+
+    .body__form {
+      @include flex($display: flex, $direction: column);
+
+      .input {
+        @include size($width: pxToRem(300), $height: pxToRem(50));
+        @include font(
+          $font-family: $secondary-font,
+          $font_size: pxToRem(18),
+          $font-weight: 400,
+          $font-style: false,
+          $line-height: false
+        );
+        padding-left: 10px;
+        padding-right: 10px ;
+        border-radius: pxToRem(15);
+        border: transparent;
+        position: relative;
+        left: 50%;
+        top: pxToRem(40);
+        transform: translateX(-50%);
+        background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.5) 0%,
+          rgba(255, 255, 255, 0.5) 100%
+        );
+        color: #fff;
+
+        &:placeholder-shown {
+          @include font(
+            $font-family: $primary-font,
+            $font_size: pxToRem(12),
+            $font-weight: 400,
+            $font-style: false,
+            $line-height: false
+          );
+          padding-left: 20px;
+        }
+        &::placeholder {
+          color: rgb(134, 130, 130);
+        }
+
+      }
+      .wrongInput_signIn {
+        animation: wrongInput_signIn 0.2s ease-in-out 6;
+      }
+      .inputPass_signIn {
+        padding-right: 40px;
+      }
+      #body__form--password {
+        margin-top: pxToRem(20);
+      }
+      span {
+        @include position(
+          $position: relative,
+          $top: pxToRem(50),
+          $bottom: false,
+          $left: 50%,
+          $right: false
+        );
+        @include font(
+          $font-family: $secondary-font,
+          $font_size: pxToRem(14),
+          $font-weight: bold,
+          $font-style: false,
+          $line-height: false
+        );
+        @include size($width: pxToRem(300));
+        transform: translateX(-42%);
+        color:rgb(255, 208, 0);
+        visibility: hidden;
+
+      }
+
+      .body__form--eyes {
+        position: absolute;
+        top: pxToRem(141);
+        right: pxToRem(60);
+        cursor: pointer;
+        @include size($width: pxToRem(25), $height: pxToRem(15));
+        img {
+          @include size($width: 100%, $height: 100%);
+          object-fit: cover;
+        }
+      }
+    }
+    .body__bottom {
+      @include flex(
+        $display: flex,
+        $justify: center,
+        $align: center,
+        $gap: pxToRem(100)
+      );
+      margin-top: pxToRem(70);
+
+      .body__bottom--btnSigin {
+        @include size($width: pxToRem(200), $height: pxToRem(52));
+        border-radius: pxToRem(25);
+        background: black;
+        border: 1px solid black;
+        opacity: 0.7;
+        &:hover {
+          transform: scale(1.01);
+        }
+        .btnSigin-content {
+          @include font(
+            $font-family: $primary-font,
+            $font_size: pxToRem(20),
+            $font-weight: 400,
+            $font-style: false,
+            $line-height: 150%
+          );
+          color: #fff;
+          text-align: center;
+        }
+      }
+    }
+    .container-SignIn__footer {
+      @include flex(
+        $display: flex,
+        $direction: column,
+        $align: center,
+        $justify: center,
+        $wrap: false,
+        $gap: pxToRem(20)
+      );
+      margin-top: pxToRem(20);
+      .footer__line {
+        @include size($width: pxToRem(300), $height: pxToRem(0.5));
+        background-color: black;
+      }
+      .footer__bottom {
+        @include flex(
+          $display: flex,
+          $direction: column,
+          $align: center,
+          $justify: center,
+          $wrap: false,
+          $gap: pxToRem(15)
+        );
+        &--resetPass {
+          @include size($width: pxToRem(198), $height: pxToRem(52));
+          border-radius: pxToRem(25);
+          border: pxToRem(1) solid #988e8e;
+          background: rgba(0, 0, 0, 0);
+
+          &:hover {
+            color: rgb(255, 145, 0);
+            transform: scale(1.03);
+          }
+          .resetPass-content {
+            @include font(
+              $font-family: $primary-font,
+              $font_size: pxToRem(16),
+              $font-weight: 400,
+              $font-style: false,
+              $line-height: 150%
+            );
+            color: rgb(227, 223, 223);
+          }
+        }
+        .footer__bottom--newMember {
+          cursor: pointer;
+          color: rgb(227, 223, 223);
+          font-family: $primary-font;
+
+          &:active {
+            color: rgb(255, 145, 0);
+            transform: scale(1.01);
+          }
+          &:hover {
+            color: rgb(255, 145, 0);
+            transform: scale(1.01);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .signIn-container {
+    @include size($width: px-to-vw-mobile(430), $height: 100%);
+    position: relative;
+    top: px-to-vw-mobile(-60);
+  
+    &__content {
+      display: block;
+      z-index: 6;
+      @include size($width: px-to-vw-mobile(200), $height: px-to-vw-mobile(200));
+      @include position(
+        $position: relative,
+        $top: px-to-vw-mobile(85),
+        $bottom: false,
+        $left: pxToRem(0),
+        $right: false
+      );
+  
+      .figure {
+        @include position(
+          $position: absolute,
+          $top: false,
+          $bottom: false,
+          $left: false,
+          $right: false
+        );
+      }
+      &--bear-head {
+        @include size($width: px-to-vw-mobile(190), $height:px-to-vw-mobile(150));
+        top: px-to-vw-mobile(75);
+        left: px-to-vw-mobile(160);
+        z-index: 5;
+      }
+  
+      &--hand-left-bear {
+        @include size($width: px-to-vw-mobile(60), $height: px-to-vw-mobile(50));
+        top: px-to-vw-mobile(190);
+        left:px-to-vw-mobile(150);
+        z-index: 6;
+      }
+  
+      &--hand-left-bear.active {
+        animation: hide-eyes-hand-left-signIN 0.7s forwards, scaleUp 0.3s forwards;
+      }
+  
+      &--hand-left-bear.re-active {
+        animation: re-set-animation-hide-eyes-hand-left-signIN 0.7s ease forwards,
+          scaleUp 0.3s ease forwards;
+      }
+  
+      &--hand-right-bear {
+        @include size($width: px-to-vw-mobile(60), $height: px-to-vw-mobile(50));
+        top: px-to-vw-mobile(195);
+        left: px-to-vw-mobile(280)
+      }
+  
+      &--hand-right-bear.active {
+        animation: hide-eyes-hand-right-signIN 0.7s forwards,
+          scaleUp 0.3s forwards;
+      }
+  
+      &--hand-right-bear.re-active {
+        animation: re-set-animation-hide-eyes-hand-right-signIN 0.7s ease forwards,
+          scaleUp 0.3s ease forwards;
+      }
+  
+      &--board-bear {
+        @include size($width: px-to-vw-mobile(200), $height: px-to-vw-mobile(200));
+        top:px-to-vw-mobile(30);
+        left:px-to-vw-mobile(50);
+        z-index: 5;
+      }
+  
+      &--board-bear.active {
+        animation: board-signIN 0.7s forwards, scaleUp 0.3s forwards;
+      }
+  
+      &--board-bear.re-active {
+        animation: re-set-animation-board-signIN 0.7s ease forwards,
+          scaleUp 0.3s ease forwards;
+      }
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  
+    .container-SignIn {
+      @include size($width: px-to-vw-mobile(400), $height:px-to-vw-mobile(420));
+      // background: rgba(255, 255, 255, 0.20);
+      background-color: rgba(92, 186, 233,0.5);
+      backdrop-filter: blur(pxToRem(7.5));
+      border-radius:px-to-vw-mobile(30);
+      position: absolute;
+      top: px-to-vw-mobile(300);
+      left: 4%;
+      z-index: 2;
+     
+  
+      .body__form {
+        @include flex($display: flex, $direction: column);
+  
+        .input {
+          @include size($width: px-to-vw-mobile(300), $height: px-to-vw-mobile(50));
+          @include font(
+            $font-family: $secondary-font,
+            $font_size: px-to-vw-mobile(18),
+            $font-weight: 400,
+            $font-style: false,
+            $line-height: false
+          );
+          padding-left: 10px;
+          padding-right: 10px ;
+          border-radius: px-to-vw-mobile(15);
+          border: transparent;
+          position: relative;
+          left: 50%;
+          top:px-to-vw-mobile(40);
+          transform: translateX(-50%);
+          background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.5) 0%,
+            rgba(255, 255, 255, 0.5) 100%
+          );
+          color: #fff;
+  
+          &:placeholder-shown {
+            @include font(
+              $font-family: $primary-font,
+              $font_size: px-to-vw-mobile(12),
+              $font-weight: 400,
+              $font-style: false,
+              $line-height: false
+            );
+            padding-left: px-to-vw-mobile(20);
+          }
+          &::placeholder {
+            color: rgb(134, 130, 130);
+          }
+  
+        }
+        .wrongInput_signIn {
+          animation: wrongInput_signIn 0.2s ease-in-out 6;
+        }
+        .inputPass_signIn {
+          padding-right: px-to-vw-mobile(40);
+        }
+        #body__form--password {
+          margin-top: px-to-vw-mobile(20);
+        }
+        span {
+          @include position(
+            $position: relative,
+            $top: px-to-vw-mobile(50),
+            $bottom: false,
+            $left: 50%,
+            $right: false
+          );
+          @include font(
+            $font-family: $secondary-font,
+            $font_size: px-to-vw-mobile(14),
+            $font-weight: bold,
+            $font-style: false,
+            $line-height: false
+          );
+          @include size($width:px-to-vw-mobile(300));
+          transform: translateX(-42%);
+          color:rgb(255, 208, 0);
+          visibility: hidden;
+  
+        }
+  
+        .body__form--eyes {
+          position: absolute;
+          top: px-to-vw-mobile(141);
+          right: px-to-vw-mobile(60);
+          cursor: pointer;
+          @include size($width: px-to-vw-mobile(25), $height: px-to-vw-mobile(15));
+          img {
+            @include size($width: 100%, $height: 100%);
+            object-fit: cover;
+          }
+        }
+      }
+      .body__bottom {
+        @include flex(
+          $display: flex,
+          $justify: center,
+          $align: center,
+          $gap: px-to-vw-mobile(100)
+        );
+        margin-top: px-to-vw-mobile(70);
+  
+        .body__bottom--btnSigin {
+          @include size($width: px-to-vw-mobile(200), $height: px-to-vw-mobile(52));
+          border-radius: px-to-vw-mobile(25);
+          background: black;
+          border: 1px solid black;
+          opacity: 0.7;
+          &:hover {
+            transform: scale(1.01);
+          }
+          .btnSigin-content {
+            @include font(
+              $font-family: $primary-font,
+              $font_size:px-to-vw-mobile(20),
+              $font-weight: 400,
+              $font-style: false,
+              $line-height: 150%
+            );
+            color: #fff;
+            text-align: center;
+          }
+        }
+      }
+      .container-SignIn__footer {
+        @include flex(
+          $display: flex,
+          $direction: column,
+          $align: center,
+          $justify: center,
+          $wrap: false,
+          $gap: px-to-vw-mobile(20)
+        );
+        margin-top: px-to-vw-mobile(20);
+        .footer__line {
+          @include size($width: pxToRem(300), $height: px-to-vw-mobile(0.5));
+          background-color: black;
+        }
+        .footer__bottom {
+          @include flex(
+            $display: flex,
+            $direction: column,
+            $align: center,
+            $justify: center,
+            $wrap: false,
+            $gap: px-to-vw-mobile(15)
+          );
+          &--resetPass {
+            @include size($width: px-to-vw-mobile(198), $height: px-to-vw-mobile(52));
+            border-radius: px-to-vw-mobile(25);
+            border: pxToRem(1) solid #988e8e;
+            background: rgba(0, 0, 0, 0);
+  
+            &:hover {
+              color: rgb(255, 145, 0);
+              transform: scale(1.03);
+            }
+            .resetPass-content {
+              @include font(
+                $font-family: $primary-font,
+                $font_size: px-to-vw-mobile(16),
+                $font-weight: 400,
+                $font-style: false,
+                $line-height: 150%
+              );
+              color: rgb(227, 223, 223);
+            }
+          }
+          
+          .footer__bottom--newMember {
+            cursor: pointer;
+            color: rgb(227, 223, 223);
+            font-family: $primary-font;
+            font-size: px-to-vw-mobile(15);
+  
+            &:active {
+              color: rgb(255, 145, 0);
+              transform: scale(1.01);
+            }
+            &:hover {
+              color: rgb(255, 145, 0);
+              transform: scale(1.01);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes hide-eyes-hand-left-signIN {
+  100% {
+    top: pxToRem(120);
+    left: pxToRem(180);
+    transform: rotate(160deg);
+  }
+}
+
+@keyframes hide-eyes-hand-right-signIN {
+  100% {
+    top: pxToRem(120);
+    left: pxToRem(280);
+    transform: rotate(160deg);
+  }
+}
+
+@keyframes board-signIN {
+  100% {
+    top: pxToRem(30);
+    left: pxToRem(20);
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes re-set-animation-hide-eyes-hand-left-signIN {
+  0% {
+    top: pxToRem(120);
+    left: pxToRem(180);
+  }
+
+  100% {
+    top: pxToRem(190);
+    left: pxToRem(150);
+    transform: rotate(-160deg);
+  }
+}
+
+@keyframes re-set-animation-hide-eyes-hand-right-signIN {
+  0% {
+    top: pxToRem(120);
+    left: pxToRem(280);
+  }
+  100% {
+    top: pxToRem(195);
+    left: pxToRem(280);
+    transform: rotate(-160deg);
+  }
+}
+
+@keyframes re-set-animation-board-signIN {
+  0% {
+    top: pxToRem(30);
+    left: pxToRem(20);
+  }
+  100% {
+    top: pxToRem(30);
+    left: pxToRem(35);
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes wrongInput_signIn {
+  0%{
+    left: 50%;
+  }
+  50% {
+    left: 49.5%;
+  }
+  100% {
+    left: 50%;
+  }
+}

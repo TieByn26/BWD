@@ -1,0 +1,52 @@
+.rotateLeft {
+  --animate-delay: 0s;
+    --animate-repeat: 0;
+  --animate-duration: 1.5s;
+  -webkit-animation-name: rotateLeft;
+  animation-name: rotateLeft;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.rotateLeft_signUp {
+  --animate-duration: 1.5s;
+  -webkit-animation-name: rotateLeft;
+  animation-name: rotateLeft;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes rotateLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: perspective(800px) rotateY(0deg) translateZ(0px);
+    transform: perspective(800px) rotateY(0deg) translateZ(0px);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transform: perspective(800px) rotateY(-180deg) translateZ(300px);
+    transform: perspective(800px) rotateY(-180deg) translateZ(300px);
+  }
+}
+@keyframes rotateLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: perspective(800px) rotateY(0deg) translateZ(0px);
+    transform: perspective(800px) rotateY(0deg) translateZ(0px);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transform: perspective(800px) rotateY(-180deg) translateZ(300px);
+    transform: perspective(800px) rotateY(-180deg) translateZ(300px);
+  }
+}

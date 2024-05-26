@@ -1,0 +1,46 @@
+.slideDown {
+    -webkit-animation-name: slideDown;
+    animation-name: slideDown;
+    --animate-duration: 2s;
+    --animate-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    z-index: 5;
+  }
+  @-webkit-keyframes slideDown {
+    0% {
+      opacity: 1;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+    }
+  
+    100% {
+      opacity: 0;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: translateY(100%);
+      transform: translateY(100%);
+      
+    }
+  }
+  @keyframes slideDown {
+    0% {
+      opacity: 1;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: translateY(0%);
+      transform: translate(0%,0%);
+      
+    }
+  
+    100% {
+      opacity: 0;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: translateY(200px);
+      transform: translateY(200px);
+    }
+  }
+  
