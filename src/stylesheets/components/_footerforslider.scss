@@ -3,11 +3,15 @@
 .footer-main-container{
     position: absolute;
     // top: 670px;
-    top: 26%;
+    top: 670px;
     @include mobile{
-        top: 17%;
+        top: 16%;
         padding: 0 10px;
     }
+    @include tablet{
+        top: 600px
+    }
+
     z-index: 1000;
     @include size($width: 100%, $height: false);
     @include color($background: rgba(0,0,0,0));
