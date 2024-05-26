@@ -5,10 +5,10 @@ var swiper = new Swiper(".mySwiper", {
   loop: true,
   slidesPerView: 1,
   effect: 'slide', // Chỉ hiển thị 1 slide tại một thời điểm  
-  // autoplay: {
-  //     delay: 4000, 
-  //     disableOnInteraction: false, 
-  // },
+  autoplay: {
+      delay: 4000, 
+      disableOnInteraction: false, 
+  },
   pagination: {
       el: '.swiper-pagination',
       clickable: true,
